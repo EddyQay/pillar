@@ -2,7 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Turing_Back_ED.DomainModels;
+using Turing_Back_ED.Utilities;
 
 namespace Turing_Back_ED.Controllers
 {
@@ -10,6 +13,13 @@ namespace Turing_Back_ED.Controllers
     [ApiController]
     public class ValuesController : ControllerBase
     {
+        private readonly IAuthenticationManager authManager;
+
+        public ValuesController(IAuthenticationManager _authManager)
+        {
+            authManager = _authManager;
+        }
+
         // GET api/values
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()
@@ -26,8 +36,22 @@ namespace Turing_Back_ED.Controllers
 
         // POST api/values
         [HttpPost]
-        public void Post([FromBody] string value)
+        public ActionResult<string> Post([FromBody] string value)
         {
+            return value;
+        }
+
+        [HttpPost("token")]
+        public ActionResult Authenticate([FromBody] LoginModel value)
+        {
+            if(authManager.IsValidUser(value))
+            {
+                return new OkObjectResult(value);
+            }
+            else
+            {
+                return new BadRequestObjectResult(value);
+            }
         }
 
         // PUT api/values/5

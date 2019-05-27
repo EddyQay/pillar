@@ -1,0 +1,1004 @@
+2019-05-27T06:25:32.6938585+00:00 0HLN2DGEKQ34J:00000001 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/values   (ca22a1cb)
+2019-05-27T06:25:33.6162565+00:00 0HLN2DGEKQ34J:00000001 [INF] Executing endpoint '"Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)"' (500cc934)
+2019-05-27T06:25:33.8203614+00:00 0HLN2DGEKQ34J:00000001 [INF] Route matched with "{action = \"Get\", controller = \"Values\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[System.String]] Get()" on controller "Turing_Back_ED.Controllers.ValuesController" ("Turing_Back_ED"). (122b2fdf)
+2019-05-27T06:25:33.9071449+00:00 0HLN2DGEKQ34J:00000001 [INF] Executing action method "Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)" - Validation state: Valid (dad538d7)
+2019-05-27T06:25:33.9869800+00:00 0HLN2DGEKQ34J:00000001 [INF] Executed action method "Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 1.5671ms. (50a9e262)
+2019-05-27T06:25:34.0908589+00:00 0HLN2DGEKQ34J:00000001 [INF] Executing ObjectResult, writing value of type '"System.String[]"'. (8a1b66c8)
+2019-05-27T06:25:34.5294058+00:00 0HLN2DGEKQ34J:00000001 [INF] Executed action "Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)" in 692.6108ms (afa2e885)
+2019-05-27T06:25:34.5299317+00:00 0HLN2DGEKQ34J:00000001 [INF] Executed endpoint '"Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)"' (99874f2b)
+2019-05-27T06:25:34.6190032+00:00 0HLN2DGEKQ34J:00000001 [INF] Request finished in 1907.3183ms 200 application/json; charset=utf-8 (791a596a)
+2019-05-27T06:26:54.0843113+00:00 0HLN2DGEKQ34L:00000001 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/tax/1 application/json 67 (ca22a1cb)
+2019-05-27T06:26:54.1048010+00:00 0HLN2DGEKQ34L:00000001 [INF] Executing endpoint '"Turing_Back_ED.Controllers.TaxController.FindTax (Turing_Back_ED)"' (500cc934)
+2019-05-27T06:26:54.1704146+00:00 0HLN2DGEKQ34L:00000001 [INF] Route matched with "{action = \"FindTax\", controller = \"Tax\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] FindTax(Int32)" on controller "Turing_Back_ED.Controllers.TaxController" ("Turing_Back_ED"). (122b2fdf)
+2019-05-27T06:26:54.9458924+00:00 0HLN2DGEKQ34L:00000001 [INF] Executing action method "Turing_Back_ED.Controllers.TaxController.FindTax (Turing_Back_ED)" - Validation state: Valid (dad538d7)
+2019-05-27T06:26:57.0540080+00:00 0HLN2DGEKQ34L:00000001 [INF] Entity Framework Core "2.2.4-servicing-10062" initialized '"TuringshopContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "None" (9958f5bb)
+2019-05-27T06:26:59.0718075+00:00 0HLN2DGEKQ34L:00000001 [INF] Executed DbCommand ("259"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `e`.`tax_id`, `e`.`tax_percentage`, `e`.`tax_type`
+FROM `turingshop`.`tax` AS `e`
+WHERE `e`.`tax_id` = @__get_Item_0
+LIMIT 1" (0723d8ff)
+2019-05-27T06:26:59.4489382+00:00 0HLN2DGEKQ34L:00000001 [INF] Executed action method "Turing_Back_ED.Controllers.TaxController.FindTax (Turing_Back_ED)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 4502.5497ms. (50a9e262)
+2019-05-27T06:26:59.4887533+00:00 0HLN2DGEKQ34L:00000001 [INF] Executing ObjectResult, writing value of type '"Turing_Back_ED.Models.Tax"'. (8a1b66c8)
+2019-05-27T06:26:59.5596150+00:00 0HLN2DGEKQ34L:00000001 [INF] Executed action "Turing_Back_ED.Controllers.TaxController.FindTax (Turing_Back_ED)" in 5388.1556ms (afa2e885)
+2019-05-27T06:26:59.5648059+00:00 0HLN2DGEKQ34L:00000001 [INF] Executed endpoint '"Turing_Back_ED.Controllers.TaxController.FindTax (Turing_Back_ED)"' (99874f2b)
+2019-05-27T06:26:59.5817774+00:00 0HLN2DGEKQ34L:00000001 [INF] Request finished in 5497.7842ms 200 application/json; charset=utf-8 (791a596a)
+2019-05-27T06:26:59.6154752+00:00  [INF] Connection id ""0HLN2DGEKQ34L"", Request id ""0HLN2DGEKQ34L:00000001"": the application completed without reading the entire request body. (54ac9468)
+2019-05-27T06:27:25.1119317+00:00 0HLN2DGEKQ34L:00000002 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/tax/ application/json 67 (ca22a1cb)
+2019-05-27T06:27:25.1125864+00:00 0HLN2DGEKQ34L:00000002 [INF] Executing endpoint '"Turing_Back_ED.Controllers.TaxController.GetAll (Turing_Back_ED)"' (500cc934)
+2019-05-27T06:27:25.1554729+00:00 0HLN2DGEKQ34L:00000002 [INF] Route matched with "{action = \"GetAll\", controller = \"Tax\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetAll(Turing_Back_ED.DomainModels.GeneralQueryModel)" on controller "Turing_Back_ED.Controllers.TaxController" ("Turing_Back_ED"). (122b2fdf)
+2019-05-27T06:27:25.2086529+00:00 0HLN2DGEKQ34L:00000002 [INF] Executing action method "Turing_Back_ED.Controllers.TaxController.GetAll (Turing_Back_ED)" - Validation state: Valid (dad538d7)
+2019-05-27T06:27:25.2236889+00:00 0HLN2DGEKQ34L:00000002 [INF] Entity Framework Core "2.2.4-servicing-10062" initialized '"TuringshopContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "None" (9958f5bb)
+2019-05-27T06:27:25.2545189+00:00 0HLN2DGEKQ34L:00000002 [WRN] Query: '"(from Tax <generated>_2 in DbSet<Tax> select [<generated>_2]).Skip(__p_0).Take(__p_1)"' uses a row limiting operation (Skip/Take) without OrderBy which may lead to unpredictable results. (32148ccc)
+2019-05-27T06:27:25.4479718+00:00 0HLN2DGEKQ34L:00000002 [INF] Executed DbCommand ("43"ms) [Parameters=["@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `t`.`tax_id`, `t`.`tax_percentage`, `t`.`tax_type`
+FROM `turingshop`.`tax` AS `t`
+LIMIT @__p_1 OFFSET @__p_0" (0723d8ff)
+2019-05-27T06:27:25.4622050+00:00 0HLN2DGEKQ34L:00000002 [INF] Executed action method "Turing_Back_ED.Controllers.TaxController.GetAll (Turing_Back_ED)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 253.271ms. (50a9e262)
+2019-05-27T06:27:25.4628705+00:00 0HLN2DGEKQ34L:00000002 [INF] Executing ObjectResult, writing value of type '"Turing_Back_ED.DomainModels.SearchResponseModel"'. (8a1b66c8)
+2019-05-27T06:27:25.4791559+00:00 0HLN2DGEKQ34L:00000002 [INF] Executed action "Turing_Back_ED.Controllers.TaxController.GetAll (Turing_Back_ED)" in 322.9586ms (afa2e885)
+2019-05-27T06:27:25.4826974+00:00 0HLN2DGEKQ34L:00000002 [INF] Executed endpoint '"Turing_Back_ED.Controllers.TaxController.GetAll (Turing_Back_ED)"' (99874f2b)
+2019-05-27T06:27:25.4838572+00:00 0HLN2DGEKQ34L:00000002 [INF] Request finished in 372.18ms 200 application/json; charset=utf-8 (791a596a)
+2019-05-27T06:27:57.4223575+00:00 0HLN2DGEKQ34L:00000003 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/tax/th application/json 67 (ca22a1cb)
+2019-05-27T06:27:57.4239068+00:00 0HLN2DGEKQ34L:00000003 [INF] Executing endpoint '"Turing_Back_ED.Controllers.TaxController.FindTax (Turing_Back_ED)"' (500cc934)
+2019-05-27T06:27:57.4247014+00:00 0HLN2DGEKQ34L:00000003 [INF] Route matched with "{action = \"FindTax\", controller = \"Tax\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] FindTax(Int32)" on controller "Turing_Back_ED.Controllers.TaxController" ("Turing_Back_ED"). (122b2fdf)
+2019-05-27T06:27:57.4675086+00:00 0HLN2DGEKQ34L:00000003 [INF] Executing ObjectResult, writing value of type '"Turing_Back_ED.DomainModels.BadRequestModel"'. (8a1b66c8)
+2019-05-27T06:27:57.4953912+00:00 0HLN2DGEKQ34L:00000003 [INF] Executed action "Turing_Back_ED.Controllers.TaxController.FindTax (Turing_Back_ED)" in 70.4413ms (afa2e885)
+2019-05-27T06:27:57.4955689+00:00 0HLN2DGEKQ34L:00000003 [INF] Executed endpoint '"Turing_Back_ED.Controllers.TaxController.FindTax (Turing_Back_ED)"' (99874f2b)
+2019-05-27T06:27:57.4958349+00:00 0HLN2DGEKQ34L:00000003 [INF] Request finished in 73.8125ms 400 application/json; charset=utf-8 (791a596a)
+2019-05-27T06:27:57.4961855+00:00  [INF] Connection id ""0HLN2DGEKQ34L"", Request id ""0HLN2DGEKQ34L:00000003"": the application completed without reading the entire request body. (54ac9468)
+2019-05-27T06:28:10.6251293+00:00 0HLN2DGEKQ34L:00000004 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/tax/4 application/json 67 (ca22a1cb)
+2019-05-27T06:28:10.6257747+00:00 0HLN2DGEKQ34L:00000004 [INF] Executing endpoint '"Turing_Back_ED.Controllers.TaxController.FindTax (Turing_Back_ED)"' (500cc934)
+2019-05-27T06:28:10.6262047+00:00 0HLN2DGEKQ34L:00000004 [INF] Route matched with "{action = \"FindTax\", controller = \"Tax\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] FindTax(Int32)" on controller "Turing_Back_ED.Controllers.TaxController" ("Turing_Back_ED"). (122b2fdf)
+2019-05-27T06:28:10.6274579+00:00 0HLN2DGEKQ34L:00000004 [INF] Executing action method "Turing_Back_ED.Controllers.TaxController.FindTax (Turing_Back_ED)" - Validation state: Valid (dad538d7)
+2019-05-27T06:28:10.6311843+00:00 0HLN2DGEKQ34L:00000004 [INF] Entity Framework Core "2.2.4-servicing-10062" initialized '"TuringshopContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "None" (9958f5bb)
+2019-05-27T06:28:10.6424666+00:00 0HLN2DGEKQ34L:00000004 [INF] Executed DbCommand ("2"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `e`.`tax_id`, `e`.`tax_percentage`, `e`.`tax_type`
+FROM `turingshop`.`tax` AS `e`
+WHERE `e`.`tax_id` = @__get_Item_0
+LIMIT 1" (0723d8ff)
+2019-05-27T06:28:10.6445492+00:00 0HLN2DGEKQ34L:00000004 [INF] Executed action method "Turing_Back_ED.Controllers.TaxController.FindTax (Turing_Back_ED)", returned result "Microsoft.AspNetCore.Mvc.BadRequestObjectResult" in 16.8617ms. (50a9e262)
+2019-05-27T06:28:10.6448723+00:00 0HLN2DGEKQ34L:00000004 [INF] Executing ObjectResult, writing value of type '"Turing_Back_ED.DomainModels.ErrorRequestModel"'. (8a1b66c8)
+2019-05-27T06:28:10.6514471+00:00 0HLN2DGEKQ34L:00000004 [INF] Executed action "Turing_Back_ED.Controllers.TaxController.FindTax (Turing_Back_ED)" in 25.0367ms (afa2e885)
+2019-05-27T06:28:10.6515688+00:00 0HLN2DGEKQ34L:00000004 [INF] Executed endpoint '"Turing_Back_ED.Controllers.TaxController.FindTax (Turing_Back_ED)"' (99874f2b)
+2019-05-27T06:28:10.6517983+00:00 0HLN2DGEKQ34L:00000004 [INF] Request finished in 26.9688ms 400 application/json; charset=utf-8 (791a596a)
+2019-05-27T06:28:10.6519414+00:00  [INF] Connection id ""0HLN2DGEKQ34L"", Request id ""0HLN2DGEKQ34L:00000004"": the application completed without reading the entire request body. (54ac9468)
+2019-05-27T06:28:21.8081062+00:00 0HLN2DGEKQ34L:00000005 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/tax/2 application/json 67 (ca22a1cb)
+2019-05-27T06:28:21.8088964+00:00 0HLN2DGEKQ34L:00000005 [INF] Executing endpoint '"Turing_Back_ED.Controllers.TaxController.FindTax (Turing_Back_ED)"' (500cc934)
+2019-05-27T06:28:21.8092759+00:00 0HLN2DGEKQ34L:00000005 [INF] Route matched with "{action = \"FindTax\", controller = \"Tax\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] FindTax(Int32)" on controller "Turing_Back_ED.Controllers.TaxController" ("Turing_Back_ED"). (122b2fdf)
+2019-05-27T06:28:21.8104524+00:00 0HLN2DGEKQ34L:00000005 [INF] Executing action method "Turing_Back_ED.Controllers.TaxController.FindTax (Turing_Back_ED)" - Validation state: Valid (dad538d7)
+2019-05-27T06:28:21.8115604+00:00 0HLN2DGEKQ34L:00000005 [INF] Entity Framework Core "2.2.4-servicing-10062" initialized '"TuringshopContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "None" (9958f5bb)
+2019-05-27T06:28:21.8188638+00:00 0HLN2DGEKQ34L:00000005 [INF] Executed DbCommand ("2"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `e`.`tax_id`, `e`.`tax_percentage`, `e`.`tax_type`
+FROM `turingshop`.`tax` AS `e`
+WHERE `e`.`tax_id` = @__get_Item_0
+LIMIT 1" (0723d8ff)
+2019-05-27T06:28:21.8204323+00:00 0HLN2DGEKQ34L:00000005 [INF] Executed action method "Turing_Back_ED.Controllers.TaxController.FindTax (Turing_Back_ED)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 9.7331ms. (50a9e262)
+2019-05-27T06:28:21.8208484+00:00 0HLN2DGEKQ34L:00000005 [INF] Executing ObjectResult, writing value of type '"Turing_Back_ED.Models.Tax"'. (8a1b66c8)
+2019-05-27T06:28:21.8217815+00:00 0HLN2DGEKQ34L:00000005 [INF] Executed action "Turing_Back_ED.Controllers.TaxController.FindTax (Turing_Back_ED)" in 12.2778ms (afa2e885)
+2019-05-27T06:28:21.8219883+00:00 0HLN2DGEKQ34L:00000005 [INF] Executed endpoint '"Turing_Back_ED.Controllers.TaxController.FindTax (Turing_Back_ED)"' (99874f2b)
+2019-05-27T06:28:21.8224355+00:00 0HLN2DGEKQ34L:00000005 [INF] Request finished in 14.4407ms 200 application/json; charset=utf-8 (791a596a)
+2019-05-27T06:28:21.8226563+00:00  [INF] Connection id ""0HLN2DGEKQ34L"", Request id ""0HLN2DGEKQ34L:00000005"": the application completed without reading the entire request body. (54ac9468)
+2019-05-27T06:28:33.0366659+00:00 0HLN2DGEKQ34L:00000006 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/tax/1 application/json 67 (ca22a1cb)
+2019-05-27T06:28:33.0371914+00:00 0HLN2DGEKQ34L:00000006 [INF] Executing endpoint '"Turing_Back_ED.Controllers.TaxController.FindTax (Turing_Back_ED)"' (500cc934)
+2019-05-27T06:28:33.0374718+00:00 0HLN2DGEKQ34L:00000006 [INF] Route matched with "{action = \"FindTax\", controller = \"Tax\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] FindTax(Int32)" on controller "Turing_Back_ED.Controllers.TaxController" ("Turing_Back_ED"). (122b2fdf)
+2019-05-27T06:28:33.0383509+00:00 0HLN2DGEKQ34L:00000006 [INF] Executing action method "Turing_Back_ED.Controllers.TaxController.FindTax (Turing_Back_ED)" - Validation state: Valid (dad538d7)
+2019-05-27T06:28:33.0390447+00:00 0HLN2DGEKQ34L:00000006 [INF] Entity Framework Core "2.2.4-servicing-10062" initialized '"TuringshopContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "None" (9958f5bb)
+2019-05-27T06:28:33.0463867+00:00 0HLN2DGEKQ34L:00000006 [INF] Executed DbCommand ("1"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `e`.`tax_id`, `e`.`tax_percentage`, `e`.`tax_type`
+FROM `turingshop`.`tax` AS `e`
+WHERE `e`.`tax_id` = @__get_Item_0
+LIMIT 1" (0723d8ff)
+2019-05-27T06:28:33.0468604+00:00 0HLN2DGEKQ34L:00000006 [INF] Executed action method "Turing_Back_ED.Controllers.TaxController.FindTax (Turing_Back_ED)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 8.3554ms. (50a9e262)
+2019-05-27T06:28:33.0470953+00:00 0HLN2DGEKQ34L:00000006 [INF] Executing ObjectResult, writing value of type '"Turing_Back_ED.Models.Tax"'. (8a1b66c8)
+2019-05-27T06:28:33.0477052+00:00 0HLN2DGEKQ34L:00000006 [INF] Executed action "Turing_Back_ED.Controllers.TaxController.FindTax (Turing_Back_ED)" in 10.0876ms (afa2e885)
+2019-05-27T06:28:33.0478873+00:00 0HLN2DGEKQ34L:00000006 [INF] Executed endpoint '"Turing_Back_ED.Controllers.TaxController.FindTax (Turing_Back_ED)"' (99874f2b)
+2019-05-27T06:28:33.0482070+00:00 0HLN2DGEKQ34L:00000006 [INF] Request finished in 11.7164ms 200 application/json; charset=utf-8 (791a596a)
+2019-05-27T06:28:33.0484208+00:00  [INF] Connection id ""0HLN2DGEKQ34L"", Request id ""0HLN2DGEKQ34L:00000006"": the application completed without reading the entire request body. (54ac9468)
+2019-05-27T07:09:28.4928544+00:00 0HLN2E908I5SQ:00000001 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/values   (ca22a1cb)
+2019-05-27T07:09:28.9917322+00:00 0HLN2E908I5SQ:00000001 [INF] Executing endpoint '"Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)"' (500cc934)
+2019-05-27T07:09:29.0732616+00:00 0HLN2E908I5SQ:00000001 [INF] Route matched with "{action = \"Get\", controller = \"Values\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[System.String]] Get()" on controller "Turing_Back_ED.Controllers.ValuesController" ("Turing_Back_ED"). (122b2fdf)
+2019-05-27T07:09:29.1178792+00:00 0HLN2E908I5SQ:00000001 [INF] Executing action method "Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)" - Validation state: Valid (dad538d7)
+2019-05-27T07:09:29.1402860+00:00 0HLN2E908I5SQ:00000001 [INF] Executed action method "Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 5.6015ms. (50a9e262)
+2019-05-27T07:09:29.1723359+00:00 0HLN2E908I5SQ:00000001 [INF] Executing ObjectResult, writing value of type '"System.String[]"'. (8a1b66c8)
+2019-05-27T07:09:29.4574002+00:00 0HLN2E908I5SQ:00000001 [INF] Executed action "Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)" in 351.0152ms (afa2e885)
+2019-05-27T07:09:29.4616252+00:00 0HLN2E908I5SQ:00000001 [INF] Executed endpoint '"Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)"' (99874f2b)
+2019-05-27T07:09:29.4876800+00:00 0HLN2E908I5SQ:00000001 [INF] Request finished in 1036.9454ms 200 application/json; charset=utf-8 (791a596a)
+2019-05-27T07:12:07.6892928+00:00 0HLN2E908I5SS:00000001 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/attributes application/json 67 (ca22a1cb)
+2019-05-27T07:12:07.7058504+00:00 0HLN2E908I5SS:00000001 [INF] Executing endpoint '"Turing_Back_ED.Controllers.AttributesController.GetAll (Turing_Back_ED)"' (500cc934)
+2019-05-27T07:12:07.7942017+00:00 0HLN2E908I5SS:00000001 [INF] Route matched with "{action = \"GetAll\", controller = \"Attributes\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetAll(Turing_Back_ED.DomainModels.GeneralQueryModel)" on controller "Turing_Back_ED.Controllers.AttributesController" ("Turing_Back_ED"). (122b2fdf)
+2019-05-27T07:12:07.7990149+00:00 0HLN2E908I5SS:00000001 [INF] Executed action "Turing_Back_ED.Controllers.AttributesController.GetAll (Turing_Back_ED)" in 2.2636ms (afa2e885)
+2019-05-27T07:12:07.7995899+00:00 0HLN2E908I5SS:00000001 [INF] Executed endpoint '"Turing_Back_ED.Controllers.AttributesController.GetAll (Turing_Back_ED)"' (99874f2b)
+2019-05-27T07:12:07.9475074+00:00 0HLN2E908I5SS:00000001 [ERR] Unable to resolve service for type 'Turing_Back_ED.DAL.AttributeStore' while attempting to activate 'Turing_Back_ED.Controllers.AttributesController'. (959e1cd7)
+System.InvalidOperationException: Unable to resolve service for type 'Turing_Back_ED.DAL.AttributeStore' while attempting to activate 'Turing_Back_ED.Controllers.AttributesController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Turing_Back_ED.ErrorMiddleware.Invoke(HttpContext context) in E:\a_PROJECTS\DOTNET-Core\Turing_Back_ED\Turing_Back_ED\Middlewares\ErrorMiddleware.cs:line 29
+2019-05-27T07:12:07.9936808+00:00 0HLN2E908I5SS:00000001 [INF] Request finished in 304.3313ms 500 application/json (791a596a)
+2019-05-27T07:12:08.0341359+00:00  [INF] Connection id ""0HLN2E908I5SS"", Request id ""0HLN2E908I5SS:00000001"": the application completed without reading the entire request body. (54ac9468)
+2019-05-27T07:13:27.7907465+00:00 0HLN2EB829UCE:00000001 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/values   (ca22a1cb)
+2019-05-27T07:13:28.1106489+00:00 0HLN2EB829UCE:00000001 [INF] Executing endpoint '"Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)"' (500cc934)
+2019-05-27T07:13:28.1938505+00:00 0HLN2EB829UCE:00000001 [INF] Route matched with "{action = \"Get\", controller = \"Values\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[System.String]] Get()" on controller "Turing_Back_ED.Controllers.ValuesController" ("Turing_Back_ED"). (122b2fdf)
+2019-05-27T07:13:28.2525422+00:00 0HLN2EB829UCE:00000001 [INF] Executing action method "Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)" - Validation state: Valid (dad538d7)
+2019-05-27T07:13:28.2804587+00:00 0HLN2EB829UCE:00000001 [INF] Executed action method "Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 1.87ms. (50a9e262)
+2019-05-27T07:13:28.3188197+00:00 0HLN2EB829UCE:00000001 [INF] Executing ObjectResult, writing value of type '"System.String[]"'. (8a1b66c8)
+2019-05-27T07:13:28.5913834+00:00 0HLN2EB829UCE:00000001 [INF] Executed action "Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)" in 345.9001ms (afa2e885)
+2019-05-27T07:13:28.5918483+00:00 0HLN2EB829UCE:00000001 [INF] Executed endpoint '"Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)"' (99874f2b)
+2019-05-27T07:13:28.6426084+00:00 0HLN2EB829UCE:00000001 [INF] Request finished in 877.1762ms 200 application/json; charset=utf-8 (791a596a)
+2019-05-27T07:13:39.0675452+00:00 0HLN2EB829UCG:00000001 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/attributes application/json 67 (ca22a1cb)
+2019-05-27T07:13:39.0774952+00:00 0HLN2EB829UCG:00000001 [INF] Executing endpoint '"Turing_Back_ED.Controllers.AttributesController.GetAll (Turing_Back_ED)"' (500cc934)
+2019-05-27T07:13:39.1701179+00:00 0HLN2EB829UCG:00000001 [INF] Route matched with "{action = \"GetAll\", controller = \"Attributes\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetAll(Turing_Back_ED.DomainModels.GeneralQueryModel)" on controller "Turing_Back_ED.Controllers.AttributesController" ("Turing_Back_ED"). (122b2fdf)
+2019-05-27T07:13:39.6455965+00:00 0HLN2EB829UCG:00000001 [INF] Executing action method "Turing_Back_ED.Controllers.AttributesController.GetAll (Turing_Back_ED)" - Validation state: Valid (dad538d7)
+2019-05-27T07:13:40.5166274+00:00 0HLN2EB829UCG:00000001 [INF] Entity Framework Core "2.2.4-servicing-10062" initialized '"TuringshopContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "None" (9958f5bb)
+2019-05-27T07:13:40.6355179+00:00 0HLN2EB829UCG:00000001 [WRN] Query: '"(from Attribute <generated>_2 in DbSet<Attribute> select [<generated>_2]).Skip(__p_0).Take(__p_1)"' uses a row limiting operation (Skip/Take) without OrderBy which may lead to unpredictable results. (32148ccc)
+2019-05-27T07:13:42.0230748+00:00 0HLN2EB829UCG:00000001 [ERR] Failed executing DbCommand ("200"ms) [Parameters=["@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `a`.`attribute_id`, `a`.`Added`, `a`.`Modified`, `a`.`name`
+FROM `turingshop`.`attribute` AS `a`
+LIMIT @__p_1 OFFSET @__p_0" (627a98df)
+MySql.Data.MySqlClient.MySqlException (0x80004005): Unknown column 'a.Added' in 'field list' ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Unknown column 'a.Added' in 'field list'
+   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in C:\projects\mysqlconnector\src\MySqlConnector\Core\ResultSet.cs:line 42
+   at MySql.Data.MySqlClient.MySqlDataReader.ActivateResultSet(ResultSet resultSet) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlDataReader.cs:line 74
+   at MySql.Data.MySqlClient.MySqlDataReader.ReadFirstResultSetAsync(IOBehavior ioBehavior) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlDataReader.cs:line 299
+   at MySql.Data.MySqlClient.MySqlDataReader.CreateAsync(MySqlCommand command, CommandBehavior behavior, ResultSetProtocol resultSetProtocol, IOBehavior ioBehavior) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlDataReader.cs:line 284
+   at MySqlConnector.Core.TextCommandExecutor.ExecuteReaderAsync(String commandText, MySqlParameterCollection parameterCollection, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in C:\projects\mysqlconnector\src\MySqlConnector\Core\TextCommandExecutor.cs:line 37
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+2019-05-27T07:13:42.0994241+00:00 0HLN2EB829UCG:00000001 [ERR] An exception occurred while iterating over the results of a query for context type '"Turing_Back_ED.Models.TuringshopContext"'."
+""MySql.Data.MySqlClient.MySqlException (0x80004005): Unknown column 'a.Added' in 'field list' ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Unknown column 'a.Added' in 'field list'
+   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in C:\projects\mysqlconnector\src\MySqlConnector\Core\ResultSet.cs:line 42
+   at MySql.Data.MySqlClient.MySqlDataReader.ActivateResultSet(ResultSet resultSet) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlDataReader.cs:line 74
+   at MySql.Data.MySqlClient.MySqlDataReader.ReadFirstResultSetAsync(IOBehavior ioBehavior) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlDataReader.cs:line 299
+   at MySql.Data.MySqlClient.MySqlDataReader.CreateAsync(MySqlCommand command, CommandBehavior behavior, ResultSetProtocol resultSetProtocol, IOBehavior ioBehavior) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlDataReader.cs:line 284
+   at MySqlConnector.Core.TextCommandExecutor.ExecuteReaderAsync(String commandText, MySqlParameterCollection parameterCollection, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in C:\projects\mysqlconnector\src\MySqlConnector\Core\TextCommandExecutor.cs:line 37
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.BufferlessMoveNext(DbContext _, Boolean buffer, CancellationToken cancellationToken)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.SelectEnumerableAsyncIterator`2.MoveNextCore(CancellationToken cancellationToken) in D:\a\1\s\Ix.NET\Source\System.Interactive.Async\Select.cs:line 106
+   at System.Linq.AsyncEnumerable.AsyncIterator`1.MoveNext(CancellationToken cancellationToken) in D:\a\1\s\Ix.NET\Source\System.Interactive.Async\AsyncIterator.cs:line 98
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext(CancellationToken cancellationToken)" (f5c7ac34)
+MySql.Data.MySqlClient.MySqlException (0x80004005): Unknown column 'a.Added' in 'field list' ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Unknown column 'a.Added' in 'field list'
+   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in C:\projects\mysqlconnector\src\MySqlConnector\Core\ResultSet.cs:line 42
+   at MySql.Data.MySqlClient.MySqlDataReader.ActivateResultSet(ResultSet resultSet) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlDataReader.cs:line 74
+   at MySql.Data.MySqlClient.MySqlDataReader.ReadFirstResultSetAsync(IOBehavior ioBehavior) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlDataReader.cs:line 299
+   at MySql.Data.MySqlClient.MySqlDataReader.CreateAsync(MySqlCommand command, CommandBehavior behavior, ResultSetProtocol resultSetProtocol, IOBehavior ioBehavior) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlDataReader.cs:line 284
+   at MySqlConnector.Core.TextCommandExecutor.ExecuteReaderAsync(String commandText, MySqlParameterCollection parameterCollection, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in C:\projects\mysqlconnector\src\MySqlConnector\Core\TextCommandExecutor.cs:line 37
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.BufferlessMoveNext(DbContext _, Boolean buffer, CancellationToken cancellationToken)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.SelectEnumerableAsyncIterator`2.MoveNextCore(CancellationToken cancellationToken) in D:\a\1\s\Ix.NET\Source\System.Interactive.Async\Select.cs:line 106
+   at System.Linq.AsyncEnumerable.AsyncIterator`1.MoveNext(CancellationToken cancellationToken) in D:\a\1\s\Ix.NET\Source\System.Interactive.Async\AsyncIterator.cs:line 98
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext(CancellationToken cancellationToken)
+2019-05-27T07:13:42.1602404+00:00 0HLN2EB829UCG:00000001 [INF] Executed action "Turing_Back_ED.Controllers.AttributesController.GetAll (Turing_Back_ED)" in 2989.699ms (afa2e885)
+2019-05-27T07:13:42.1662054+00:00 0HLN2EB829UCG:00000001 [INF] Executed endpoint '"Turing_Back_ED.Controllers.AttributesController.GetAll (Turing_Back_ED)"' (99874f2b)
+2019-05-27T07:13:42.2210372+00:00 0HLN2EB829UCG:00000001 [ERR] Unknown column 'a.Added' in 'field list' (f4748870)
+MySql.Data.MySqlClient.MySqlException (0x80004005): Unknown column 'a.Added' in 'field list' ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Unknown column 'a.Added' in 'field list'
+   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in C:\projects\mysqlconnector\src\MySqlConnector\Core\ResultSet.cs:line 42
+   at MySql.Data.MySqlClient.MySqlDataReader.ActivateResultSet(ResultSet resultSet) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlDataReader.cs:line 74
+   at MySql.Data.MySqlClient.MySqlDataReader.ReadFirstResultSetAsync(IOBehavior ioBehavior) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlDataReader.cs:line 299
+   at MySql.Data.MySqlClient.MySqlDataReader.CreateAsync(MySqlCommand command, CommandBehavior behavior, ResultSetProtocol resultSetProtocol, IOBehavior ioBehavior) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlDataReader.cs:line 284
+   at MySqlConnector.Core.TextCommandExecutor.ExecuteReaderAsync(String commandText, MySqlParameterCollection parameterCollection, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in C:\projects\mysqlconnector\src\MySqlConnector\Core\TextCommandExecutor.cs:line 37
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.BufferlessMoveNext(DbContext _, Boolean buffer, CancellationToken cancellationToken)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.SelectEnumerableAsyncIterator`2.MoveNextCore(CancellationToken cancellationToken) in D:\a\1\s\Ix.NET\Source\System.Interactive.Async\Select.cs:line 106
+   at System.Linq.AsyncEnumerable.AsyncIterator`1.MoveNext(CancellationToken cancellationToken) in D:\a\1\s\Ix.NET\Source\System.Interactive.Async\AsyncIterator.cs:line 98
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.Aggregate_[TSource,TAccumulate,TResult](IAsyncEnumerable`1 source, TAccumulate seed, Func`3 accumulator, Func`2 resultSelector, CancellationToken cancellationToken) in D:\a\1\s\Ix.NET\Source\System.Interactive.Async\Aggregate.cs:line 120
+   at Turing_Back_ED.DAL.AttributeStore.GetAllAsync(GeneralQueryModel criteria) in E:\a_PROJECTS\DOTNET-Core\Turing_Back_ED\Turing_Back_ED\DAL\AtrributeStore.cs:line 50
+   at Turing_Back_ED.Controllers.AttributesController.GetAll(GeneralQueryModel model) in E:\a_PROJECTS\DOTNET-Core\Turing_Back_ED\Turing_Back_ED\Controllers\AttributeController.cs:line 54
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Turing_Back_ED.ErrorMiddleware.Invoke(HttpContext context) in E:\a_PROJECTS\DOTNET-Core\Turing_Back_ED\Turing_Back_ED\Middlewares\ErrorMiddleware.cs:line 29
+2019-05-27T07:13:42.2970224+00:00 0HLN2EB829UCG:00000001 [INF] Request finished in 3229.5629ms 500 application/json (791a596a)
+2019-05-27T07:15:30.8616796+00:00 0HLN2ECCNE0GA:00000001 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/values   (ca22a1cb)
+2019-05-27T07:15:31.2558202+00:00 0HLN2ECCNE0GA:00000001 [INF] Executing endpoint '"Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)"' (500cc934)
+2019-05-27T07:15:31.3376532+00:00 0HLN2ECCNE0GA:00000001 [INF] Route matched with "{action = \"Get\", controller = \"Values\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[System.String]] Get()" on controller "Turing_Back_ED.Controllers.ValuesController" ("Turing_Back_ED"). (122b2fdf)
+2019-05-27T07:15:31.3940921+00:00 0HLN2ECCNE0GA:00000001 [INF] Executing action method "Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)" - Validation state: Valid (dad538d7)
+2019-05-27T07:15:31.4177661+00:00 0HLN2ECCNE0GA:00000001 [INF] Executed action method "Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 0.7011ms. (50a9e262)
+2019-05-27T07:15:31.4595771+00:00 0HLN2ECCNE0GA:00000001 [INF] Executing ObjectResult, writing value of type '"System.String[]"'. (8a1b66c8)
+2019-05-27T07:15:31.7433964+00:00 0HLN2ECCNE0GA:00000001 [INF] Executed action "Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)" in 386.0733ms (afa2e885)
+2019-05-27T07:15:31.7440406+00:00 0HLN2ECCNE0GA:00000001 [INF] Executed endpoint '"Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)"' (99874f2b)
+2019-05-27T07:15:31.7842435+00:00 0HLN2ECCNE0GA:00000001 [INF] Request finished in 944.7168ms 200 application/json; charset=utf-8 (791a596a)
+2019-05-27T07:15:40.5744231+00:00 0HLN2ECCNE0GC:00000001 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/attributes application/json 67 (ca22a1cb)
+2019-05-27T07:15:40.5860653+00:00 0HLN2ECCNE0GC:00000001 [INF] Executing endpoint '"Turing_Back_ED.Controllers.AttributesController.GetAll (Turing_Back_ED)"' (500cc934)
+2019-05-27T07:15:40.6580927+00:00 0HLN2ECCNE0GC:00000001 [INF] Route matched with "{action = \"GetAll\", controller = \"Attributes\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetAll(Turing_Back_ED.DomainModels.GeneralQueryModel)" on controller "Turing_Back_ED.Controllers.AttributesController" ("Turing_Back_ED"). (122b2fdf)
+2019-05-27T07:15:41.1158429+00:00 0HLN2ECCNE0GC:00000001 [INF] Executing action method "Turing_Back_ED.Controllers.AttributesController.GetAll (Turing_Back_ED)" - Validation state: Valid (dad538d7)
+2019-05-27T07:15:41.9961661+00:00 0HLN2ECCNE0GC:00000001 [INF] Entity Framework Core "2.2.4-servicing-10062" initialized '"TuringshopContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "None" (9958f5bb)
+2019-05-27T07:15:42.1070798+00:00 0HLN2ECCNE0GC:00000001 [WRN] Query: '"(from Attribute <generated>_2 in DbSet<Attribute> select [<generated>_2]).Skip(__p_0).Take(__p_1)"' uses a row limiting operation (Skip/Take) without OrderBy which may lead to unpredictable results. (32148ccc)
+2019-05-27T07:15:43.3406148+00:00 0HLN2ECCNE0GC:00000001 [INF] Executed DbCommand ("179"ms) [Parameters=["@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `a`.`attribute_id`, `a`.`name`
+FROM `turingshop`.`attribute` AS `a`
+LIMIT @__p_1 OFFSET @__p_0" (0723d8ff)
+2019-05-27T07:15:43.5610912+00:00 0HLN2ECCNE0GC:00000001 [INF] Executed action method "Turing_Back_ED.Controllers.AttributesController.GetAll (Turing_Back_ED)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 2444.8634ms. (50a9e262)
+2019-05-27T07:15:43.5859741+00:00 0HLN2ECCNE0GC:00000001 [INF] Executing ObjectResult, writing value of type '"Turing_Back_ED.DomainModels.SearchResponseModel"'. (8a1b66c8)
+2019-05-27T07:15:43.6103501+00:00 0HLN2ECCNE0GC:00000001 [INF] Executed action "Turing_Back_ED.Controllers.AttributesController.GetAll (Turing_Back_ED)" in 2951.2321ms (afa2e885)
+2019-05-27T07:15:43.6149328+00:00 0HLN2ECCNE0GC:00000001 [INF] Executed endpoint '"Turing_Back_ED.Controllers.AttributesController.GetAll (Turing_Back_ED)"' (99874f2b)
+2019-05-27T07:15:43.6272749+00:00 0HLN2ECCNE0GC:00000001 [INF] Request finished in 3052.8853ms 200 application/json; charset=utf-8 (791a596a)
+2019-05-27T07:15:57.8449174+00:00 0HLN2ECCNE0GC:00000002 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/attributes/1 application/json 67 (ca22a1cb)
+2019-05-27T07:15:57.8459929+00:00 0HLN2ECCNE0GC:00000002 [INF] Executing endpoint '"Turing_Back_ED.Controllers.AttributesController.FindAttribute (Turing_Back_ED)"' (500cc934)
+2019-05-27T07:15:57.8738555+00:00 0HLN2ECCNE0GC:00000002 [INF] Route matched with "{action = \"FindAttribute\", controller = \"Attributes\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] FindAttribute(Int32)" on controller "Turing_Back_ED.Controllers.AttributesController" ("Turing_Back_ED"). (122b2fdf)
+2019-05-27T07:15:57.8873625+00:00 0HLN2ECCNE0GC:00000002 [INF] Executing action method "Turing_Back_ED.Controllers.AttributesController.FindAttribute (Turing_Back_ED)" - Validation state: Valid (dad538d7)
+2019-05-27T07:15:57.9004601+00:00 0HLN2ECCNE0GC:00000002 [INF] Entity Framework Core "2.2.4-servicing-10062" initialized '"TuringshopContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "None" (9958f5bb)
+2019-05-27T07:15:58.1776743+00:00 0HLN2ECCNE0GC:00000002 [INF] Executed DbCommand ("40"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `e`.`attribute_id`, `e`.`name`
+FROM `turingshop`.`attribute` AS `e`
+WHERE `e`.`attribute_id` = @__get_Item_0
+LIMIT 1" (0723d8ff)
+2019-05-27T07:15:58.2217528+00:00 0HLN2ECCNE0GC:00000002 [INF] Executed action method "Turing_Back_ED.Controllers.AttributesController.FindAttribute (Turing_Back_ED)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 333.9743ms. (50a9e262)
+2019-05-27T07:15:58.2226493+00:00 0HLN2ECCNE0GC:00000002 [INF] Executing ObjectResult, writing value of type '"Turing_Back_ED.Models.Attribute"'. (8a1b66c8)
+2019-05-27T07:15:58.2238816+00:00 0HLN2ECCNE0GC:00000002 [INF] Executed action "Turing_Back_ED.Controllers.AttributesController.FindAttribute (Turing_Back_ED)" in 349.7013ms (afa2e885)
+2019-05-27T07:15:58.2244700+00:00 0HLN2ECCNE0GC:00000002 [INF] Executed endpoint '"Turing_Back_ED.Controllers.AttributesController.FindAttribute (Turing_Back_ED)"' (99874f2b)
+2019-05-27T07:15:58.2257199+00:00 0HLN2ECCNE0GC:00000002 [INF] Request finished in 380.5628ms 200 application/json; charset=utf-8 (791a596a)
+2019-05-27T07:15:58.2374077+00:00  [INF] Connection id ""0HLN2ECCNE0GC"", Request id ""0HLN2ECCNE0GC:00000002"": the application completed without reading the entire request body. (54ac9468)
+2019-05-27T07:19:02.7513636+00:00 0HLN2ECCNE0GE:00000001 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/attributes/1 application/json 67 (ca22a1cb)
+2019-05-27T07:19:02.7520771+00:00 0HLN2ECCNE0GE:00000001 [INF] Executing endpoint '"Turing_Back_ED.Controllers.AttributesController.FindAttribute (Turing_Back_ED)"' (500cc934)
+2019-05-27T07:19:02.7530141+00:00 0HLN2ECCNE0GE:00000001 [INF] Route matched with "{action = \"FindAttribute\", controller = \"Attributes\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] FindAttribute(Int32)" on controller "Turing_Back_ED.Controllers.AttributesController" ("Turing_Back_ED"). (122b2fdf)
+2019-05-27T07:19:02.7648129+00:00 0HLN2ECCNE0GE:00000001 [INF] Executing action method "Turing_Back_ED.Controllers.AttributesController.FindAttribute (Turing_Back_ED)" - Validation state: Valid (dad538d7)
+2019-05-27T07:19:02.7667076+00:00 0HLN2ECCNE0GE:00000001 [INF] Entity Framework Core "2.2.4-servicing-10062" initialized '"TuringshopContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "None" (9958f5bb)
+2019-05-27T07:19:02.7827331+00:00 0HLN2ECCNE0GE:00000001 [INF] Executed DbCommand ("2"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `e`.`attribute_id`, `e`.`name`
+FROM `turingshop`.`attribute` AS `e`
+WHERE `e`.`attribute_id` = @__get_Item_0
+LIMIT 1" (0723d8ff)
+2019-05-27T07:19:02.7845487+00:00 0HLN2ECCNE0GE:00000001 [INF] Executed action method "Turing_Back_ED.Controllers.AttributesController.FindAttribute (Turing_Back_ED)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 19.3658ms. (50a9e262)
+2019-05-27T07:19:02.7850120+00:00 0HLN2ECCNE0GE:00000001 [INF] Executing ObjectResult, writing value of type '"Turing_Back_ED.Models.Attribute"'. (8a1b66c8)
+2019-05-27T07:19:02.7858939+00:00 0HLN2ECCNE0GE:00000001 [INF] Executed action "Turing_Back_ED.Controllers.AttributesController.FindAttribute (Turing_Back_ED)" in 31.642ms (afa2e885)
+2019-05-27T07:19:02.7860763+00:00 0HLN2ECCNE0GE:00000001 [INF] Executed endpoint '"Turing_Back_ED.Controllers.AttributesController.FindAttribute (Turing_Back_ED)"' (99874f2b)
+2019-05-27T07:19:02.7863831+00:00 0HLN2ECCNE0GE:00000001 [INF] Request finished in 35.3301ms 200 application/json; charset=utf-8 (791a596a)
+2019-05-27T07:19:02.7867752+00:00  [INF] Connection id ""0HLN2ECCNE0GE"", Request id ""0HLN2ECCNE0GE:00000001"": the application completed without reading the entire request body. (54ac9468)
+2019-05-27T07:19:11.9071862+00:00 0HLN2ECCNE0GE:00000002 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/attributes application/json 67 (ca22a1cb)
+2019-05-27T07:19:11.9078472+00:00 0HLN2ECCNE0GE:00000002 [INF] Executing endpoint '"Turing_Back_ED.Controllers.AttributesController.GetAll (Turing_Back_ED)"' (500cc934)
+2019-05-27T07:19:11.9082100+00:00 0HLN2ECCNE0GE:00000002 [INF] Route matched with "{action = \"GetAll\", controller = \"Attributes\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetAll(Turing_Back_ED.DomainModels.GeneralQueryModel)" on controller "Turing_Back_ED.Controllers.AttributesController" ("Turing_Back_ED"). (122b2fdf)
+2019-05-27T07:19:11.9132613+00:00 0HLN2ECCNE0GE:00000002 [INF] Executing action method "Turing_Back_ED.Controllers.AttributesController.GetAll (Turing_Back_ED)" - Validation state: Valid (dad538d7)
+2019-05-27T07:19:11.9147314+00:00 0HLN2ECCNE0GE:00000002 [INF] Entity Framework Core "2.2.4-servicing-10062" initialized '"TuringshopContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "None" (9958f5bb)
+2019-05-27T07:19:11.9200161+00:00 0HLN2ECCNE0GE:00000002 [INF] Executed DbCommand ("1"ms) [Parameters=["@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `a`.`attribute_id`, `a`.`name`
+FROM `turingshop`.`attribute` AS `a`
+LIMIT @__p_1 OFFSET @__p_0" (0723d8ff)
+2019-05-27T07:19:11.9210358+00:00 0HLN2ECCNE0GE:00000002 [INF] Executed action method "Turing_Back_ED.Controllers.AttributesController.GetAll (Turing_Back_ED)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 7.5011ms. (50a9e262)
+2019-05-27T07:19:11.9213564+00:00 0HLN2ECCNE0GE:00000002 [INF] Executing ObjectResult, writing value of type '"Turing_Back_ED.DomainModels.SearchResponseModel"'. (8a1b66c8)
+2019-05-27T07:19:11.9222335+00:00 0HLN2ECCNE0GE:00000002 [INF] Executed action "Turing_Back_ED.Controllers.AttributesController.GetAll (Turing_Back_ED)" in 13.8467ms (afa2e885)
+2019-05-27T07:19:11.9223915+00:00 0HLN2ECCNE0GE:00000002 [INF] Executed endpoint '"Turing_Back_ED.Controllers.AttributesController.GetAll (Turing_Back_ED)"' (99874f2b)
+2019-05-27T07:19:11.9228145+00:00 0HLN2ECCNE0GE:00000002 [INF] Request finished in 15.8717ms 200 application/json; charset=utf-8 (791a596a)
+2019-05-27T07:19:18.2829783+00:00 0HLN2ECCNE0GE:00000003 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/attributes/1 application/json 67 (ca22a1cb)
+2019-05-27T07:19:18.2837948+00:00 0HLN2ECCNE0GE:00000003 [INF] Executing endpoint '"Turing_Back_ED.Controllers.AttributesController.FindAttribute (Turing_Back_ED)"' (500cc934)
+2019-05-27T07:19:18.2843513+00:00 0HLN2ECCNE0GE:00000003 [INF] Route matched with "{action = \"FindAttribute\", controller = \"Attributes\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] FindAttribute(Int32)" on controller "Turing_Back_ED.Controllers.AttributesController" ("Turing_Back_ED"). (122b2fdf)
+2019-05-27T07:19:18.2866774+00:00 0HLN2ECCNE0GE:00000003 [INF] Executing action method "Turing_Back_ED.Controllers.AttributesController.FindAttribute (Turing_Back_ED)" - Validation state: Valid (dad538d7)
+2019-05-27T07:19:18.2875940+00:00 0HLN2ECCNE0GE:00000003 [INF] Entity Framework Core "2.2.4-servicing-10062" initialized '"TuringshopContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "None" (9958f5bb)
+2019-05-27T07:19:18.2976423+00:00 0HLN2ECCNE0GE:00000003 [INF] Executed DbCommand ("1"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `e`.`attribute_id`, `e`.`name`
+FROM `turingshop`.`attribute` AS `e`
+WHERE `e`.`attribute_id` = @__get_Item_0
+LIMIT 1" (0723d8ff)
+2019-05-27T07:19:18.2983523+00:00 0HLN2ECCNE0GE:00000003 [INF] Executed action method "Turing_Back_ED.Controllers.AttributesController.FindAttribute (Turing_Back_ED)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 11.4012ms. (50a9e262)
+2019-05-27T07:19:18.2988084+00:00 0HLN2ECCNE0GE:00000003 [INF] Executing ObjectResult, writing value of type '"Turing_Back_ED.Models.Attribute"'. (8a1b66c8)
+2019-05-27T07:19:18.2995915+00:00 0HLN2ECCNE0GE:00000003 [INF] Executed action "Turing_Back_ED.Controllers.AttributesController.FindAttribute (Turing_Back_ED)" in 14.6644ms (afa2e885)
+2019-05-27T07:19:18.2997591+00:00 0HLN2ECCNE0GE:00000003 [INF] Executed endpoint '"Turing_Back_ED.Controllers.AttributesController.FindAttribute (Turing_Back_ED)"' (99874f2b)
+2019-05-27T07:19:18.3000781+00:00 0HLN2ECCNE0GE:00000003 [INF] Request finished in 17.2777ms 200 application/json; charset=utf-8 (791a596a)
+2019-05-27T07:19:18.3002559+00:00  [INF] Connection id ""0HLN2ECCNE0GE"", Request id ""0HLN2ECCNE0GE:00000003"": the application completed without reading the entire request body. (54ac9468)
+2019-05-27T07:23:00.6853718+00:00 0HLN2ECCNE0GG:00000001 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/shippings/1 application/json 67 (ca22a1cb)
+2019-05-27T07:23:00.6977361+00:00 0HLN2ECCNE0GG:00000001 [INF] Request finished in 12.553ms 404  (791a596a)
+2019-05-27T07:23:00.6981007+00:00  [INF] Connection id ""0HLN2ECCNE0GG"", Request id ""0HLN2ECCNE0GG:00000001"": the application completed without reading the entire request body. (54ac9468)
+2019-05-27T07:23:08.4657821+00:00 0HLN2ECCNE0GG:00000002 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/shippings application/json 67 (ca22a1cb)
+2019-05-27T07:23:08.4672265+00:00 0HLN2ECCNE0GG:00000002 [INF] Request finished in 1.5725ms 404  (791a596a)
+2019-05-27T07:23:08.4674584+00:00  [INF] Connection id ""0HLN2ECCNE0GG"", Request id ""0HLN2ECCNE0GG:00000002"": the application completed without reading the entire request body. (54ac9468)
+2019-05-27T07:24:07.1689907+00:00 0HLN2EH6BTM4Q:00000001 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/values   (ca22a1cb)
+2019-05-27T07:24:08.1560017+00:00 0HLN2EH6BTM4Q:00000001 [INF] Executing endpoint '"Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)"' (500cc934)
+2019-05-27T07:24:08.2854528+00:00 0HLN2EH6BTM4Q:00000001 [INF] Route matched with "{action = \"Get\", controller = \"Values\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[System.String]] Get()" on controller "Turing_Back_ED.Controllers.ValuesController" ("Turing_Back_ED"). (122b2fdf)
+2019-05-27T07:24:08.4214329+00:00 0HLN2EH6BTM4Q:00000001 [INF] Executing action method "Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)" - Validation state: Valid (dad538d7)
+2019-05-27T07:24:08.4509525+00:00 0HLN2EH6BTM4Q:00000001 [INF] Executed action method "Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 1.3553ms. (50a9e262)
+2019-05-27T07:24:08.5218102+00:00 0HLN2EH6BTM4Q:00000001 [INF] Executing ObjectResult, writing value of type '"System.String[]"'. (8a1b66c8)
+2019-05-27T07:24:08.8117596+00:00 0HLN2EH6BTM4Q:00000001 [INF] Executed action "Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)" in 495.8566ms (afa2e885)
+2019-05-27T07:24:08.8120939+00:00 0HLN2EH6BTM4Q:00000001 [INF] Executed endpoint '"Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)"' (99874f2b)
+2019-05-27T07:24:08.8351654+00:00 0HLN2EH6BTM4Q:00000001 [INF] Request finished in 1764.633ms 200 application/json; charset=utf-8 (791a596a)
+2019-05-27T07:24:27.8700989+00:00 0HLN2EH6BTM4S:00000001 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/shippings application/json 67 (ca22a1cb)
+2019-05-27T07:24:27.8841645+00:00 0HLN2EH6BTM4S:00000001 [INF] Executing endpoint '"Turing_Back_ED.Controllers.ShippingsController.GetAll (Turing_Back_ED)"' (500cc934)
+2019-05-27T07:24:27.9626323+00:00 0HLN2EH6BTM4S:00000001 [INF] Route matched with "{action = \"GetAll\", controller = \"Shippings\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetAll(Turing_Back_ED.DomainModels.GeneralQueryModel)" on controller "Turing_Back_ED.Controllers.ShippingsController" ("Turing_Back_ED"). (122b2fdf)
+2019-05-27T07:24:28.4260104+00:00 0HLN2EH6BTM4S:00000001 [INF] Executing action method "Turing_Back_ED.Controllers.ShippingsController.GetAll (Turing_Back_ED)" - Validation state: Valid (dad538d7)
+2019-05-27T07:24:29.2847866+00:00 0HLN2EH6BTM4S:00000001 [INF] Entity Framework Core "2.2.4-servicing-10062" initialized '"TuringshopContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "None" (9958f5bb)
+2019-05-27T07:24:29.3993067+00:00 0HLN2EH6BTM4S:00000001 [WRN] Query: '"(from Shipping <generated>_2 in DbSet<Shipping> select [<generated>_2]).Skip(__p_0).Take(__p_1)"' uses a row limiting operation (Skip/Take) without OrderBy which may lead to unpredictable results. (32148ccc)
+2019-05-27T07:24:30.6230790+00:00 0HLN2EH6BTM4S:00000001 [INF] Executed DbCommand ("172"ms) [Parameters=["@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `s`.`shipping_id`, `s`.`shipping_cost`, `s`.`shipping_region_id`, `s`.`shipping_type`
+FROM `turingshop`.`shipping` AS `s`
+LIMIT @__p_1 OFFSET @__p_0" (0723d8ff)
+2019-05-27T07:24:30.8476526+00:00 0HLN2EH6BTM4S:00000001 [INF] Executed action method "Turing_Back_ED.Controllers.ShippingsController.GetAll (Turing_Back_ED)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 2421.256ms. (50a9e262)
+2019-05-27T07:24:30.8735113+00:00 0HLN2EH6BTM4S:00000001 [INF] Executing ObjectResult, writing value of type '"Turing_Back_ED.DomainModels.SearchResponseModel"'. (8a1b66c8)
+2019-05-27T07:24:30.9012618+00:00 0HLN2EH6BTM4S:00000001 [INF] Executed action "Turing_Back_ED.Controllers.ShippingsController.GetAll (Turing_Back_ED)" in 2938.2956ms (afa2e885)
+2019-05-27T07:24:30.9057231+00:00 0HLN2EH6BTM4S:00000001 [INF] Executed endpoint '"Turing_Back_ED.Controllers.ShippingsController.GetAll (Turing_Back_ED)"' (99874f2b)
+2019-05-27T07:24:30.9183974+00:00 0HLN2EH6BTM4S:00000001 [INF] Request finished in 3048.5732ms 200 application/json; charset=utf-8 (791a596a)
+2019-05-27T07:24:54.8360439+00:00 0HLN2EH6BTM4S:00000002 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/shippings/1 application/json 67 (ca22a1cb)
+2019-05-27T07:24:54.8369792+00:00 0HLN2EH6BTM4S:00000002 [INF] Executing endpoint '"Turing_Back_ED.Controllers.ShippingsController.FindShipping (Turing_Back_ED)"' (500cc934)
+2019-05-27T07:24:54.8601392+00:00 0HLN2EH6BTM4S:00000002 [INF] Route matched with "{action = \"FindShipping\", controller = \"Shippings\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] FindShipping(Int32)" on controller "Turing_Back_ED.Controllers.ShippingsController" ("Turing_Back_ED"). (122b2fdf)
+2019-05-27T07:24:54.8727231+00:00 0HLN2EH6BTM4S:00000002 [INF] Executing action method "Turing_Back_ED.Controllers.ShippingsController.FindShipping (Turing_Back_ED)" - Validation state: Valid (dad538d7)
+2019-05-27T07:24:54.8887995+00:00 0HLN2EH6BTM4S:00000002 [INF] Entity Framework Core "2.2.4-servicing-10062" initialized '"TuringshopContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "None" (9958f5bb)
+2019-05-27T07:24:55.1551948+00:00 0HLN2EH6BTM4S:00000002 [INF] Executed DbCommand ("36"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `e`.`shipping_id`, `e`.`shipping_cost`, `e`.`shipping_region_id`, `e`.`shipping_type`
+FROM `turingshop`.`shipping` AS `e`
+WHERE `e`.`shipping_id` = @__get_Item_0
+LIMIT 1" (0723d8ff)
+2019-05-27T07:24:55.1974582+00:00 0HLN2EH6BTM4S:00000002 [INF] Executed action method "Turing_Back_ED.Controllers.ShippingsController.FindShipping (Turing_Back_ED)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 324.4908ms. (50a9e262)
+2019-05-27T07:24:55.1980636+00:00 0HLN2EH6BTM4S:00000002 [INF] Executing ObjectResult, writing value of type '"Turing_Back_ED.Models.Shipping"'. (8a1b66c8)
+2019-05-27T07:24:55.1988903+00:00 0HLN2EH6BTM4S:00000002 [INF] Executed action "Turing_Back_ED.Controllers.ShippingsController.FindShipping (Turing_Back_ED)" in 338.5045ms (afa2e885)
+2019-05-27T07:24:55.1992530+00:00 0HLN2EH6BTM4S:00000002 [INF] Executed endpoint '"Turing_Back_ED.Controllers.ShippingsController.FindShipping (Turing_Back_ED)"' (99874f2b)
+2019-05-27T07:24:55.1999687+00:00 0HLN2EH6BTM4S:00000002 [INF] Request finished in 364.1688ms 200 application/json; charset=utf-8 (791a596a)
+2019-05-27T07:24:55.2486484+00:00  [INF] Connection id ""0HLN2EH6BTM4S"", Request id ""0HLN2EH6BTM4S:00000002"": the application completed without reading the entire request body. (54ac9468)
+2019-05-27T07:25:03.2777810+00:00 0HLN2EH6BTM4S:00000003 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/shippings/5 application/json 67 (ca22a1cb)
+2019-05-27T07:25:03.2782367+00:00 0HLN2EH6BTM4S:00000003 [INF] Executing endpoint '"Turing_Back_ED.Controllers.ShippingsController.FindShipping (Turing_Back_ED)"' (500cc934)
+2019-05-27T07:25:03.2789716+00:00 0HLN2EH6BTM4S:00000003 [INF] Route matched with "{action = \"FindShipping\", controller = \"Shippings\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] FindShipping(Int32)" on controller "Turing_Back_ED.Controllers.ShippingsController" ("Turing_Back_ED"). (122b2fdf)
+2019-05-27T07:25:03.2812303+00:00 0HLN2EH6BTM4S:00000003 [INF] Executing action method "Turing_Back_ED.Controllers.ShippingsController.FindShipping (Turing_Back_ED)" - Validation state: Valid (dad538d7)
+2019-05-27T07:25:03.2831398+00:00 0HLN2EH6BTM4S:00000003 [INF] Entity Framework Core "2.2.4-servicing-10062" initialized '"TuringshopContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "None" (9958f5bb)
+2019-05-27T07:25:03.2936103+00:00 0HLN2EH6BTM4S:00000003 [INF] Executed DbCommand ("1"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `e`.`shipping_id`, `e`.`shipping_cost`, `e`.`shipping_region_id`, `e`.`shipping_type`
+FROM `turingshop`.`shipping` AS `e`
+WHERE `e`.`shipping_id` = @__get_Item_0
+LIMIT 1" (0723d8ff)
+2019-05-27T07:25:03.2949089+00:00 0HLN2EH6BTM4S:00000003 [INF] Executed action method "Turing_Back_ED.Controllers.ShippingsController.FindShipping (Turing_Back_ED)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 13.4221ms. (50a9e262)
+2019-05-27T07:25:03.2953513+00:00 0HLN2EH6BTM4S:00000003 [INF] Executing ObjectResult, writing value of type '"Turing_Back_ED.Models.Shipping"'. (8a1b66c8)
+2019-05-27T07:25:03.2961408+00:00 0HLN2EH6BTM4S:00000003 [INF] Executed action "Turing_Back_ED.Controllers.ShippingsController.FindShipping (Turing_Back_ED)" in 16.9422ms (afa2e885)
+2019-05-27T07:25:03.2963065+00:00 0HLN2EH6BTM4S:00000003 [INF] Executed endpoint '"Turing_Back_ED.Controllers.ShippingsController.FindShipping (Turing_Back_ED)"' (99874f2b)
+2019-05-27T07:25:03.2972213+00:00 0HLN2EH6BTM4S:00000003 [INF] Request finished in 19.4968ms 200 application/json; charset=utf-8 (791a596a)
+2019-05-27T07:25:03.2978691+00:00  [INF] Connection id ""0HLN2EH6BTM4S"", Request id ""0HLN2EH6BTM4S:00000003"": the application completed without reading the entire request body. (54ac9468)
+2019-05-27T07:25:14.3242819+00:00 0HLN2EH6BTM4S:00000004 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/shippings/1 application/json 67 (ca22a1cb)
+2019-05-27T07:25:14.3248155+00:00 0HLN2EH6BTM4S:00000004 [INF] Executing endpoint '"Turing_Back_ED.Controllers.ShippingsController.FindShipping (Turing_Back_ED)"' (500cc934)
+2019-05-27T07:25:14.3251081+00:00 0HLN2EH6BTM4S:00000004 [INF] Route matched with "{action = \"FindShipping\", controller = \"Shippings\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] FindShipping(Int32)" on controller "Turing_Back_ED.Controllers.ShippingsController" ("Turing_Back_ED"). (122b2fdf)
+2019-05-27T07:25:14.3270808+00:00 0HLN2EH6BTM4S:00000004 [INF] Executing action method "Turing_Back_ED.Controllers.ShippingsController.FindShipping (Turing_Back_ED)" - Validation state: Valid (dad538d7)
+2019-05-27T07:25:14.3317985+00:00 0HLN2EH6BTM4S:00000004 [INF] Entity Framework Core "2.2.4-servicing-10062" initialized '"TuringshopContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "None" (9958f5bb)
+2019-05-27T07:25:14.3392805+00:00 0HLN2EH6BTM4S:00000004 [INF] Executed DbCommand ("1"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `e`.`shipping_id`, `e`.`shipping_cost`, `e`.`shipping_region_id`, `e`.`shipping_type`
+FROM `turingshop`.`shipping` AS `e`
+WHERE `e`.`shipping_id` = @__get_Item_0
+LIMIT 1" (0723d8ff)
+2019-05-27T07:25:14.3399199+00:00 0HLN2EH6BTM4S:00000004 [INF] Executed action method "Turing_Back_ED.Controllers.ShippingsController.FindShipping (Turing_Back_ED)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 12.6527ms. (50a9e262)
+2019-05-27T07:25:14.3403241+00:00 0HLN2EH6BTM4S:00000004 [INF] Executing ObjectResult, writing value of type '"Turing_Back_ED.Models.Shipping"'. (8a1b66c8)
+2019-05-27T07:25:14.3410442+00:00 0HLN2EH6BTM4S:00000004 [INF] Executed action "Turing_Back_ED.Controllers.ShippingsController.FindShipping (Turing_Back_ED)" in 15.7627ms (afa2e885)
+2019-05-27T07:25:14.3412639+00:00 0HLN2EH6BTM4S:00000004 [INF] Executed endpoint '"Turing_Back_ED.Controllers.ShippingsController.FindShipping (Turing_Back_ED)"' (99874f2b)
+2019-05-27T07:25:14.3416276+00:00 0HLN2EH6BTM4S:00000004 [INF] Request finished in 17.502ms 200 application/json; charset=utf-8 (791a596a)
+2019-05-27T07:25:14.3417780+00:00  [INF] Connection id ""0HLN2EH6BTM4S"", Request id ""0HLN2EH6BTM4S:00000004"": the application completed without reading the entire request body. (54ac9468)
+2019-05-27T07:51:56.3895509+00:00 0HLN2F0O3PQHT:00000001 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/values   (ca22a1cb)
+2019-05-27T07:51:56.6422719+00:00 0HLN2F0O3PQHT:00000001 [INF] Executing endpoint '"Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)"' (500cc934)
+2019-05-27T07:51:56.7018341+00:00 0HLN2F0O3PQHT:00000001 [INF] Route matched with "{action = \"Get\", controller = \"Values\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[System.String]] Get()" on controller "Turing_Back_ED.Controllers.ValuesController" ("Turing_Back_ED"). (122b2fdf)
+2019-05-27T07:51:56.7477906+00:00 0HLN2F0O3PQHT:00000001 [INF] Executing action method "Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)" - Validation state: Valid (dad538d7)
+2019-05-27T07:51:56.7645492+00:00 0HLN2F0O3PQHT:00000001 [INF] Executed action method "Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 0.597ms. (50a9e262)
+2019-05-27T07:51:56.7964213+00:00 0HLN2F0O3PQHT:00000001 [INF] Executing ObjectResult, writing value of type '"System.String[]"'. (8a1b66c8)
+2019-05-27T07:51:56.9287938+00:00 0HLN2F0O3PQHT:00000001 [INF] Executed action "Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)" in 206.2171ms (afa2e885)
+2019-05-27T07:51:56.9293309+00:00 0HLN2F0O3PQHT:00000001 [INF] Executed endpoint '"Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)"' (99874f2b)
+2019-05-27T07:51:56.9499641+00:00 0HLN2F0O3PQHT:00000001 [INF] Request finished in 579.3983ms 200 application/json; charset=utf-8 (791a596a)
+2019-05-27T07:54:32.9946681+00:00 0HLN2F0O3PQHV:00000001 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/shipping/regions application/json 67 (ca22a1cb)
+2019-05-27T07:54:33.0101763+00:00 0HLN2F0O3PQHV:00000001 [INF] Request finished in 15.7645ms 404  (791a596a)
+2019-05-27T07:54:33.0533047+00:00  [INF] Connection id ""0HLN2F0O3PQHV"", Request id ""0HLN2F0O3PQHV:00000001"": the application completed without reading the entire request body. (54ac9468)
+2019-05-27T07:55:33.0270503+00:00 0HLN2F2OCCOO0:00000001 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/values   (ca22a1cb)
+2019-05-27T07:55:34.1360335+00:00 0HLN2F2OCCOO0:00000001 [INF] Executing endpoint '"Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)"' (500cc934)
+2019-05-27T07:55:34.3421889+00:00 0HLN2F2OCCOO0:00000001 [INF] Route matched with "{action = \"Get\", controller = \"Values\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[System.String]] Get()" on controller "Turing_Back_ED.Controllers.ValuesController" ("Turing_Back_ED"). (122b2fdf)
+2019-05-27T07:55:34.4682051+00:00 0HLN2F2OCCOO0:00000001 [INF] Executing action method "Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)" - Validation state: Valid (dad538d7)
+2019-05-27T07:55:34.4916352+00:00 0HLN2F2OCCOO0:00000001 [INF] Executed action method "Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 0.9802ms. (50a9e262)
+2019-05-27T07:55:34.5567187+00:00 0HLN2F2OCCOO0:00000001 [INF] Executing ObjectResult, writing value of type '"System.String[]"'. (8a1b66c8)
+2019-05-27T07:55:34.9068064+00:00 0HLN2F2OCCOO0:00000001 [INF] Executed action "Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)" in 529.7851ms (afa2e885)
+2019-05-27T07:55:34.9075300+00:00 0HLN2F2OCCOO0:00000001 [INF] Executed endpoint '"Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)"' (99874f2b)
+2019-05-27T07:55:34.9523088+00:00 0HLN2F2OCCOO0:00000001 [INF] Request finished in 2059.2255ms 200 application/json; charset=utf-8 (791a596a)
+2019-05-27T07:55:51.9249275+00:00 0HLN2F2OCCOO2:00000001 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/shipping/regions application/json 67 (ca22a1cb)
+2019-05-27T07:55:51.9579363+00:00 0HLN2F2OCCOO2:00000001 [INF] Executing endpoint '"Turing_Back_ED.Controllers.ShippingController.GetAllRegions (Turing_Back_ED)"' (500cc934)
+2019-05-27T07:55:52.0992071+00:00 0HLN2F2OCCOO2:00000001 [INF] Route matched with "{action = \"GetAllRegions\", controller = \"Shipping\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetAllRegions(Turing_Back_ED.DomainModels.GeneralQueryModel)" on controller "Turing_Back_ED.Controllers.ShippingController" ("Turing_Back_ED"). (122b2fdf)
+2019-05-27T07:55:53.2485076+00:00 0HLN2F2OCCOO2:00000001 [INF] Executing action method "Turing_Back_ED.Controllers.ShippingController.GetAllRegions (Turing_Back_ED)" - Validation state: Valid (dad538d7)
+2019-05-27T07:55:54.6076934+00:00 0HLN2F2OCCOO2:00000001 [INF] Entity Framework Core "2.2.4-servicing-10062" initialized '"TuringshopContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "None" (9958f5bb)
+2019-05-27T07:55:54.7447754+00:00 0HLN2F2OCCOO2:00000001 [WRN] Query: '"(from ShippingRegion <generated>_2 in DbSet<ShippingRegion> select [<generated>_2]).Skip(__p_0).Take..."' uses a row limiting operation (Skip/Take) without OrderBy which may lead to unpredictable results. (32148ccc)
+2019-05-27T07:55:56.8315430+00:00 0HLN2F2OCCOO2:00000001 [INF] Executed DbCommand ("198"ms) [Parameters=["@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `s`.`shipping_region_id`, `s`.`shipping_region`
+FROM `turingshop`.`shipping_region` AS `s`
+LIMIT @__p_1 OFFSET @__p_0" (0723d8ff)
+2019-05-27T07:55:57.0460959+00:00 0HLN2F2OCCOO2:00000001 [INF] Executed action method "Turing_Back_ED.Controllers.ShippingController.GetAllRegions (Turing_Back_ED)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 3797.2211ms. (50a9e262)
+2019-05-27T07:55:57.0708627+00:00 0HLN2F2OCCOO2:00000001 [INF] Executing ObjectResult, writing value of type '"Turing_Back_ED.DomainModels.SearchResponseModel"'. (8a1b66c8)
+2019-05-27T07:55:57.0940730+00:00 0HLN2F2OCCOO2:00000001 [INF] Executed action "Turing_Back_ED.Controllers.ShippingController.GetAllRegions (Turing_Back_ED)" in 4994.5548ms (afa2e885)
+2019-05-27T07:55:57.0993447+00:00 0HLN2F2OCCOO2:00000001 [INF] Executed endpoint '"Turing_Back_ED.Controllers.ShippingController.GetAllRegions (Turing_Back_ED)"' (99874f2b)
+2019-05-27T07:55:57.1112858+00:00 0HLN2F2OCCOO2:00000001 [INF] Request finished in 5186.596ms 200 application/json; charset=utf-8 (791a596a)
+2019-05-27T07:56:48.2419693+00:00 0HLN2F2OCCOO2:00000002 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/shipping/regions/1 application/json 67 (ca22a1cb)
+2019-05-27T07:56:48.2426229+00:00 0HLN2F2OCCOO2:00000002 [INF] Executing endpoint '"Turing_Back_ED.Controllers.ShippingController.FindRegionById (Turing_Back_ED)"' (500cc934)
+2019-05-27T07:56:48.2706085+00:00 0HLN2F2OCCOO2:00000002 [INF] Route matched with "{action = \"FindRegionById\", controller = \"Shipping\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] FindRegionById(Int32)" on controller "Turing_Back_ED.Controllers.ShippingController" ("Turing_Back_ED"). (122b2fdf)
+2019-05-27T07:56:48.3020545+00:00 0HLN2F2OCCOO2:00000002 [INF] Executing action method "Turing_Back_ED.Controllers.ShippingController.FindRegionById (Turing_Back_ED)" - Validation state: Valid (dad538d7)
+2019-05-27T07:56:48.3147727+00:00 0HLN2F2OCCOO2:00000002 [INF] Entity Framework Core "2.2.4-servicing-10062" initialized '"TuringshopContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "None" (9958f5bb)
+2019-05-27T07:56:48.5875309+00:00 0HLN2F2OCCOO2:00000002 [INF] Executed DbCommand ("38"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `e`.`shipping_region_id`, `e`.`shipping_region`
+FROM `turingshop`.`shipping_region` AS `e`
+WHERE `e`.`shipping_region_id` = @__get_Item_0
+LIMIT 1" (0723d8ff)
+2019-05-27T07:56:48.6361658+00:00 0HLN2F2OCCOO2:00000002 [INF] Executed action method "Turing_Back_ED.Controllers.ShippingController.FindRegionById (Turing_Back_ED)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 333.784ms. (50a9e262)
+2019-05-27T07:56:48.6367422+00:00 0HLN2F2OCCOO2:00000002 [INF] Executing ObjectResult, writing value of type '"Turing_Back_ED.Models.ShippingRegion"'. (8a1b66c8)
+2019-05-27T07:56:48.6379231+00:00 0HLN2F2OCCOO2:00000002 [INF] Executed action "Turing_Back_ED.Controllers.ShippingController.FindRegionById (Turing_Back_ED)" in 366.6515ms (afa2e885)
+2019-05-27T07:56:48.6381355+00:00 0HLN2F2OCCOO2:00000002 [INF] Executed endpoint '"Turing_Back_ED.Controllers.ShippingController.FindRegionById (Turing_Back_ED)"' (99874f2b)
+2019-05-27T07:56:48.6387021+00:00 0HLN2F2OCCOO2:00000002 [INF] Request finished in 397.0304ms 200 application/json; charset=utf-8 (791a596a)
+2019-05-27T07:56:48.6472369+00:00  [INF] Connection id ""0HLN2F2OCCOO2"", Request id ""0HLN2F2OCCOO2:00000002"": the application completed without reading the entire request body. (54ac9468)
+2019-05-27T08:31:57.3928629+00:00 0HLN2FN3FD94K:00000001 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/values   (ca22a1cb)
+2019-05-27T08:31:57.7001889+00:00 0HLN2FN3FD94K:00000001 [INF] Executing endpoint '"Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)"' (500cc934)
+2019-05-27T08:31:57.7626183+00:00 0HLN2FN3FD94K:00000001 [INF] Route matched with "{action = \"Get\", controller = \"Values\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[System.String]] Get()" on controller "Turing_Back_ED.Controllers.ValuesController" ("Turing_Back_ED"). (122b2fdf)
+2019-05-27T08:31:57.8208233+00:00 0HLN2FN3FD94K:00000001 [INF] Executing action method "Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)" - Validation state: Valid (dad538d7)
+2019-05-27T08:31:57.8350555+00:00 0HLN2FN3FD94K:00000001 [INF] Executed action method "Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 0.6181ms. (50a9e262)
+2019-05-27T08:31:57.8617762+00:00 0HLN2FN3FD94K:00000001 [INF] Executing ObjectResult, writing value of type '"System.String[]"'. (8a1b66c8)
+2019-05-27T08:31:58.0485701+00:00 0HLN2FN3FD94K:00000001 [INF] Executed action "Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)" in 266.1308ms (afa2e885)
+2019-05-27T08:31:58.0492451+00:00 0HLN2FN3FD94K:00000001 [INF] Executed endpoint '"Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)"' (99874f2b)
+2019-05-27T08:31:58.0731683+00:00 0HLN2FN3FD94K:00000001 [INF] Request finished in 722.5993ms 200 application/json; charset=utf-8 (791a596a)
+2019-05-27T08:35:40.2711730+00:00 0HLN2FN3FD94M:00000001 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/attributes/inProduct/1 application/json 67 (ca22a1cb)
+2019-05-27T08:35:40.2869802+00:00 0HLN2FN3FD94M:00000001 [INF] Executing endpoint '"Turing_Back_ED.Controllers.AttributesController.GetAttibutesInProduct (Turing_Back_ED)"' (500cc934)
+2019-05-27T08:35:40.3592762+00:00 0HLN2FN3FD94M:00000001 [INF] Route matched with "{action = \"GetAttibutesInProduct\", controller = \"Attributes\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetAttibutesInProduct(Int32, Turing_Back_ED.DomainModels.GeneralQueryModel)" on controller "Turing_Back_ED.Controllers.AttributesController" ("Turing_Back_ED"). (122b2fdf)
+2019-05-27T08:35:40.8503440+00:00 0HLN2FN3FD94M:00000001 [INF] Executing action method "Turing_Back_ED.Controllers.AttributesController.GetAttibutesInProduct (Turing_Back_ED)" - Validation state: Valid (dad538d7)
+2019-05-27T08:35:42.8501495+00:00 0HLN2FN3FD94M:00000001 [INF] Entity Framework Core "2.2.4-servicing-10062" initialized '"TuringshopContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "None" (9958f5bb)
+2019-05-27T08:35:43.0887905+00:00 0HLN2FN3FD94M:00000001 [WRN] Query: '"(from ProductAttribute a in DbSet<ProductAttribute> where [a].ProductId == __product_Id_0 select [a]..."' uses a row limiting operation (Skip/Take) without OrderBy which may lead to unpredictable results. (32148ccc)
+2019-05-27T08:35:44.6744130+00:00 0HLN2FN3FD94M:00000001 [INF] Executed DbCommand ("173"ms) [Parameters=["@__product_Id_0='?' (DbType = Int32), @__p_2='?' (DbType = Int32), @__p_1='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `a`.`product_id`, `a`.`attribute_value_id`
+FROM `turingshop`.`product_attribute` AS `a`
+WHERE `a`.`product_id` = @__product_Id_0
+LIMIT @__p_2 OFFSET @__p_1" (0723d8ff)
+2019-05-27T08:35:44.8563415+00:00 0HLN2FN3FD94M:00000001 [INF] Executed action method "Turing_Back_ED.Controllers.AttributesController.GetAttibutesInProduct (Turing_Back_ED)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 4005.6589ms. (50a9e262)
+2019-05-27T08:35:44.8806559+00:00 0HLN2FN3FD94M:00000001 [INF] Executing ObjectResult, writing value of type '"Turing_Back_ED.DomainModels.SearchResponseModel"'. (8a1b66c8)
+2019-05-27T08:35:44.9068698+00:00 0HLN2FN3FD94M:00000001 [INF] Executed action "Turing_Back_ED.Controllers.AttributesController.GetAttibutesInProduct (Turing_Back_ED)" in 4547.2582ms (afa2e885)
+2019-05-27T08:35:44.9118237+00:00 0HLN2FN3FD94M:00000001 [INF] Executed endpoint '"Turing_Back_ED.Controllers.AttributesController.GetAttibutesInProduct (Turing_Back_ED)"' (99874f2b)
+2019-05-27T08:35:44.9274397+00:00 0HLN2FN3FD94M:00000001 [INF] Request finished in 4656.5437ms 200 application/json; charset=utf-8 (791a596a)
+2019-05-27T08:38:14.5798155+00:00 0HLN2FN3FD94O:00000001 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/attributes/values/1 application/json 67 (ca22a1cb)
+2019-05-27T08:38:14.5951320+00:00 0HLN2FN3FD94O:00000001 [INF] Executing endpoint '"Turing_Back_ED.Controllers.AttributesController.GetValues (Turing_Back_ED)"' (500cc934)
+2019-05-27T08:38:14.6240190+00:00 0HLN2FN3FD94O:00000001 [INF] Route matched with "{action = \"GetValues\", controller = \"Attributes\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetValues(Int32, Turing_Back_ED.DomainModels.GeneralQueryModel)" on controller "Turing_Back_ED.Controllers.AttributesController" ("Turing_Back_ED"). (122b2fdf)
+2019-05-27T08:38:14.6297142+00:00 0HLN2FN3FD94O:00000001 [INF] Executing action method "Turing_Back_ED.Controllers.AttributesController.GetValues (Turing_Back_ED)" - Validation state: Valid (dad538d7)
+2019-05-27T08:38:14.6654232+00:00 0HLN2FN3FD94O:00000001 [INF] Entity Framework Core "2.2.4-servicing-10062" initialized '"TuringshopContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "None" (9958f5bb)
+2019-05-27T08:38:14.7130184+00:00 0HLN2FN3FD94O:00000001 [WRN] Query: '"(from AttributeValue a in DbSet<AttributeValue> where [a].AttributeId == __attribute_Id_0 select [a]..."' uses a row limiting operation (Skip/Take) without OrderBy which may lead to unpredictable results. (32148ccc)
+2019-05-27T08:38:14.9352553+00:00 0HLN2FN3FD94O:00000001 [INF] Executed DbCommand ("40"ms) [Parameters=["@__attribute_Id_0='?' (DbType = Int32), @__p_2='?' (DbType = Int32), @__p_1='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `a`.`attribute_value_id`, `a`.`attribute_id`, `a`.`value`
+FROM `turingshop`.`attribute_value` AS `a`
+WHERE `a`.`attribute_id` = @__attribute_Id_0
+LIMIT @__p_2 OFFSET @__p_1" (0723d8ff)
+2019-05-27T08:38:14.9987512+00:00 0HLN2FN3FD94O:00000001 [INF] Executed action method "Turing_Back_ED.Controllers.AttributesController.GetValues (Turing_Back_ED)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 368.8046ms. (50a9e262)
+2019-05-27T08:38:14.9992506+00:00 0HLN2FN3FD94O:00000001 [INF] Executing ObjectResult, writing value of type '"Turing_Back_ED.DomainModels.SearchResponseModel"'. (8a1b66c8)
+2019-05-27T08:38:15.0099470+00:00 0HLN2FN3FD94O:00000001 [INF] Executed action "Turing_Back_ED.Controllers.AttributesController.GetValues (Turing_Back_ED)" in 385.551ms (afa2e885)
+2019-05-27T08:38:15.0104381+00:00 0HLN2FN3FD94O:00000001 [INF] Executed endpoint '"Turing_Back_ED.Controllers.AttributesController.GetValues (Turing_Back_ED)"' (99874f2b)
+2019-05-27T08:38:15.0110431+00:00 0HLN2FN3FD94O:00000001 [INF] Request finished in 431.5903ms 200 application/json; charset=utf-8 (791a596a)
+2019-05-27T09:01:04.3998607+00:00 0HLN2G7C1BE9D:00000001 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/values   (ca22a1cb)
+2019-05-27T09:01:04.9195581+00:00 0HLN2G7C1BE9D:00000001 [INF] Executing endpoint '"Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)"' (500cc934)
+2019-05-27T09:01:05.0240522+00:00 0HLN2G7C1BE9D:00000001 [INF] Route matched with "{action = \"Get\", controller = \"Values\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[System.String]] Get()" on controller "Turing_Back_ED.Controllers.ValuesController" ("Turing_Back_ED"). (122b2fdf)
+2019-05-27T09:01:05.1026931+00:00 0HLN2G7C1BE9D:00000001 [INF] Executing action method "Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)" - Validation state: Valid (dad538d7)
+2019-05-27T09:01:05.1251485+00:00 0HLN2G7C1BE9D:00000001 [INF] Executed action method "Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 1.08ms. (50a9e262)
+2019-05-27T09:01:05.1831722+00:00 0HLN2G7C1BE9D:00000001 [INF] Executing ObjectResult, writing value of type '"System.String[]"'. (8a1b66c8)
+2019-05-27T09:01:05.4717016+00:00 0HLN2G7C1BE9D:00000001 [INF] Executed action "Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)" in 428.3937ms (afa2e885)
+2019-05-27T09:01:05.4726436+00:00 0HLN2G7C1BE9D:00000001 [INF] Executed endpoint '"Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)"' (99874f2b)
+2019-05-27T09:01:05.5021836+00:00 0HLN2G7C1BE9D:00000001 [INF] Request finished in 1143.7601ms 200 application/json; charset=utf-8 (791a596a)
+2019-05-27T09:01:35.9144752+00:00 0HLN2G7C1BE9F:00000001 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/attributes/values/1 application/json 67 (ca22a1cb)
+2019-05-27T09:01:35.9631202+00:00 0HLN2G7C1BE9F:00000001 [INF] Executing endpoint '"Turing_Back_ED.Controllers.AttributesController.GetValues (Turing_Back_ED)"' (500cc934)
+2019-05-27T09:01:36.1361895+00:00 0HLN2G7C1BE9F:00000001 [INF] Route matched with "{action = \"GetValues\", controller = \"Attributes\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetValues(Int32, Turing_Back_ED.DomainModels.GeneralQueryModel)" on controller "Turing_Back_ED.Controllers.AttributesController" ("Turing_Back_ED"). (122b2fdf)
+2019-05-27T09:01:37.3759252+00:00 0HLN2G7C1BE9F:00000001 [INF] Executing action method "Turing_Back_ED.Controllers.AttributesController.GetValues (Turing_Back_ED)" - Validation state: Valid (dad538d7)
+2019-05-27T09:01:38.4604721+00:00 0HLN2G7C1BE9F:00000001 [INF] Entity Framework Core "2.2.4-servicing-10062" initialized '"TuringshopContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "None" (9958f5bb)
+2019-05-27T09:01:38.5997489+00:00 0HLN2G7C1BE9F:00000001 [WRN] Query: '"(from AttributeValue a in DbSet<AttributeValue> where [a].AttributeId == __attribute_Id_0 select [a]..."' uses a row limiting operation (Skip/Take) without OrderBy which may lead to unpredictable results. (32148ccc)
+2019-05-27T09:01:39.7912059+00:00 0HLN2G7C1BE9F:00000001 [INF] Executed DbCommand ("183"ms) [Parameters=["@__attribute_Id_0='?' (DbType = Int32), @__p_2='?' (DbType = Int32), @__p_1='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `a`.`attribute_value_id`, `a`.`attribute_id`, `a`.`value`
+FROM `turingshop`.`attribute_value` AS `a`
+WHERE `a`.`attribute_id` = @__attribute_Id_0
+LIMIT @__p_2 OFFSET @__p_1" (0723d8ff)
+2019-05-27T09:01:40.0094862+00:00 0HLN2G7C1BE9F:00000001 [INF] Executed action method "Turing_Back_ED.Controllers.AttributesController.GetValues (Turing_Back_ED)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 2633.2239ms. (50a9e262)
+2019-05-27T09:01:40.0337830+00:00 0HLN2G7C1BE9F:00000001 [INF] Executing ObjectResult, writing value of type '"Turing_Back_ED.DomainModels.SearchResponseModel"'. (8a1b66c8)
+2019-05-27T09:01:40.0635325+00:00 0HLN2G7C1BE9F:00000001 [INF] Executed action "Turing_Back_ED.Controllers.AttributesController.GetValues (Turing_Back_ED)" in 3926.7212ms (afa2e885)
+2019-05-27T09:01:40.0675404+00:00 0HLN2G7C1BE9F:00000001 [INF] Executed endpoint '"Turing_Back_ED.Controllers.AttributesController.GetValues (Turing_Back_ED)"' (99874f2b)
+2019-05-27T09:01:40.0806360+00:00 0HLN2G7C1BE9F:00000001 [INF] Request finished in 4173.6203ms 200 application/json; charset=utf-8 (791a596a)
+2019-05-27T09:03:03.5122078+00:00 0HLN2G8FN634J:00000001 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/values   (ca22a1cb)
+2019-05-27T09:03:04.2509107+00:00 0HLN2G8FN634J:00000001 [INF] Executing endpoint '"Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)"' (500cc934)
+2019-05-27T09:03:04.4775000+00:00 0HLN2G8FN634J:00000001 [INF] Route matched with "{action = \"Get\", controller = \"Values\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[System.String]] Get()" on controller "Turing_Back_ED.Controllers.ValuesController" ("Turing_Back_ED"). (122b2fdf)
+2019-05-27T09:03:04.7543481+00:00 0HLN2G8FN634J:00000001 [INF] Executing action method "Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)" - Validation state: Valid (dad538d7)
+2019-05-27T09:03:04.8100534+00:00 0HLN2G8FN634J:00000001 [INF] Executed action method "Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 1.0283ms. (50a9e262)
+2019-05-27T09:03:04.9038708+00:00 0HLN2G8FN634J:00000001 [INF] Executing ObjectResult, writing value of type '"System.String[]"'. (8a1b66c8)
+2019-05-27T09:03:05.5496175+00:00 0HLN2G8FN634J:00000001 [INF] Executed action "Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)" in 1040.2348ms (afa2e885)
+2019-05-27T09:03:05.5499769+00:00 0HLN2G8FN634J:00000001 [INF] Executed endpoint '"Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)"' (99874f2b)
+2019-05-27T09:03:05.6045459+00:00 0HLN2G8FN634J:00000001 [INF] Request finished in 2132.0722ms 200 application/json; charset=utf-8 (791a596a)
+2019-05-27T09:03:20.1738898+00:00 0HLN2G8FN634L:00000001 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/attributes/values/1 application/json 67 (ca22a1cb)
+2019-05-27T09:03:20.1947739+00:00 0HLN2G8FN634L:00000001 [INF] Executing endpoint '"Turing_Back_ED.Controllers.AttributesController.GetValues (Turing_Back_ED)"' (500cc934)
+2019-05-27T09:03:20.2879561+00:00 0HLN2G8FN634L:00000001 [INF] Route matched with "{action = \"GetValues\", controller = \"Attributes\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetValues(Int32, Turing_Back_ED.DomainModels.GeneralQueryModel)" on controller "Turing_Back_ED.Controllers.AttributesController" ("Turing_Back_ED"). (122b2fdf)
+2019-05-27T09:03:20.7386576+00:00 0HLN2G8FN634L:00000001 [INF] Executing action method "Turing_Back_ED.Controllers.AttributesController.GetValues (Turing_Back_ED)" - Validation state: Valid (dad538d7)
+2019-05-27T09:03:21.6902062+00:00 0HLN2G8FN634L:00000001 [INF] Entity Framework Core "2.2.4-servicing-10062" initialized '"TuringshopContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "None" (9958f5bb)
+2019-05-27T09:03:21.8418754+00:00 0HLN2G8FN634L:00000001 [WRN] Query: '"(from AttributeValue a in DbSet<AttributeValue> where [a].AttributeId == __attribute_Id_0 select [a]..."' uses a row limiting operation (Skip/Take) without OrderBy which may lead to unpredictable results. (32148ccc)
+2019-05-27T09:03:23.1286997+00:00 0HLN2G8FN634L:00000001 [INF] Executed DbCommand ("277"ms) [Parameters=["@__attribute_Id_0='?' (DbType = Int32), @__p_2='?' (DbType = Int32), @__p_1='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `a`.`attribute_value_id`, `a`.`attribute_id`, `a`.`value`
+FROM `turingshop`.`attribute_value` AS `a`
+WHERE `a`.`attribute_id` = @__attribute_Id_0
+LIMIT @__p_2 OFFSET @__p_1" (0723d8ff)
+2019-05-27T09:03:23.7101288+00:00 0HLN2G8FN634L:00000001 [INF] Executed action method "Turing_Back_ED.Controllers.AttributesController.GetValues (Turing_Back_ED)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 2971.0508ms. (50a9e262)
+2019-05-27T09:03:23.7554418+00:00 0HLN2G8FN634L:00000001 [INF] Executing ObjectResult, writing value of type '"Turing_Back_ED.DomainModels.SearchResponseModel"'. (8a1b66c8)
+2019-05-27T09:03:23.8073247+00:00 0HLN2G8FN634L:00000001 [INF] Executed action "Turing_Back_ED.Controllers.AttributesController.GetValues (Turing_Back_ED)" in 3519.004ms (afa2e885)
+2019-05-27T09:03:23.8191709+00:00 0HLN2G8FN634L:00000001 [INF] Executed endpoint '"Turing_Back_ED.Controllers.AttributesController.GetValues (Turing_Back_ED)"' (99874f2b)
+2019-05-27T09:03:23.8456123+00:00 0HLN2G8FN634L:00000001 [INF] Request finished in 3670.1155ms 200 application/json; charset=utf-8 (791a596a)
+2019-05-27T09:03:31.7173838+00:00 0HLN2G8FN634L:00000002 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/attributes/inProduct/1 application/json 67 (ca22a1cb)
+2019-05-27T09:03:31.7267110+00:00 0HLN2G8FN634L:00000002 [INF] Executing endpoint '"Turing_Back_ED.Controllers.AttributesController.GetAttibutesInProduct (Turing_Back_ED)"' (500cc934)
+2019-05-27T09:03:31.7667609+00:00 0HLN2G8FN634L:00000002 [INF] Route matched with "{action = \"GetAttibutesInProduct\", controller = \"Attributes\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetAttibutesInProduct(Int32, Turing_Back_ED.DomainModels.GeneralQueryModel)" on controller "Turing_Back_ED.Controllers.AttributesController" ("Turing_Back_ED"). (122b2fdf)
+2019-05-27T09:03:31.7969763+00:00 0HLN2G8FN634L:00000002 [INF] Executing action method "Turing_Back_ED.Controllers.AttributesController.GetAttibutesInProduct (Turing_Back_ED)" - Validation state: Valid (dad538d7)
+2019-05-27T09:03:31.8328249+00:00 0HLN2G8FN634L:00000002 [INF] Entity Framework Core "2.2.4-servicing-10062" initialized '"TuringshopContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "None" (9958f5bb)
+2019-05-27T09:03:31.9503570+00:00 0HLN2G8FN634L:00000002 [WRN] Query: '"(from ProductAttribute a in DbSet<ProductAttribute> where [a].ProductId == __product_Id_0 select new..."' uses a row limiting operation (Skip/Take) without OrderBy which may lead to unpredictable results. (32148ccc)
+2019-05-27T09:03:31.9703456+00:00 0HLN2G8FN634L:00000002 [WRN] The Include operation for navigation '"[a].AttributeValue"' is unnecessary and was ignored because the navigation is not reachable in the final query results. See https://go.microsoft.com/fwlink/?linkid=850303 for more information. (10efaee6)
+2019-05-27T09:03:31.9705665+00:00 0HLN2G8FN634L:00000002 [WRN] The Include operation for navigation '"[a].AttributeValue.Attribute"' is unnecessary and was ignored because the navigation is not reachable in the final query results. See https://go.microsoft.com/fwlink/?linkid=850303 for more information. (10efaee6)
+2019-05-27T09:03:32.3620354+00:00 0HLN2G8FN634L:00000002 [INF] Executed DbCommand ("8"ms) [Parameters=["@__product_Id_0='?' (DbType = Int32), @__p_2='?' (DbType = Int32), @__p_1='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `a.AttributeValue.Attribute`.`name`, `a`.`attribute_value_id` AS `AttributeValueId`, `a.AttributeValue`.`value`
+FROM `turingshop`.`product_attribute` AS `a`
+INNER JOIN `turingshop`.`attribute_value` AS `a.AttributeValue` ON `a`.`attribute_value_id` = `a.AttributeValue`.`attribute_value_id`
+INNER JOIN `turingshop`.`attribute` AS `a.AttributeValue.Attribute` ON `a.AttributeValue`.`attribute_id` = `a.AttributeValue.Attribute`.`attribute_id`
+WHERE `a`.`product_id` = @__product_Id_0
+LIMIT @__p_2 OFFSET @__p_1" (0723d8ff)
+2019-05-27T09:03:32.3788315+00:00 0HLN2G8FN634L:00000002 [INF] Executed action method "Turing_Back_ED.Controllers.AttributesController.GetAttibutesInProduct (Turing_Back_ED)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 581.5922ms. (50a9e262)
+2019-05-27T09:03:32.3793801+00:00 0HLN2G8FN634L:00000002 [INF] Executing ObjectResult, writing value of type '"Turing_Back_ED.DomainModels.SearchResponseModel"'. (8a1b66c8)
+2019-05-27T09:03:32.4076216+00:00 0HLN2G8FN634L:00000002 [INF] Executed action "Turing_Back_ED.Controllers.AttributesController.GetAttibutesInProduct (Turing_Back_ED)" in 640.6328ms (afa2e885)
+2019-05-27T09:03:32.4077855+00:00 0HLN2G8FN634L:00000002 [INF] Executed endpoint '"Turing_Back_ED.Controllers.AttributesController.GetAttibutesInProduct (Turing_Back_ED)"' (99874f2b)
+2019-05-27T09:03:32.4083762+00:00 0HLN2G8FN634L:00000002 [INF] Request finished in 691.4056ms 200 application/json; charset=utf-8 (791a596a)
+2019-05-27T09:05:40.8514402+00:00 0HLN2G9UALV98:00000001 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/values   (ca22a1cb)
+2019-05-27T09:05:41.8931381+00:00 0HLN2G9UALV98:00000001 [INF] Executing endpoint '"Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)"' (500cc934)
+2019-05-27T09:05:42.0272610+00:00 0HLN2G9UALV98:00000001 [INF] Route matched with "{action = \"Get\", controller = \"Values\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[System.String]] Get()" on controller "Turing_Back_ED.Controllers.ValuesController" ("Turing_Back_ED"). (122b2fdf)
+2019-05-27T09:05:42.1298884+00:00 0HLN2G9UALV98:00000001 [INF] Executing action method "Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)" - Validation state: Valid (dad538d7)
+2019-05-27T09:05:42.1657507+00:00 0HLN2G9UALV98:00000001 [INF] Executed action method "Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 3.0244ms. (50a9e262)
+2019-05-27T09:05:42.2707228+00:00 0HLN2G9UALV98:00000001 [INF] Executing ObjectResult, writing value of type '"System.String[]"'. (8a1b66c8)
+2019-05-27T09:05:42.7263838+00:00 0HLN2G9UALV98:00000001 [INF] Executed action "Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)" in 631.9712ms (afa2e885)
+2019-05-27T09:05:42.7270409+00:00 0HLN2G9UALV98:00000001 [INF] Executed endpoint '"Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)"' (99874f2b)
+2019-05-27T09:05:42.7544929+00:00 0HLN2G9UALV98:00000001 [INF] Request finished in 1972.6624ms 200 application/json; charset=utf-8 (791a596a)
+2019-05-27T09:05:55.4786862+00:00 0HLN2G9UALV9A:00000001 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/attributes/values/1 application/json 67 (ca22a1cb)
+2019-05-27T09:05:55.4877984+00:00 0HLN2G9UALV9A:00000001 [INF] Executing endpoint '"Turing_Back_ED.Controllers.AttributesController.GetValues (Turing_Back_ED)"' (500cc934)
+2019-05-27T09:05:55.5634327+00:00 0HLN2G9UALV9A:00000001 [INF] Route matched with "{action = \"GetValues\", controller = \"Attributes\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetValues(Int32, Turing_Back_ED.DomainModels.GeneralQueryModel)" on controller "Turing_Back_ED.Controllers.AttributesController" ("Turing_Back_ED"). (122b2fdf)
+2019-05-27T09:05:56.0460540+00:00 0HLN2G9UALV9A:00000001 [INF] Executing action method "Turing_Back_ED.Controllers.AttributesController.GetValues (Turing_Back_ED)" - Validation state: Valid (dad538d7)
+2019-05-27T09:05:57.0826353+00:00 0HLN2G9UALV9A:00000001 [INF] Entity Framework Core "2.2.4-servicing-10062" initialized '"TuringshopContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "None" (9958f5bb)
+2019-05-27T09:05:57.2110478+00:00 0HLN2G9UALV9A:00000001 [WRN] Query: '"(from AttributeValue a in DbSet<AttributeValue> where [a].AttributeId == __attribute_Id_0 select [a]..."' uses a row limiting operation (Skip/Take) without OrderBy which may lead to unpredictable results. (32148ccc)
+2019-05-27T09:05:58.6413100+00:00 0HLN2G9UALV9A:00000001 [INF] Executed DbCommand ("170"ms) [Parameters=["@__attribute_Id_0='?' (DbType = Int32), @__p_2='?' (DbType = Int32), @__p_1='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `a`.`attribute_value_id`, `a`.`attribute_id`, `a`.`value`
+FROM `turingshop`.`attribute_value` AS `a`
+WHERE `a`.`attribute_id` = @__attribute_Id_0
+LIMIT @__p_2 OFFSET @__p_1" (0723d8ff)
+2019-05-27T09:05:58.8913835+00:00 0HLN2G9UALV9A:00000001 [INF] Executed action method "Turing_Back_ED.Controllers.AttributesController.GetValues (Turing_Back_ED)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 2845.0072ms. (50a9e262)
+2019-05-27T09:05:58.9164883+00:00 0HLN2G9UALV9A:00000001 [INF] Executing ObjectResult, writing value of type '"Turing_Back_ED.DomainModels.SearchResponseModel"'. (8a1b66c8)
+2019-05-27T09:05:58.9444645+00:00 0HLN2G9UALV9A:00000001 [INF] Executed action "Turing_Back_ED.Controllers.AttributesController.GetValues (Turing_Back_ED)" in 3380.7065ms (afa2e885)
+2019-05-27T09:05:58.9480979+00:00 0HLN2G9UALV9A:00000001 [INF] Executed endpoint '"Turing_Back_ED.Controllers.AttributesController.GetValues (Turing_Back_ED)"' (99874f2b)
+2019-05-27T09:05:58.9619072+00:00 0HLN2G9UALV9A:00000001 [INF] Request finished in 3483.2253ms 200 application/json; charset=utf-8 (791a596a)
+2019-05-27T09:06:08.6060619+00:00 0HLN2G9UALV9A:00000002 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/attributes/inProduct/1 application/json 67 (ca22a1cb)
+2019-05-27T09:06:08.6114144+00:00 0HLN2G9UALV9A:00000002 [INF] Executing endpoint '"Turing_Back_ED.Controllers.AttributesController.GetAttibutesInProduct (Turing_Back_ED)"' (500cc934)
+2019-05-27T09:06:08.6732140+00:00 0HLN2G9UALV9A:00000002 [INF] Route matched with "{action = \"GetAttibutesInProduct\", controller = \"Attributes\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetAttibutesInProduct(Int32, Turing_Back_ED.DomainModels.GeneralQueryModel)" on controller "Turing_Back_ED.Controllers.AttributesController" ("Turing_Back_ED"). (122b2fdf)
+2019-05-27T09:06:08.6933811+00:00 0HLN2G9UALV9A:00000002 [INF] Executing action method "Turing_Back_ED.Controllers.AttributesController.GetAttibutesInProduct (Turing_Back_ED)" - Validation state: Valid (dad538d7)
+2019-05-27T09:06:08.7236282+00:00 0HLN2G9UALV9A:00000002 [INF] Entity Framework Core "2.2.4-servicing-10062" initialized '"TuringshopContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "None" (9958f5bb)
+2019-05-27T09:06:08.8068838+00:00 0HLN2G9UALV9A:00000002 [WRN] Query: '"(from ProductAttribute a in DbSet<ProductAttribute> where [a].ProductId == __product_Id_0 select new..."' uses a row limiting operation (Skip/Take) without OrderBy which may lead to unpredictable results. (32148ccc)
+2019-05-27T09:06:08.8203869+00:00 0HLN2G9UALV9A:00000002 [WRN] The Include operation for navigation '"[a].AttributeValue"' is unnecessary and was ignored because the navigation is not reachable in the final query results. See https://go.microsoft.com/fwlink/?linkid=850303 for more information. (10efaee6)
+2019-05-27T09:06:08.8206208+00:00 0HLN2G9UALV9A:00000002 [WRN] The Include operation for navigation '"[a].AttributeValue.Attribute"' is unnecessary and was ignored because the navigation is not reachable in the final query results. See https://go.microsoft.com/fwlink/?linkid=850303 for more information. (10efaee6)
+2019-05-27T09:06:09.2376657+00:00 0HLN2G9UALV9A:00000002 [INF] Executed DbCommand ("71"ms) [Parameters=["@__product_Id_0='?' (DbType = Int32), @__p_2='?' (DbType = Int32), @__p_1='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `a.AttributeValue.Attribute`.`name` AS `AtributeName`, `a`.`attribute_value_id` AS `AttributeValueId`, `a.AttributeValue`.`value` AS `AttributeValue`
+FROM `turingshop`.`product_attribute` AS `a`
+INNER JOIN `turingshop`.`attribute_value` AS `a.AttributeValue` ON `a`.`attribute_value_id` = `a.AttributeValue`.`attribute_value_id`
+INNER JOIN `turingshop`.`attribute` AS `a.AttributeValue.Attribute` ON `a.AttributeValue`.`attribute_id` = `a.AttributeValue.Attribute`.`attribute_id`
+WHERE `a`.`product_id` = @__product_Id_0
+LIMIT @__p_2 OFFSET @__p_1" (0723d8ff)
+2019-05-27T09:06:09.2866422+00:00 0HLN2G9UALV9A:00000002 [INF] Executed action method "Turing_Back_ED.Controllers.AttributesController.GetAttibutesInProduct (Turing_Back_ED)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 592.9731ms. (50a9e262)
+2019-05-27T09:06:09.2873394+00:00 0HLN2G9UALV9A:00000002 [INF] Executing ObjectResult, writing value of type '"Turing_Back_ED.DomainModels.SearchResponseModel"'. (8a1b66c8)
+2019-05-27T09:06:09.3214688+00:00 0HLN2G9UALV9A:00000002 [INF] Executed action "Turing_Back_ED.Controllers.AttributesController.GetAttibutesInProduct (Turing_Back_ED)" in 645.6818ms (afa2e885)
+2019-05-27T09:06:09.3237013+00:00 0HLN2G9UALV9A:00000002 [INF] Executed endpoint '"Turing_Back_ED.Controllers.AttributesController.GetAttibutesInProduct (Turing_Back_ED)"' (99874f2b)
+2019-05-27T09:06:09.3251984+00:00 0HLN2G9UALV9A:00000002 [INF] Request finished in 719.7174ms 200 application/json; charset=utf-8 (791a596a)
+2019-05-27T09:07:01.7181577+00:00 0HLN2G9UALV9A:00000003 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/attributes/inProduct/9 application/json 67 (ca22a1cb)
+2019-05-27T09:07:01.7188093+00:00 0HLN2G9UALV9A:00000003 [INF] Executing endpoint '"Turing_Back_ED.Controllers.AttributesController.GetAttibutesInProduct (Turing_Back_ED)"' (500cc934)
+2019-05-27T09:07:01.7196041+00:00 0HLN2G9UALV9A:00000003 [INF] Route matched with "{action = \"GetAttibutesInProduct\", controller = \"Attributes\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetAttibutesInProduct(Int32, Turing_Back_ED.DomainModels.GeneralQueryModel)" on controller "Turing_Back_ED.Controllers.AttributesController" ("Turing_Back_ED"). (122b2fdf)
+2019-05-27T09:07:01.7214128+00:00 0HLN2G9UALV9A:00000003 [INF] Executing action method "Turing_Back_ED.Controllers.AttributesController.GetAttibutesInProduct (Turing_Back_ED)" - Validation state: Valid (dad538d7)
+2019-05-27T09:07:01.7230087+00:00 0HLN2G9UALV9A:00000003 [INF] Entity Framework Core "2.2.4-servicing-10062" initialized '"TuringshopContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "None" (9958f5bb)
+2019-05-27T09:07:01.8346693+00:00 0HLN2G9UALV9A:00000003 [INF] Executed DbCommand ("44"ms) [Parameters=["@__product_Id_0='?' (DbType = Int32), @__p_2='?' (DbType = Int32), @__p_1='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `a.AttributeValue.Attribute`.`name` AS `AtributeName`, `a`.`attribute_value_id` AS `AttributeValueId`, `a.AttributeValue`.`value` AS `AttributeValue`
+FROM `turingshop`.`product_attribute` AS `a`
+INNER JOIN `turingshop`.`attribute_value` AS `a.AttributeValue` ON `a`.`attribute_value_id` = `a.AttributeValue`.`attribute_value_id`
+INNER JOIN `turingshop`.`attribute` AS `a.AttributeValue.Attribute` ON `a.AttributeValue`.`attribute_id` = `a.AttributeValue.Attribute`.`attribute_id`
+WHERE `a`.`product_id` = @__product_Id_0
+LIMIT @__p_2 OFFSET @__p_1" (0723d8ff)
+2019-05-27T09:07:01.8507264+00:00 0HLN2G9UALV9A:00000003 [INF] Executed action method "Turing_Back_ED.Controllers.AttributesController.GetAttibutesInProduct (Turing_Back_ED)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 129.0335ms. (50a9e262)
+2019-05-27T09:07:01.8512147+00:00 0HLN2G9UALV9A:00000003 [INF] Executing ObjectResult, writing value of type '"Turing_Back_ED.DomainModels.SearchResponseModel"'. (8a1b66c8)
+2019-05-27T09:07:01.8523277+00:00 0HLN2G9UALV9A:00000003 [INF] Executed action "Turing_Back_ED.Controllers.AttributesController.GetAttibutesInProduct (Turing_Back_ED)" in 132.51ms (afa2e885)
+2019-05-27T09:07:01.8543459+00:00 0HLN2G9UALV9A:00000003 [INF] Executed endpoint '"Turing_Back_ED.Controllers.AttributesController.GetAttibutesInProduct (Turing_Back_ED)"' (99874f2b)
+2019-05-27T09:07:01.8555492+00:00 0HLN2G9UALV9A:00000003 [INF] Request finished in 137.6262ms 200 application/json; charset=utf-8 (791a596a)
+2019-05-27T09:07:16.7819885+00:00 0HLN2G9UALV9A:00000004 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/attributes/inProduct/700 application/json 67 (ca22a1cb)
+2019-05-27T09:07:16.7827295+00:00 0HLN2G9UALV9A:00000004 [INF] Executing endpoint '"Turing_Back_ED.Controllers.AttributesController.GetAttibutesInProduct (Turing_Back_ED)"' (500cc934)
+2019-05-27T09:07:16.7832783+00:00 0HLN2G9UALV9A:00000004 [INF] Route matched with "{action = \"GetAttibutesInProduct\", controller = \"Attributes\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetAttibutesInProduct(Int32, Turing_Back_ED.DomainModels.GeneralQueryModel)" on controller "Turing_Back_ED.Controllers.AttributesController" ("Turing_Back_ED"). (122b2fdf)
+2019-05-27T09:07:16.7845746+00:00 0HLN2G9UALV9A:00000004 [INF] Executing action method "Turing_Back_ED.Controllers.AttributesController.GetAttibutesInProduct (Turing_Back_ED)" - Validation state: Valid (dad538d7)
+2019-05-27T09:07:16.7855985+00:00 0HLN2G9UALV9A:00000004 [INF] Entity Framework Core "2.2.4-servicing-10062" initialized '"TuringshopContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "None" (9958f5bb)
+2019-05-27T09:07:16.7923467+00:00 0HLN2G9UALV9A:00000004 [INF] Executed DbCommand ("2"ms) [Parameters=["@__product_Id_0='?' (DbType = Int32), @__p_2='?' (DbType = Int32), @__p_1='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `a.AttributeValue.Attribute`.`name` AS `AtributeName`, `a`.`attribute_value_id` AS `AttributeValueId`, `a.AttributeValue`.`value` AS `AttributeValue`
+FROM `turingshop`.`product_attribute` AS `a`
+INNER JOIN `turingshop`.`attribute_value` AS `a.AttributeValue` ON `a`.`attribute_value_id` = `a.AttributeValue`.`attribute_value_id`
+INNER JOIN `turingshop`.`attribute` AS `a.AttributeValue.Attribute` ON `a.AttributeValue`.`attribute_id` = `a.AttributeValue.Attribute`.`attribute_id`
+WHERE `a`.`product_id` = @__product_Id_0
+LIMIT @__p_2 OFFSET @__p_1" (0723d8ff)
+2019-05-27T09:07:16.7927601+00:00 0HLN2G9UALV9A:00000004 [INF] Executed action method "Turing_Back_ED.Controllers.AttributesController.GetAttibutesInProduct (Turing_Back_ED)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 7.9609ms. (50a9e262)
+2019-05-27T09:07:16.7932366+00:00 0HLN2G9UALV9A:00000004 [INF] Executing ObjectResult, writing value of type '"Turing_Back_ED.DomainModels.SearchResponseModel"'. (8a1b66c8)
+2019-05-27T09:07:16.7937713+00:00 0HLN2G9UALV9A:00000004 [INF] Executed action "Turing_Back_ED.Controllers.AttributesController.GetAttibutesInProduct (Turing_Back_ED)" in 10.3254ms (afa2e885)
+2019-05-27T09:07:16.7939691+00:00 0HLN2G9UALV9A:00000004 [INF] Executed endpoint '"Turing_Back_ED.Controllers.AttributesController.GetAttibutesInProduct (Turing_Back_ED)"' (99874f2b)
+2019-05-27T09:07:16.7943132+00:00 0HLN2G9UALV9A:00000004 [INF] Request finished in 12.5525ms 200 application/json; charset=utf-8 (791a596a)
+2019-05-27T09:07:30.3311658+00:00 0HLN2G9UALV9A:00000005 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/attributes/inProduct/23 application/json 67 (ca22a1cb)
+2019-05-27T09:07:30.3317792+00:00 0HLN2G9UALV9A:00000005 [INF] Executing endpoint '"Turing_Back_ED.Controllers.AttributesController.GetAttibutesInProduct (Turing_Back_ED)"' (500cc934)
+2019-05-27T09:07:30.3320894+00:00 0HLN2G9UALV9A:00000005 [INF] Route matched with "{action = \"GetAttibutesInProduct\", controller = \"Attributes\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetAttibutesInProduct(Int32, Turing_Back_ED.DomainModels.GeneralQueryModel)" on controller "Turing_Back_ED.Controllers.AttributesController" ("Turing_Back_ED"). (122b2fdf)
+2019-05-27T09:07:30.3333826+00:00 0HLN2G9UALV9A:00000005 [INF] Executing action method "Turing_Back_ED.Controllers.AttributesController.GetAttibutesInProduct (Turing_Back_ED)" - Validation state: Valid (dad538d7)
+2019-05-27T09:07:30.3343447+00:00 0HLN2G9UALV9A:00000005 [INF] Entity Framework Core "2.2.4-servicing-10062" initialized '"TuringshopContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "None" (9958f5bb)
+2019-05-27T09:07:30.3420883+00:00 0HLN2G9UALV9A:00000005 [INF] Executed DbCommand ("2"ms) [Parameters=["@__product_Id_0='?' (DbType = Int32), @__p_2='?' (DbType = Int32), @__p_1='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `a.AttributeValue.Attribute`.`name` AS `AtributeName`, `a`.`attribute_value_id` AS `AttributeValueId`, `a.AttributeValue`.`value` AS `AttributeValue`
+FROM `turingshop`.`product_attribute` AS `a`
+INNER JOIN `turingshop`.`attribute_value` AS `a.AttributeValue` ON `a`.`attribute_value_id` = `a.AttributeValue`.`attribute_value_id`
+INNER JOIN `turingshop`.`attribute` AS `a.AttributeValue.Attribute` ON `a.AttributeValue`.`attribute_id` = `a.AttributeValue.Attribute`.`attribute_id`
+WHERE `a`.`product_id` = @__product_Id_0
+LIMIT @__p_2 OFFSET @__p_1" (0723d8ff)
+2019-05-27T09:07:30.3428311+00:00 0HLN2G9UALV9A:00000005 [INF] Executed action method "Turing_Back_ED.Controllers.AttributesController.GetAttibutesInProduct (Turing_Back_ED)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 9.2364ms. (50a9e262)
+2019-05-27T09:07:30.3431744+00:00 0HLN2G9UALV9A:00000005 [INF] Executing ObjectResult, writing value of type '"Turing_Back_ED.DomainModels.SearchResponseModel"'. (8a1b66c8)
+2019-05-27T09:07:30.3439450+00:00 0HLN2G9UALV9A:00000005 [INF] Executed action "Turing_Back_ED.Controllers.AttributesController.GetAttibutesInProduct (Turing_Back_ED)" in 11.6874ms (afa2e885)
+2019-05-27T09:07:30.3440704+00:00 0HLN2G9UALV9A:00000005 [INF] Executed endpoint '"Turing_Back_ED.Controllers.AttributesController.GetAttibutesInProduct (Turing_Back_ED)"' (99874f2b)
+2019-05-27T09:07:30.3445040+00:00 0HLN2G9UALV9A:00000005 [INF] Request finished in 13.5334ms 200 application/json; charset=utf-8 (791a596a)
+2019-05-27T09:09:01.3981536+00:00 0HLN2G9UALV9A:00000006 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/attributes/inProduct/7 application/json 67 (ca22a1cb)
+2019-05-27T09:09:01.3987736+00:00 0HLN2G9UALV9A:00000006 [INF] Executing endpoint '"Turing_Back_ED.Controllers.AttributesController.GetAttibutesInProduct (Turing_Back_ED)"' (500cc934)
+2019-05-27T09:09:01.3994198+00:00 0HLN2G9UALV9A:00000006 [INF] Route matched with "{action = \"GetAttibutesInProduct\", controller = \"Attributes\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetAttibutesInProduct(Int32, Turing_Back_ED.DomainModels.GeneralQueryModel)" on controller "Turing_Back_ED.Controllers.AttributesController" ("Turing_Back_ED"). (122b2fdf)
+2019-05-27T09:09:01.4016035+00:00 0HLN2G9UALV9A:00000006 [INF] Executing action method "Turing_Back_ED.Controllers.AttributesController.GetAttibutesInProduct (Turing_Back_ED)" - Validation state: Valid (dad538d7)
+2019-05-27T09:09:01.4034356+00:00 0HLN2G9UALV9A:00000006 [INF] Entity Framework Core "2.2.4-servicing-10062" initialized '"TuringshopContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "None" (9958f5bb)
+2019-05-27T09:09:01.4119736+00:00 0HLN2G9UALV9A:00000006 [INF] Executed DbCommand ("3"ms) [Parameters=["@__product_Id_0='?' (DbType = Int32), @__p_2='?' (DbType = Int32), @__p_1='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `a.AttributeValue.Attribute`.`name` AS `AtributeName`, `a`.`attribute_value_id` AS `AttributeValueId`, `a.AttributeValue`.`value` AS `AttributeValue`
+FROM `turingshop`.`product_attribute` AS `a`
+INNER JOIN `turingshop`.`attribute_value` AS `a.AttributeValue` ON `a`.`attribute_value_id` = `a.AttributeValue`.`attribute_value_id`
+INNER JOIN `turingshop`.`attribute` AS `a.AttributeValue.Attribute` ON `a.AttributeValue`.`attribute_id` = `a.AttributeValue.Attribute`.`attribute_id`
+WHERE `a`.`product_id` = @__product_Id_0
+LIMIT @__p_2 OFFSET @__p_1" (0723d8ff)
+2019-05-27T09:09:01.4128165+00:00 0HLN2G9UALV9A:00000006 [INF] Executed action method "Turing_Back_ED.Controllers.AttributesController.GetAttibutesInProduct (Turing_Back_ED)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 10.9581ms. (50a9e262)
+2019-05-27T09:09:01.4132287+00:00 0HLN2G9UALV9A:00000006 [INF] Executing ObjectResult, writing value of type '"Turing_Back_ED.DomainModels.SearchResponseModel"'. (8a1b66c8)
+2019-05-27T09:09:01.4141183+00:00 0HLN2G9UALV9A:00000006 [INF] Executed action "Turing_Back_ED.Controllers.AttributesController.GetAttibutesInProduct (Turing_Back_ED)" in 14.5104ms (afa2e885)
+2019-05-27T09:09:01.4143360+00:00 0HLN2G9UALV9A:00000006 [INF] Executed endpoint '"Turing_Back_ED.Controllers.AttributesController.GetAttibutesInProduct (Turing_Back_ED)"' (99874f2b)
+2019-05-27T09:09:01.4147599+00:00 0HLN2G9UALV9A:00000006 [INF] Request finished in 16.8648ms 200 application/json; charset=utf-8 (791a596a)
+2019-05-27T09:09:10.1546458+00:00 0HLN2G9UALV9A:00000007 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/attributes/inProduct/9 application/json 67 (ca22a1cb)
+2019-05-27T09:09:10.1551606+00:00 0HLN2G9UALV9A:00000007 [INF] Executing endpoint '"Turing_Back_ED.Controllers.AttributesController.GetAttibutesInProduct (Turing_Back_ED)"' (500cc934)
+2019-05-27T09:09:10.1554608+00:00 0HLN2G9UALV9A:00000007 [INF] Route matched with "{action = \"GetAttibutesInProduct\", controller = \"Attributes\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetAttibutesInProduct(Int32, Turing_Back_ED.DomainModels.GeneralQueryModel)" on controller "Turing_Back_ED.Controllers.AttributesController" ("Turing_Back_ED"). (122b2fdf)
+2019-05-27T09:09:10.1582381+00:00 0HLN2G9UALV9A:00000007 [INF] Executing action method "Turing_Back_ED.Controllers.AttributesController.GetAttibutesInProduct (Turing_Back_ED)" - Validation state: Valid (dad538d7)
+2019-05-27T09:09:10.1593959+00:00 0HLN2G9UALV9A:00000007 [INF] Entity Framework Core "2.2.4-servicing-10062" initialized '"TuringshopContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "None" (9958f5bb)
+2019-05-27T09:09:10.1666159+00:00 0HLN2G9UALV9A:00000007 [INF] Executed DbCommand ("3"ms) [Parameters=["@__product_Id_0='?' (DbType = Int32), @__p_2='?' (DbType = Int32), @__p_1='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `a.AttributeValue.Attribute`.`name` AS `AtributeName`, `a`.`attribute_value_id` AS `AttributeValueId`, `a.AttributeValue`.`value` AS `AttributeValue`
+FROM `turingshop`.`product_attribute` AS `a`
+INNER JOIN `turingshop`.`attribute_value` AS `a.AttributeValue` ON `a`.`attribute_value_id` = `a.AttributeValue`.`attribute_value_id`
+INNER JOIN `turingshop`.`attribute` AS `a.AttributeValue.Attribute` ON `a.AttributeValue`.`attribute_id` = `a.AttributeValue.Attribute`.`attribute_id`
+WHERE `a`.`product_id` = @__product_Id_0
+LIMIT @__p_2 OFFSET @__p_1" (0723d8ff)
+2019-05-27T09:09:10.1673312+00:00 0HLN2G9UALV9A:00000007 [INF] Executed action method "Turing_Back_ED.Controllers.AttributesController.GetAttibutesInProduct (Turing_Back_ED)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 8.8642ms. (50a9e262)
+2019-05-27T09:09:10.1676846+00:00 0HLN2G9UALV9A:00000007 [INF] Executing ObjectResult, writing value of type '"Turing_Back_ED.DomainModels.SearchResponseModel"'. (8a1b66c8)
+2019-05-27T09:09:10.1684958+00:00 0HLN2G9UALV9A:00000007 [INF] Executed action "Turing_Back_ED.Controllers.AttributesController.GetAttibutesInProduct (Turing_Back_ED)" in 12.8522ms (afa2e885)
+2019-05-27T09:09:10.1686241+00:00 0HLN2G9UALV9A:00000007 [INF] Executed endpoint '"Turing_Back_ED.Controllers.AttributesController.GetAttibutesInProduct (Turing_Back_ED)"' (99874f2b)
+2019-05-27T09:09:10.1689798+00:00 0HLN2G9UALV9A:00000007 [INF] Request finished in 14.5267ms 200 application/json; charset=utf-8 (791a596a)
+2019-05-27T09:09:18.1520775+00:00 0HLN2G9UALV9A:00000008 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/attributes/inProduct/90 application/json 67 (ca22a1cb)
+2019-05-27T09:09:18.1526704+00:00 0HLN2G9UALV9A:00000008 [INF] Executing endpoint '"Turing_Back_ED.Controllers.AttributesController.GetAttibutesInProduct (Turing_Back_ED)"' (500cc934)
+2019-05-27T09:09:18.1531798+00:00 0HLN2G9UALV9A:00000008 [INF] Route matched with "{action = \"GetAttibutesInProduct\", controller = \"Attributes\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetAttibutesInProduct(Int32, Turing_Back_ED.DomainModels.GeneralQueryModel)" on controller "Turing_Back_ED.Controllers.AttributesController" ("Turing_Back_ED"). (122b2fdf)
+2019-05-27T09:09:18.1546423+00:00 0HLN2G9UALV9A:00000008 [INF] Executing action method "Turing_Back_ED.Controllers.AttributesController.GetAttibutesInProduct (Turing_Back_ED)" - Validation state: Valid (dad538d7)
+2019-05-27T09:09:18.1560627+00:00 0HLN2G9UALV9A:00000008 [INF] Entity Framework Core "2.2.4-servicing-10062" initialized '"TuringshopContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "None" (9958f5bb)
+2019-05-27T09:09:18.1630472+00:00 0HLN2G9UALV9A:00000008 [INF] Executed DbCommand ("3"ms) [Parameters=["@__product_Id_0='?' (DbType = Int32), @__p_2='?' (DbType = Int32), @__p_1='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `a.AttributeValue.Attribute`.`name` AS `AtributeName`, `a`.`attribute_value_id` AS `AttributeValueId`, `a.AttributeValue`.`value` AS `AttributeValue`
+FROM `turingshop`.`product_attribute` AS `a`
+INNER JOIN `turingshop`.`attribute_value` AS `a.AttributeValue` ON `a`.`attribute_value_id` = `a.AttributeValue`.`attribute_value_id`
+INNER JOIN `turingshop`.`attribute` AS `a.AttributeValue.Attribute` ON `a.AttributeValue`.`attribute_id` = `a.AttributeValue.Attribute`.`attribute_id`
+WHERE `a`.`product_id` = @__product_Id_0
+LIMIT @__p_2 OFFSET @__p_1" (0723d8ff)
+2019-05-27T09:09:18.1637273+00:00 0HLN2G9UALV9A:00000008 [INF] Executed action method "Turing_Back_ED.Controllers.AttributesController.GetAttibutesInProduct (Turing_Back_ED)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 8.8542ms. (50a9e262)
+2019-05-27T09:09:18.1641344+00:00 0HLN2G9UALV9A:00000008 [INF] Executing ObjectResult, writing value of type '"Turing_Back_ED.DomainModels.SearchResponseModel"'. (8a1b66c8)
+2019-05-27T09:09:18.1649120+00:00 0HLN2G9UALV9A:00000008 [INF] Executed action "Turing_Back_ED.Controllers.AttributesController.GetAttibutesInProduct (Turing_Back_ED)" in 11.5171ms (afa2e885)
+2019-05-27T09:09:18.1650451+00:00 0HLN2G9UALV9A:00000008 [INF] Executed endpoint '"Turing_Back_ED.Controllers.AttributesController.GetAttibutesInProduct (Turing_Back_ED)"' (99874f2b)
+2019-05-27T09:09:18.1653772+00:00 0HLN2G9UALV9A:00000008 [INF] Request finished in 13.5944ms 200 application/json; charset=utf-8 (791a596a)
+2019-05-27T09:09:42.4129966+00:00 0HLN2G9UALV9A:00000009 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/products/7 application/json  (ca22a1cb)
+2019-05-27T09:09:42.4155829+00:00 0HLN2G9UALV9A:00000009 [INF] "Bearer" was not authenticated. Failure message: "Authorization failed; No valid token was found." (48071232)
+2019-05-27T09:09:42.4158621+00:00 0HLN2G9UALV9A:00000009 [INF] Executing endpoint '"Turing_Back_ED.Controllers.ProductsController.Find (Turing_Back_ED)"' (500cc934)
+2019-05-27T09:09:42.4382022+00:00 0HLN2G9UALV9A:00000009 [INF] Route matched with "{action = \"Find\", controller = \"Products\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Turing_Back_ED.Models.Product]]] Find(Int32)" on controller "Turing_Back_ED.Controllers.ProductsController" ("Turing_Back_ED"). (122b2fdf)
+2019-05-27T09:09:42.4433360+00:00 0HLN2G9UALV9A:00000009 [INF] Executing action method "Turing_Back_ED.Controllers.ProductsController.Find (Turing_Back_ED)" - Validation state: Valid (dad538d7)
+2019-05-27T09:09:42.4598253+00:00 0HLN2G9UALV9A:00000009 [INF] Entity Framework Core "2.2.4-servicing-10062" initialized '"TuringshopContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "None" (9958f5bb)
+2019-05-27T09:09:42.5634750+00:00 0HLN2G9UALV9A:00000009 [INF] Executed DbCommand ("4"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `e`.`product_id`, `e`.`added`, `e`.`category_id`, `e`.`description`, `e`.`discounted_price`, `e`.`display`, `e`.`image`, `e`.`image_2`, `e`.`modified`, `e`.`name`, `e`.`price`, `e`.`thumbnail`
+FROM `turingshop`.`product` AS `e`
+WHERE `e`.`product_id` = @__get_Item_0
+LIMIT 1" (0723d8ff)
+2019-05-27T09:09:42.7046339+00:00 0HLN2G9UALV9A:00000009 [INF] Executed action method "Turing_Back_ED.Controllers.ProductsController.Find (Turing_Back_ED)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 260.9656ms. (50a9e262)
+2019-05-27T09:09:42.7049454+00:00 0HLN2G9UALV9A:00000009 [INF] Executing ObjectResult, writing value of type '"Turing_Back_ED.Models.Product"'. (8a1b66c8)
+2019-05-27T09:09:42.7307705+00:00 0HLN2G9UALV9A:00000009 [INF] Executed action "Turing_Back_ED.Controllers.ProductsController.Find (Turing_Back_ED)" in 292.185ms (afa2e885)
+2019-05-27T09:09:42.7312804+00:00 0HLN2G9UALV9A:00000009 [INF] Executed endpoint '"Turing_Back_ED.Controllers.ProductsController.Find (Turing_Back_ED)"' (99874f2b)
+2019-05-27T09:09:42.7342116+00:00 0HLN2G9UALV9A:00000009 [INF] Request finished in 321.2802ms 200 application/json; charset=utf-8 (791a596a)
+2019-05-27T13:11:22.7584347+00:00 0HLN2KJ7OJ4QS:00000001 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/values   (ca22a1cb)
+2019-05-27T13:11:23.3963872+00:00 0HLN2KJ7OJ4QS:00000001 [INF] Executing endpoint '"Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)"' (500cc934)
+2019-05-27T13:11:23.4979352+00:00 0HLN2KJ7OJ4QS:00000001 [INF] Route matched with "{action = \"Get\", controller = \"Values\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[System.String]] Get()" on controller "Turing_Back_ED.Controllers.ValuesController" ("Turing_Back_ED"). (122b2fdf)
+2019-05-27T13:11:23.5860412+00:00 0HLN2KJ7OJ4QS:00000001 [INF] Executing action method "Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)" - Validation state: Valid (dad538d7)
+2019-05-27T13:11:23.6129631+00:00 0HLN2KJ7OJ4QS:00000001 [INF] Executed action method "Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 4.216ms. (50a9e262)
+2019-05-27T13:11:23.6660955+00:00 0HLN2KJ7OJ4QS:00000001 [INF] Executing ObjectResult, writing value of type '"System.String[]"'. (8a1b66c8)
+2019-05-27T13:11:23.9790548+00:00 0HLN2KJ7OJ4QS:00000001 [INF] Executed action "Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)" in 445.8897ms (afa2e885)
+2019-05-27T13:11:23.9793657+00:00 0HLN2KJ7OJ4QS:00000001 [INF] Executed endpoint '"Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)"' (99874f2b)
+2019-05-27T13:11:24.0162053+00:00 0HLN2KJ7OJ4QS:00000001 [INF] Request finished in 1295.9732ms 200 application/json; charset=utf-8 (791a596a)
+2019-05-27T13:12:00.1317145+00:00 0HLN2KJ7OJ4QS:00000002 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/values   (ca22a1cb)
+2019-05-27T13:12:00.1484015+00:00 0HLN2KJ7OJ4QS:00000002 [INF] Executing endpoint '"Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)"' (500cc934)
+2019-05-27T13:12:00.1501133+00:00 0HLN2KJ7OJ4QS:00000002 [INF] Route matched with "{action = \"Get\", controller = \"Values\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[System.String]] Get()" on controller "Turing_Back_ED.Controllers.ValuesController" ("Turing_Back_ED"). (122b2fdf)
+2019-05-27T13:12:00.1511335+00:00 0HLN2KJ7OJ4QS:00000002 [INF] Executing action method "Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)" - Validation state: Valid (dad538d7)
+2019-05-27T13:12:00.1519029+00:00 0HLN2KJ7OJ4QS:00000002 [INF] Executed action method "Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 0.3694ms. (50a9e262)
+2019-05-27T13:12:00.1528550+00:00 0HLN2KJ7OJ4QS:00000002 [INF] Executing ObjectResult, writing value of type '"System.String[]"'. (8a1b66c8)
+2019-05-27T13:12:00.1547762+00:00 0HLN2KJ7OJ4QS:00000002 [INF] Executed action "Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)" in 4.307ms (afa2e885)
+2019-05-27T13:12:00.1549255+00:00 0HLN2KJ7OJ4QS:00000002 [INF] Executed endpoint '"Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)"' (99874f2b)
+2019-05-27T13:12:00.1554201+00:00 0HLN2KJ7OJ4QS:00000002 [INF] Request finished in 24.6825ms 200 application/json; charset=utf-8 (791a596a)
+2019-05-27T13:12:24.6487263+00:00 0HLN2KJ7OJ4QV:00000001 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/categories application/json 67 (ca22a1cb)
+2019-05-27T13:12:24.6491741+00:00 0HLN2KJ7OJ4QV:00000001 [INF] Executing endpoint '"Turing_Back_ED.Controllers.CategoriesController.GetAll (Turing_Back_ED)"' (500cc934)
+2019-05-27T13:12:24.7200665+00:00 0HLN2KJ7OJ4QV:00000001 [INF] Route matched with "{action = \"GetAll\", controller = \"Categories\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetAll(Turing_Back_ED.DomainModels.CategoryQueryModel)" on controller "Turing_Back_ED.Controllers.CategoriesController" ("Turing_Back_ED"). (122b2fdf)
+2019-05-27T13:12:25.3413823+00:00 0HLN2KJ7OJ4QV:00000001 [INF] Executing action method "Turing_Back_ED.Controllers.CategoriesController.GetAll (Turing_Back_ED)" - Validation state: Valid (dad538d7)
+2019-05-27T13:12:26.3224490+00:00 0HLN2KJ7OJ4QV:00000001 [INF] Entity Framework Core "2.2.4-servicing-10062" initialized '"TuringshopContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "None" (9958f5bb)
+2019-05-27T13:12:28.1392092+00:00 0HLN2KJ7OJ4QV:00000001 [INF] Executed DbCommand ("619"ms) [Parameters=["@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `a`.`category_id`, `a`.`added`, `a`.`department_id`, `a`.`description`, `a`.`modified`, `a`.`name`
+FROM `turingshop`.`category` AS `a`
+ORDER BY `a`.`category_id`
+LIMIT @__p_1 OFFSET @__p_0" (0723d8ff)
+2019-05-27T13:12:28.7110723+00:00 0HLN2KJ7OJ4QV:00000001 [INF] Executed action method "Turing_Back_ED.Controllers.CategoriesController.GetAll (Turing_Back_ED)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 3369.3326ms. (50a9e262)
+2019-05-27T13:12:28.7521462+00:00 0HLN2KJ7OJ4QV:00000001 [INF] Executing ObjectResult, writing value of type '"Turing_Back_ED.DomainModels.SearchResponseModel"'. (8a1b66c8)
+2019-05-27T13:12:28.8097617+00:00 0HLN2KJ7OJ4QV:00000001 [INF] Executed action "Turing_Back_ED.Controllers.CategoriesController.GetAll (Turing_Back_ED)" in 4089.4166ms (afa2e885)
+2019-05-27T13:12:28.8194629+00:00 0HLN2KJ7OJ4QV:00000001 [INF] Executed endpoint '"Turing_Back_ED.Controllers.CategoriesController.GetAll (Turing_Back_ED)"' (99874f2b)
+2019-05-27T13:12:28.8406409+00:00 0HLN2KJ7OJ4QV:00000001 [INF] Request finished in 4192.0843ms 200 application/json; charset=utf-8 (791a596a)
+2019-05-27T13:12:41.7266587+00:00 0HLN2KJ7OJ4QV:00000002 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/categories application/json 67 (ca22a1cb)
+2019-05-27T13:12:41.7273786+00:00 0HLN2KJ7OJ4QV:00000002 [INF] Executing endpoint '"Turing_Back_ED.Controllers.CategoriesController.GetAll (Turing_Back_ED)"' (500cc934)
+2019-05-27T13:12:41.7277972+00:00 0HLN2KJ7OJ4QV:00000002 [INF] Route matched with "{action = \"GetAll\", controller = \"Categories\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetAll(Turing_Back_ED.DomainModels.CategoryQueryModel)" on controller "Turing_Back_ED.Controllers.CategoriesController" ("Turing_Back_ED"). (122b2fdf)
+2019-05-27T13:12:41.7328551+00:00 0HLN2KJ7OJ4QV:00000002 [INF] Executing action method "Turing_Back_ED.Controllers.CategoriesController.GetAll (Turing_Back_ED)" - Validation state: Valid (dad538d7)
+2019-05-27T13:12:41.7358132+00:00 0HLN2KJ7OJ4QV:00000002 [INF] Entity Framework Core "2.2.4-servicing-10062" initialized '"TuringshopContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "None" (9958f5bb)
+2019-05-27T13:12:41.8549394+00:00 0HLN2KJ7OJ4QV:00000002 [INF] Executed DbCommand ("3"ms) [Parameters=["@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `a`.`category_id`, `a`.`added`, `a`.`department_id`, `a`.`description`, `a`.`modified`, `a`.`name`
+FROM `turingshop`.`category` AS `a`
+ORDER BY `a`.`category_id`
+LIMIT @__p_1 OFFSET @__p_0" (0723d8ff)
+2019-05-27T13:12:41.8574208+00:00 0HLN2KJ7OJ4QV:00000002 [INF] Executed action method "Turing_Back_ED.Controllers.CategoriesController.GetAll (Turing_Back_ED)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 124.2756ms. (50a9e262)
+2019-05-27T13:12:41.8579804+00:00 0HLN2KJ7OJ4QV:00000002 [INF] Executing ObjectResult, writing value of type '"Turing_Back_ED.DomainModels.SearchResponseModel"'. (8a1b66c8)
+2019-05-27T13:12:41.8590988+00:00 0HLN2KJ7OJ4QV:00000002 [INF] Executed action "Turing_Back_ED.Controllers.CategoriesController.GetAll (Turing_Back_ED)" in 131.1164ms (afa2e885)
+2019-05-27T13:12:41.8592927+00:00 0HLN2KJ7OJ4QV:00000002 [INF] Executed endpoint '"Turing_Back_ED.Controllers.CategoriesController.GetAll (Turing_Back_ED)"' (99874f2b)
+2019-05-27T13:12:41.8598628+00:00 0HLN2KJ7OJ4QV:00000002 [INF] Request finished in 133.4494ms 200 application/json; charset=utf-8 (791a596a)
+2019-05-27T13:13:25.9933601+00:00 0HLN2KJ7OJ4QV:00000003 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/categories application/json 28 (ca22a1cb)
+2019-05-27T13:13:25.9939475+00:00 0HLN2KJ7OJ4QV:00000003 [INF] Executing endpoint '"Turing_Back_ED.Controllers.CategoriesController.GetAll (Turing_Back_ED)"' (500cc934)
+2019-05-27T13:13:25.9943486+00:00 0HLN2KJ7OJ4QV:00000003 [INF] Route matched with "{action = \"GetAll\", controller = \"Categories\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetAll(Turing_Back_ED.DomainModels.CategoryQueryModel)" on controller "Turing_Back_ED.Controllers.CategoriesController" ("Turing_Back_ED"). (122b2fdf)
+2019-05-27T13:13:26.0011916+00:00 0HLN2KJ7OJ4QV:00000003 [INF] Executing action method "Turing_Back_ED.Controllers.CategoriesController.GetAll (Turing_Back_ED)" - Validation state: Valid (dad538d7)
+2019-05-27T13:13:26.0057112+00:00 0HLN2KJ7OJ4QV:00000003 [INF] Entity Framework Core "2.2.4-servicing-10062" initialized '"TuringshopContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "None" (9958f5bb)
+2019-05-27T13:13:26.0543301+00:00 0HLN2KJ7OJ4QV:00000003 [INF] Executed DbCommand ("2"ms) [Parameters=["@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `a`.`category_id`, `a`.`added`, `a`.`department_id`, `a`.`description`, `a`.`modified`, `a`.`name`
+FROM `turingshop`.`category` AS `a`
+ORDER BY `a`.`category_id` DESC
+LIMIT @__p_1 OFFSET @__p_0" (0723d8ff)
+2019-05-27T13:13:26.0597166+00:00 0HLN2KJ7OJ4QV:00000003 [INF] Executed action method "Turing_Back_ED.Controllers.CategoriesController.GetAll (Turing_Back_ED)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 58.217ms. (50a9e262)
+2019-05-27T13:13:26.0600708+00:00 0HLN2KJ7OJ4QV:00000003 [INF] Executing ObjectResult, writing value of type '"Turing_Back_ED.DomainModels.SearchResponseModel"'. (8a1b66c8)
+2019-05-27T13:13:26.0610348+00:00 0HLN2KJ7OJ4QV:00000003 [INF] Executed action "Turing_Back_ED.Controllers.CategoriesController.GetAll (Turing_Back_ED)" in 66.4788ms (afa2e885)
+2019-05-27T13:13:26.0611629+00:00 0HLN2KJ7OJ4QV:00000003 [INF] Executed endpoint '"Turing_Back_ED.Controllers.CategoriesController.GetAll (Turing_Back_ED)"' (99874f2b)
+2019-05-27T13:13:26.0614648+00:00 0HLN2KJ7OJ4QV:00000003 [INF] Request finished in 68.4121ms 200 application/json; charset=utf-8 (791a596a)
+2019-05-27T13:13:57.2289334+00:00 0HLN2KJ7OJ4QV:00000004 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/categories application/json 29 (ca22a1cb)
+2019-05-27T13:13:57.2294283+00:00 0HLN2KJ7OJ4QV:00000004 [INF] Executing endpoint '"Turing_Back_ED.Controllers.CategoriesController.GetAll (Turing_Back_ED)"' (500cc934)
+2019-05-27T13:13:57.2297782+00:00 0HLN2KJ7OJ4QV:00000004 [INF] Route matched with "{action = \"GetAll\", controller = \"Categories\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetAll(Turing_Back_ED.DomainModels.CategoryQueryModel)" on controller "Turing_Back_ED.Controllers.CategoriesController" ("Turing_Back_ED"). (122b2fdf)
+2019-05-27T13:13:57.2312799+00:00 0HLN2KJ7OJ4QV:00000004 [INF] Executing action method "Turing_Back_ED.Controllers.CategoriesController.GetAll (Turing_Back_ED)" - Validation state: Valid (dad538d7)
+2019-05-27T13:13:57.2486251+00:00 0HLN2KJ7OJ4QV:00000004 [INF] Executed action method "Turing_Back_ED.Controllers.CategoriesController.GetAll (Turing_Back_ED)", returned result "Microsoft.AspNetCore.Mvc.BadRequestObjectResult" in 15.7559ms. (50a9e262)
+2019-05-27T13:13:57.2494863+00:00 0HLN2KJ7OJ4QV:00000004 [INF] Executing ObjectResult, writing value of type '"Turing_Back_ED.DomainModels.BadRequestModel"'. (8a1b66c8)
+2019-05-27T13:13:57.2634267+00:00 0HLN2KJ7OJ4QV:00000004 [INF] Executed action "Turing_Back_ED.Controllers.CategoriesController.GetAll (Turing_Back_ED)" in 33.3415ms (afa2e885)
+2019-05-27T13:13:57.2644470+00:00 0HLN2KJ7OJ4QV:00000004 [INF] Executed endpoint '"Turing_Back_ED.Controllers.CategoriesController.GetAll (Turing_Back_ED)"' (99874f2b)
+2019-05-27T13:13:57.2659038+00:00 0HLN2KJ7OJ4QV:00000004 [INF] Request finished in 36.2334ms 400 application/json; charset=utf-8 (791a596a)
+2019-05-27T13:14:23.8819101+00:00 0HLN2KJ7OJ4QV:00000005 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/categories application/json 27 (ca22a1cb)
+2019-05-27T13:14:23.8824149+00:00 0HLN2KJ7OJ4QV:00000005 [INF] Executing endpoint '"Turing_Back_ED.Controllers.CategoriesController.GetAll (Turing_Back_ED)"' (500cc934)
+2019-05-27T13:14:23.8828658+00:00 0HLN2KJ7OJ4QV:00000005 [INF] Route matched with "{action = \"GetAll\", controller = \"Categories\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetAll(Turing_Back_ED.DomainModels.CategoryQueryModel)" on controller "Turing_Back_ED.Controllers.CategoriesController" ("Turing_Back_ED"). (122b2fdf)
+2019-05-27T13:14:23.8846088+00:00 0HLN2KJ7OJ4QV:00000005 [INF] Executing action method "Turing_Back_ED.Controllers.CategoriesController.GetAll (Turing_Back_ED)" - Validation state: Valid (dad538d7)
+2019-05-27T13:14:23.8861033+00:00 0HLN2KJ7OJ4QV:00000005 [INF] Entity Framework Core "2.2.4-servicing-10062" initialized '"TuringshopContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "None" (9958f5bb)
+2019-05-27T13:14:23.8985836+00:00 0HLN2KJ7OJ4QV:00000005 [INF] Executed DbCommand ("2"ms) [Parameters=["@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `a`.`category_id`, `a`.`added`, `a`.`department_id`, `a`.`description`, `a`.`modified`, `a`.`name`
+FROM `turingshop`.`category` AS `a`
+ORDER BY `a`.`category_id`
+LIMIT @__p_1 OFFSET @__p_0" (0723d8ff)
+2019-05-27T13:14:23.9001607+00:00 0HLN2KJ7OJ4QV:00000005 [INF] Executed action method "Turing_Back_ED.Controllers.CategoriesController.GetAll (Turing_Back_ED)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 15.3038ms. (50a9e262)
+2019-05-27T13:14:23.9005715+00:00 0HLN2KJ7OJ4QV:00000005 [INF] Executing ObjectResult, writing value of type '"Turing_Back_ED.DomainModels.SearchResponseModel"'. (8a1b66c8)
+2019-05-27T13:14:23.9016571+00:00 0HLN2KJ7OJ4QV:00000005 [INF] Executed action "Turing_Back_ED.Controllers.CategoriesController.GetAll (Turing_Back_ED)" in 18.5138ms (afa2e885)
+2019-05-27T13:14:23.9017952+00:00 0HLN2KJ7OJ4QV:00000005 [INF] Executed endpoint '"Turing_Back_ED.Controllers.CategoriesController.GetAll (Turing_Back_ED)"' (99874f2b)
+2019-05-27T13:14:23.9022035+00:00 0HLN2KJ7OJ4QV:00000005 [INF] Request finished in 20.6101ms 200 application/json; charset=utf-8 (791a596a)
+2019-05-27T13:14:44.2733561+00:00 0HLN2KJ7OJ4QV:00000006 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/categories application/json 27 (ca22a1cb)
+2019-05-27T13:14:44.2738834+00:00 0HLN2KJ7OJ4QV:00000006 [INF] Executing endpoint '"Turing_Back_ED.Controllers.CategoriesController.GetAll (Turing_Back_ED)"' (500cc934)
+2019-05-27T13:14:44.2742421+00:00 0HLN2KJ7OJ4QV:00000006 [INF] Route matched with "{action = \"GetAll\", controller = \"Categories\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetAll(Turing_Back_ED.DomainModels.CategoryQueryModel)" on controller "Turing_Back_ED.Controllers.CategoriesController" ("Turing_Back_ED"). (122b2fdf)
+2019-05-27T13:14:44.2757333+00:00 0HLN2KJ7OJ4QV:00000006 [INF] Executing action method "Turing_Back_ED.Controllers.CategoriesController.GetAll (Turing_Back_ED)" - Validation state: Valid (dad538d7)
+2019-05-27T13:14:44.2759872+00:00 0HLN2KJ7OJ4QV:00000006 [INF] Executed action method "Turing_Back_ED.Controllers.CategoriesController.GetAll (Turing_Back_ED)", returned result "Microsoft.AspNetCore.Mvc.BadRequestObjectResult" in 0.0896ms. (50a9e262)
+2019-05-27T13:14:44.2765932+00:00 0HLN2KJ7OJ4QV:00000006 [INF] Executing ObjectResult, writing value of type '"Turing_Back_ED.DomainModels.BadRequestModel"'. (8a1b66c8)
+2019-05-27T13:14:44.2774373+00:00 0HLN2KJ7OJ4QV:00000006 [INF] Executed action "Turing_Back_ED.Controllers.CategoriesController.GetAll (Turing_Back_ED)" in 3.0208ms (afa2e885)
+2019-05-27T13:14:44.2776058+00:00 0HLN2KJ7OJ4QV:00000006 [INF] Executed endpoint '"Turing_Back_ED.Controllers.CategoriesController.GetAll (Turing_Back_ED)"' (99874f2b)
+2019-05-27T13:14:44.2778343+00:00 0HLN2KJ7OJ4QV:00000006 [INF] Request finished in 4.6697ms 400 application/json; charset=utf-8 (791a596a)
+2019-05-27T13:15:15.9482859+00:00 0HLN2KJ7OJ4QV:00000007 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/categories application/json 20 (ca22a1cb)
+2019-05-27T13:15:15.9487867+00:00 0HLN2KJ7OJ4QV:00000007 [INF] Executing endpoint '"Turing_Back_ED.Controllers.CategoriesController.GetAll (Turing_Back_ED)"' (500cc934)
+2019-05-27T13:15:15.9491924+00:00 0HLN2KJ7OJ4QV:00000007 [INF] Route matched with "{action = \"GetAll\", controller = \"Categories\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetAll(Turing_Back_ED.DomainModels.CategoryQueryModel)" on controller "Turing_Back_ED.Controllers.CategoriesController" ("Turing_Back_ED"). (122b2fdf)
+2019-05-27T13:15:15.9506846+00:00 0HLN2KJ7OJ4QV:00000007 [INF] Executing action method "Turing_Back_ED.Controllers.CategoriesController.GetAll (Turing_Back_ED)" - Validation state: Valid (dad538d7)
+2019-05-27T13:15:15.9524673+00:00 0HLN2KJ7OJ4QV:00000007 [INF] Entity Framework Core "2.2.4-servicing-10062" initialized '"TuringshopContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "None" (9958f5bb)
+2019-05-27T13:15:15.9741588+00:00 0HLN2KJ7OJ4QV:00000007 [INF] Executed DbCommand ("2"ms) [Parameters=["@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `a`.`category_id`, `a`.`added`, `a`.`department_id`, `a`.`description`, `a`.`modified`, `a`.`name`
+FROM `turingshop`.`category` AS `a`
+ORDER BY `a`.`name`
+LIMIT @__p_1 OFFSET @__p_0" (0723d8ff)
+2019-05-27T13:15:15.9754207+00:00 0HLN2KJ7OJ4QV:00000007 [INF] Executed action method "Turing_Back_ED.Controllers.CategoriesController.GetAll (Turing_Back_ED)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 24.5547ms. (50a9e262)
+2019-05-27T13:15:15.9757804+00:00 0HLN2KJ7OJ4QV:00000007 [INF] Executing ObjectResult, writing value of type '"Turing_Back_ED.DomainModels.SearchResponseModel"'. (8a1b66c8)
+2019-05-27T13:15:15.9774068+00:00 0HLN2KJ7OJ4QV:00000007 [INF] Executed action "Turing_Back_ED.Controllers.CategoriesController.GetAll (Turing_Back_ED)" in 27.7498ms (afa2e885)
+2019-05-27T13:15:15.9777033+00:00 0HLN2KJ7OJ4QV:00000007 [INF] Executed endpoint '"Turing_Back_ED.Controllers.CategoriesController.GetAll (Turing_Back_ED)"' (99874f2b)
+2019-05-27T13:15:15.9783628+00:00 0HLN2KJ7OJ4QV:00000007 [INF] Request finished in 30.2621ms 200 application/json; charset=utf-8 (791a596a)
+2019-05-27T13:15:56.3774935+00:00 0HLN2KJ7OJ4QV:00000008 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/categories application/json 29 (ca22a1cb)
+2019-05-27T13:15:56.3781053+00:00 0HLN2KJ7OJ4QV:00000008 [INF] Executing endpoint '"Turing_Back_ED.Controllers.CategoriesController.GetAll (Turing_Back_ED)"' (500cc934)
+2019-05-27T13:15:56.3786985+00:00 0HLN2KJ7OJ4QV:00000008 [INF] Route matched with "{action = \"GetAll\", controller = \"Categories\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetAll(Turing_Back_ED.DomainModels.CategoryQueryModel)" on controller "Turing_Back_ED.Controllers.CategoriesController" ("Turing_Back_ED"). (122b2fdf)
+2019-05-27T13:15:56.3811686+00:00 0HLN2KJ7OJ4QV:00000008 [INF] Executing action method "Turing_Back_ED.Controllers.CategoriesController.GetAll (Turing_Back_ED)" - Validation state: Valid (dad538d7)
+2019-05-27T13:15:56.3815455+00:00 0HLN2KJ7OJ4QV:00000008 [INF] Executed action method "Turing_Back_ED.Controllers.CategoriesController.GetAll (Turing_Back_ED)", returned result "Microsoft.AspNetCore.Mvc.BadRequestObjectResult" in 0.1101ms. (50a9e262)
+2019-05-27T13:15:56.3819550+00:00 0HLN2KJ7OJ4QV:00000008 [INF] Executing ObjectResult, writing value of type '"Turing_Back_ED.DomainModels.BadRequestModel"'. (8a1b66c8)
+2019-05-27T13:15:56.3828751+00:00 0HLN2KJ7OJ4QV:00000008 [INF] Executed action "Turing_Back_ED.Controllers.CategoriesController.GetAll (Turing_Back_ED)" in 3.9895ms (afa2e885)
+2019-05-27T13:15:56.3832174+00:00 0HLN2KJ7OJ4QV:00000008 [INF] Executed endpoint '"Turing_Back_ED.Controllers.CategoriesController.GetAll (Turing_Back_ED)"' (99874f2b)
+2019-05-27T13:15:56.3835721+00:00 0HLN2KJ7OJ4QV:00000008 [INF] Request finished in 6.3009ms 400 application/json; charset=utf-8 (791a596a)
+2019-05-27T13:18:18.4493575+00:00 0HLN2KN3RHD9E:00000001 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/values   (ca22a1cb)
+2019-05-27T13:18:18.7933905+00:00 0HLN2KN3RHD9E:00000001 [INF] Executing endpoint '"Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)"' (500cc934)
+2019-05-27T13:18:18.8592325+00:00 0HLN2KN3RHD9E:00000001 [INF] Route matched with "{action = \"Get\", controller = \"Values\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[System.String]] Get()" on controller "Turing_Back_ED.Controllers.ValuesController" ("Turing_Back_ED"). (122b2fdf)
+2019-05-27T13:18:18.9228021+00:00 0HLN2KN3RHD9E:00000001 [INF] Executing action method "Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)" - Validation state: Valid (dad538d7)
+2019-05-27T13:18:18.9429911+00:00 0HLN2KN3RHD9E:00000001 [INF] Executed action method "Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 0.591ms. (50a9e262)
+2019-05-27T13:18:18.9879395+00:00 0HLN2KN3RHD9E:00000001 [INF] Executing ObjectResult, writing value of type '"System.String[]"'. (8a1b66c8)
+2019-05-27T13:18:19.1596013+00:00 0HLN2KN3RHD9E:00000001 [INF] Executed action "Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)" in 278.108ms (afa2e885)
+2019-05-27T13:18:19.1774436+00:00 0HLN2KN3RHD9E:00000001 [INF] Executed endpoint '"Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)"' (99874f2b)
+2019-05-27T13:18:19.1966375+00:00 0HLN2KN3RHD9E:00000001 [INF] Request finished in 767.1302ms 200 application/json; charset=utf-8 (791a596a)
+2019-05-27T13:18:27.4973811+00:00 0HLN2KN3RHD9G:00000001 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/categories application/json 29 (ca22a1cb)
+2019-05-27T13:18:27.5098539+00:00 0HLN2KN3RHD9G:00000001 [INF] Executing endpoint '"Turing_Back_ED.Controllers.CategoriesController.GetAll (Turing_Back_ED)"' (500cc934)
+2019-05-27T13:18:27.5814455+00:00 0HLN2KN3RHD9G:00000001 [INF] Route matched with "{action = \"GetAll\", controller = \"Categories\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetAll(Turing_Back_ED.DomainModels.CategoryQueryModel)" on controller "Turing_Back_ED.Controllers.CategoriesController" ("Turing_Back_ED"). (122b2fdf)
+2019-05-27T13:18:28.1263341+00:00 0HLN2KN3RHD9G:00000001 [INF] Executing action method "Turing_Back_ED.Controllers.CategoriesController.GetAll (Turing_Back_ED)" - Validation state: Valid (dad538d7)
+2019-05-27T13:18:28.1408726+00:00 0HLN2KN3RHD9G:00000001 [INF] Executed action method "Turing_Back_ED.Controllers.CategoriesController.GetAll (Turing_Back_ED)", returned result "Microsoft.AspNetCore.Mvc.BadRequestObjectResult" in 14.1785ms. (50a9e262)
+2019-05-27T13:18:28.1522187+00:00 0HLN2KN3RHD9G:00000001 [INF] Executing ObjectResult, writing value of type '"Turing_Back_ED.DomainModels.BadRequestModel"'. (8a1b66c8)
+2019-05-27T13:18:28.1685477+00:00 0HLN2KN3RHD9G:00000001 [INF] Executed action "Turing_Back_ED.Controllers.CategoriesController.GetAll (Turing_Back_ED)" in 586.714ms (afa2e885)
+2019-05-27T13:18:28.1691438+00:00 0HLN2KN3RHD9G:00000001 [INF] Executed endpoint '"Turing_Back_ED.Controllers.CategoriesController.GetAll (Turing_Back_ED)"' (99874f2b)
+2019-05-27T13:18:28.1701768+00:00 0HLN2KN3RHD9G:00000001 [INF] Request finished in 672.9909ms 400 application/json; charset=utf-8 (791a596a)
+2019-05-27T13:18:52.4923142+00:00 0HLN2KN3RHD9G:00000002 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/categories application/json 21 (ca22a1cb)
+2019-05-27T13:18:52.4931461+00:00 0HLN2KN3RHD9G:00000002 [INF] Executing endpoint '"Turing_Back_ED.Controllers.CategoriesController.GetAll (Turing_Back_ED)"' (500cc934)
+2019-05-27T13:18:52.4938549+00:00 0HLN2KN3RHD9G:00000002 [INF] Route matched with "{action = \"GetAll\", controller = \"Categories\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetAll(Turing_Back_ED.DomainModels.CategoryQueryModel)" on controller "Turing_Back_ED.Controllers.CategoriesController" ("Turing_Back_ED"). (122b2fdf)
+2019-05-27T13:18:52.5014189+00:00 0HLN2KN3RHD9G:00000002 [INF] Executing action method "Turing_Back_ED.Controllers.CategoriesController.GetAll (Turing_Back_ED)" - Validation state: Valid (dad538d7)
+2019-05-27T13:18:53.7124281+00:00 0HLN2KN3RHD9G:00000002 [INF] Entity Framework Core "2.2.4-servicing-10062" initialized '"TuringshopContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "None" (9958f5bb)
+2019-05-27T13:18:55.8722067+00:00 0HLN2KN3RHD9G:00000002 [INF] Executed DbCommand ("373"ms) [Parameters=["@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `a`.`category_id`, `a`.`added`, `a`.`department_id`, `a`.`description`, `a`.`modified`, `a`.`name`
+FROM `turingshop`.`category` AS `a`
+ORDER BY `a`.`name` DESC
+LIMIT @__p_1 OFFSET @__p_0" (0723d8ff)
+2019-05-27T13:18:56.4427998+00:00 0HLN2KN3RHD9G:00000002 [INF] Executed action method "Turing_Back_ED.Controllers.CategoriesController.GetAll (Turing_Back_ED)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 3941.0224ms. (50a9e262)
+2019-05-27T13:18:56.4775166+00:00 0HLN2KN3RHD9G:00000002 [INF] Executing ObjectResult, writing value of type '"Turing_Back_ED.DomainModels.SearchResponseModel"'. (8a1b66c8)
+2019-05-27T13:18:56.5428926+00:00 0HLN2KN3RHD9G:00000002 [INF] Executed action "Turing_Back_ED.Controllers.CategoriesController.GetAll (Turing_Back_ED)" in 4048.6568ms (afa2e885)
+2019-05-27T13:18:56.5505707+00:00 0HLN2KN3RHD9G:00000002 [INF] Executed endpoint '"Turing_Back_ED.Controllers.CategoriesController.GetAll (Turing_Back_ED)"' (99874f2b)
+2019-05-27T13:18:56.5779853+00:00 0HLN2KN3RHD9G:00000002 [INF] Request finished in 4085.9062ms 200 application/json; charset=utf-8 (791a596a)
+2019-05-27T13:20:29.6880238+00:00 0HLN2KN3RHD9G:00000003 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/categories/1 application/json 67 (ca22a1cb)
+2019-05-27T13:20:29.6888760+00:00 0HLN2KN3RHD9G:00000003 [INF] Executing endpoint '"Turing_Back_ED.Controllers.CategoriesController.FindCategory (Turing_Back_ED)"' (500cc934)
+2019-05-27T13:20:29.7100673+00:00 0HLN2KN3RHD9G:00000003 [INF] Route matched with "{action = \"FindCategory\", controller = \"Categories\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] FindCategory(Int32)" on controller "Turing_Back_ED.Controllers.CategoriesController" ("Turing_Back_ED"). (122b2fdf)
+2019-05-27T13:20:29.7177980+00:00 0HLN2KN3RHD9G:00000003 [INF] Executing action method "Turing_Back_ED.Controllers.CategoriesController.FindCategory (Turing_Back_ED)" - Validation state: Valid (dad538d7)
+2019-05-27T13:20:29.7294134+00:00 0HLN2KN3RHD9G:00000003 [INF] Entity Framework Core "2.2.4-servicing-10062" initialized '"TuringshopContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "None" (9958f5bb)
+2019-05-27T13:20:30.0259043+00:00 0HLN2KN3RHD9G:00000003 [INF] Executed DbCommand ("52"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `e`.`category_id`, `e`.`added`, `e`.`department_id`, `e`.`description`, `e`.`modified`, `e`.`name`
+FROM `turingshop`.`category` AS `e`
+WHERE `e`.`category_id` = @__get_Item_0
+LIMIT 1" (0723d8ff)
+2019-05-27T13:20:30.0709062+00:00 0HLN2KN3RHD9G:00000003 [INF] Executed action method "Turing_Back_ED.Controllers.CategoriesController.FindCategory (Turing_Back_ED)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 352.8172ms. (50a9e262)
+2019-05-27T13:20:30.0712952+00:00 0HLN2KN3RHD9G:00000003 [INF] Executing ObjectResult, writing value of type '"Turing_Back_ED.Models.Category"'. (8a1b66c8)
+2019-05-27T13:20:30.0721010+00:00 0HLN2KN3RHD9G:00000003 [INF] Executed action "Turing_Back_ED.Controllers.CategoriesController.FindCategory (Turing_Back_ED)" in 361.1987ms (afa2e885)
+2019-05-27T13:20:30.0728367+00:00 0HLN2KN3RHD9G:00000003 [INF] Executed endpoint '"Turing_Back_ED.Controllers.CategoriesController.FindCategory (Turing_Back_ED)"' (99874f2b)
+2019-05-27T13:20:30.0736884+00:00 0HLN2KN3RHD9G:00000003 [INF] Request finished in 385.8789ms 200 application/json; charset=utf-8 (791a596a)
+2019-05-27T13:20:30.0829124+00:00  [INF] Connection id ""0HLN2KN3RHD9G"", Request id ""0HLN2KN3RHD9G:00000003"": the application completed without reading the entire request body. (54ac9468)
+2019-05-27T13:20:46.6046267+00:00 0HLN2KN3RHD9G:00000004 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/categories/5 application/json 67 (ca22a1cb)
+2019-05-27T13:20:46.6099603+00:00 0HLN2KN3RHD9G:00000004 [INF] Executing endpoint '"Turing_Back_ED.Controllers.CategoriesController.FindCategory (Turing_Back_ED)"' (500cc934)
+2019-05-27T13:20:46.6103984+00:00 0HLN2KN3RHD9G:00000004 [INF] Route matched with "{action = \"FindCategory\", controller = \"Categories\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] FindCategory(Int32)" on controller "Turing_Back_ED.Controllers.CategoriesController" ("Turing_Back_ED"). (122b2fdf)
+2019-05-27T13:20:46.6120148+00:00 0HLN2KN3RHD9G:00000004 [INF] Executing action method "Turing_Back_ED.Controllers.CategoriesController.FindCategory (Turing_Back_ED)" - Validation state: Valid (dad538d7)
+2019-05-27T13:20:46.6131663+00:00 0HLN2KN3RHD9G:00000004 [INF] Entity Framework Core "2.2.4-servicing-10062" initialized '"TuringshopContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "None" (9958f5bb)
+2019-05-27T13:20:46.6638729+00:00 0HLN2KN3RHD9G:00000004 [INF] Executed DbCommand ("1"ms) [Parameters=["@__get_Item_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `e`.`category_id`, `e`.`added`, `e`.`department_id`, `e`.`description`, `e`.`modified`, `e`.`name`
+FROM `turingshop`.`category` AS `e`
+WHERE `e`.`category_id` = @__get_Item_0
+LIMIT 1" (0723d8ff)
+2019-05-27T13:20:46.6653665+00:00 0HLN2KN3RHD9G:00000004 [INF] Executed action method "Turing_Back_ED.Controllers.CategoriesController.FindCategory (Turing_Back_ED)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 53.1319ms. (50a9e262)
+2019-05-27T13:20:46.6656805+00:00 0HLN2KN3RHD9G:00000004 [INF] Executing ObjectResult, writing value of type '"Turing_Back_ED.Models.Category"'. (8a1b66c8)
+2019-05-27T13:20:46.6661305+00:00 0HLN2KN3RHD9G:00000004 [INF] Executed action "Turing_Back_ED.Controllers.CategoriesController.FindCategory (Turing_Back_ED)" in 55.5802ms (afa2e885)
+2019-05-27T13:20:46.6662548+00:00 0HLN2KN3RHD9G:00000004 [INF] Executed endpoint '"Turing_Back_ED.Controllers.CategoriesController.FindCategory (Turing_Back_ED)"' (99874f2b)
+2019-05-27T13:20:46.6664641+00:00 0HLN2KN3RHD9G:00000004 [INF] Request finished in 62.0698ms 200 application/json; charset=utf-8 (791a596a)
+2019-05-27T13:20:46.6667759+00:00  [INF] Connection id ""0HLN2KN3RHD9G"", Request id ""0HLN2KN3RHD9G:00000004"": the application completed without reading the entire request body. (54ac9468)
+2019-05-27T13:21:14.2963010+00:00 0HLN2KN3RHD9G:00000005 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/categories/inProduct/1 application/json 67 (ca22a1cb)
+2019-05-27T13:21:14.2970056+00:00 0HLN2KN3RHD9G:00000005 [INF] Executing endpoint '"Turing_Back_ED.Controllers.CategoriesController.GetCategoriesInProduct (Turing_Back_ED)"' (500cc934)
+2019-05-27T13:21:14.3179245+00:00 0HLN2KN3RHD9G:00000005 [INF] Route matched with "{action = \"GetCategoriesInProduct\", controller = \"Categories\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetCategoriesInProduct(Int32, Turing_Back_ED.DomainModels.GeneralQueryModel)" on controller "Turing_Back_ED.Controllers.CategoriesController" ("Turing_Back_ED"). (122b2fdf)
+2019-05-27T13:21:14.3270467+00:00 0HLN2KN3RHD9G:00000005 [INF] Executing action method "Turing_Back_ED.Controllers.CategoriesController.GetCategoriesInProduct (Turing_Back_ED)" - Validation state: Valid (dad538d7)
+2019-05-27T13:21:14.3606655+00:00 0HLN2KN3RHD9G:00000005 [INF] Entity Framework Core "2.2.4-servicing-10062" initialized '"TuringshopContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "None" (9958f5bb)
+2019-05-27T13:21:14.4091177+00:00 0HLN2KN3RHD9G:00000005 [WRN] Query: '"(from ProductCategory a in DbSet<ProductCategory> where [a].ProductId == __product_Id_0 select new {..."' uses a row limiting operation (Skip/Take) without OrderBy which may lead to unpredictable results. (32148ccc)
+2019-05-27T13:21:14.4241598+00:00 0HLN2KN3RHD9G:00000005 [WRN] The Include operation for navigation '"[a].Category"' is unnecessary and was ignored because the navigation is not reachable in the final query results. See https://go.microsoft.com/fwlink/?linkid=850303 for more information. (10efaee6)
+2019-05-27T13:21:14.5936880+00:00 0HLN2KN3RHD9G:00000005 [INF] Executed DbCommand ("38"ms) [Parameters=["@__product_Id_0='?' (DbType = Int32), @__p_2='?' (DbType = Int32), @__p_1='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `a`.`category_id` AS `CategoryId`, `a.Category`.`department_id` AS `DepartmentId`, `a.Category`.`name`
+FROM `turingshop`.`product_category` AS `a`
+INNER JOIN `turingshop`.`category` AS `a.Category` ON `a`.`category_id` = `a.Category`.`category_id`
+WHERE `a`.`product_id` = @__product_Id_0
+LIMIT @__p_2 OFFSET @__p_1" (0723d8ff)
+2019-05-27T13:21:14.6173279+00:00 0HLN2KN3RHD9G:00000005 [INF] Executed action method "Turing_Back_ED.Controllers.CategoriesController.GetCategoriesInProduct (Turing_Back_ED)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 289.945ms. (50a9e262)
+2019-05-27T13:21:14.6176143+00:00 0HLN2KN3RHD9G:00000005 [INF] Executing ObjectResult, writing value of type '"Turing_Back_ED.DomainModels.SearchResponseModel"'. (8a1b66c8)
+2019-05-27T13:21:14.6399976+00:00 0HLN2KN3RHD9G:00000005 [INF] Executed action "Turing_Back_ED.Controllers.CategoriesController.GetCategoriesInProduct (Turing_Back_ED)" in 321.8204ms (afa2e885)
+2019-05-27T13:21:14.6402098+00:00 0HLN2KN3RHD9G:00000005 [INF] Executed endpoint '"Turing_Back_ED.Controllers.CategoriesController.GetCategoriesInProduct (Turing_Back_ED)"' (99874f2b)
+2019-05-27T13:21:14.6405131+00:00 0HLN2KN3RHD9G:00000005 [INF] Request finished in 344.4847ms 200 application/json; charset=utf-8 (791a596a)
+2019-05-27T13:22:07.3288741+00:00 0HLN2KN3RHD9G:00000006 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/categories/inProduct/80 application/json 67 (ca22a1cb)
+2019-05-27T13:22:07.3295972+00:00 0HLN2KN3RHD9G:00000006 [INF] Executing endpoint '"Turing_Back_ED.Controllers.CategoriesController.GetCategoriesInProduct (Turing_Back_ED)"' (500cc934)
+2019-05-27T13:22:07.3302059+00:00 0HLN2KN3RHD9G:00000006 [INF] Route matched with "{action = \"GetCategoriesInProduct\", controller = \"Categories\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetCategoriesInProduct(Int32, Turing_Back_ED.DomainModels.GeneralQueryModel)" on controller "Turing_Back_ED.Controllers.CategoriesController" ("Turing_Back_ED"). (122b2fdf)
+2019-05-27T13:22:07.3325335+00:00 0HLN2KN3RHD9G:00000006 [INF] Executing action method "Turing_Back_ED.Controllers.CategoriesController.GetCategoriesInProduct (Turing_Back_ED)" - Validation state: Valid (dad538d7)
+2019-05-27T13:22:07.3342619+00:00 0HLN2KN3RHD9G:00000006 [INF] Entity Framework Core "2.2.4-servicing-10062" initialized '"TuringshopContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "None" (9958f5bb)
+2019-05-27T13:22:07.3422027+00:00 0HLN2KN3RHD9G:00000006 [INF] Executed DbCommand ("2"ms) [Parameters=["@__product_Id_0='?' (DbType = Int32), @__p_2='?' (DbType = Int32), @__p_1='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `a`.`category_id` AS `CategoryId`, `a.Category`.`department_id` AS `DepartmentId`, `a.Category`.`name`
+FROM `turingshop`.`product_category` AS `a`
+INNER JOIN `turingshop`.`category` AS `a.Category` ON `a`.`category_id` = `a.Category`.`category_id`
+WHERE `a`.`product_id` = @__product_Id_0
+LIMIT @__p_2 OFFSET @__p_1" (0723d8ff)
+2019-05-27T13:22:07.3431177+00:00 0HLN2KN3RHD9G:00000006 [INF] Executed action method "Turing_Back_ED.Controllers.CategoriesController.GetCategoriesInProduct (Turing_Back_ED)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 10.2661ms. (50a9e262)
+2019-05-27T13:22:07.3435323+00:00 0HLN2KN3RHD9G:00000006 [INF] Executing ObjectResult, writing value of type '"Turing_Back_ED.DomainModels.SearchResponseModel"'. (8a1b66c8)
+2019-05-27T13:22:07.3443915+00:00 0HLN2KN3RHD9G:00000006 [INF] Executed action "Turing_Back_ED.Controllers.CategoriesController.GetCategoriesInProduct (Turing_Back_ED)" in 13.8709ms (afa2e885)
+2019-05-27T13:22:07.3445860+00:00 0HLN2KN3RHD9G:00000006 [INF] Executed endpoint '"Turing_Back_ED.Controllers.CategoriesController.GetCategoriesInProduct (Turing_Back_ED)"' (99874f2b)
+2019-05-27T13:22:07.3449954+00:00 0HLN2KN3RHD9G:00000006 [INF] Request finished in 16.2882ms 200 application/json; charset=utf-8 (791a596a)
+2019-05-27T13:22:33.4882891+00:00 0HLN2KN3RHD9G:00000007 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/categories/inProduct/1 application/json 67 (ca22a1cb)
+2019-05-27T13:22:33.4887342+00:00 0HLN2KN3RHD9G:00000007 [INF] Executing endpoint '"Turing_Back_ED.Controllers.CategoriesController.GetCategoriesInProduct (Turing_Back_ED)"' (500cc934)
+2019-05-27T13:22:33.4932098+00:00 0HLN2KN3RHD9G:00000007 [INF] Route matched with "{action = \"GetCategoriesInProduct\", controller = \"Categories\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetCategoriesInProduct(Int32, Turing_Back_ED.DomainModels.GeneralQueryModel)" on controller "Turing_Back_ED.Controllers.CategoriesController" ("Turing_Back_ED"). (122b2fdf)
+2019-05-27T13:22:33.4964729+00:00 0HLN2KN3RHD9G:00000007 [INF] Executing action method "Turing_Back_ED.Controllers.CategoriesController.GetCategoriesInProduct (Turing_Back_ED)" - Validation state: Valid (dad538d7)
+2019-05-27T13:22:33.4982576+00:00 0HLN2KN3RHD9G:00000007 [INF] Entity Framework Core "2.2.4-servicing-10062" initialized '"TuringshopContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "None" (9958f5bb)
+2019-05-27T13:22:33.5184269+00:00 0HLN2KN3RHD9G:00000007 [INF] Executed DbCommand ("3"ms) [Parameters=["@__product_Id_0='?' (DbType = Int32), @__p_2='?' (DbType = Int32), @__p_1='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `a`.`category_id` AS `CategoryId`, `a.Category`.`department_id` AS `DepartmentId`, `a.Category`.`name`
+FROM `turingshop`.`product_category` AS `a`
+INNER JOIN `turingshop`.`category` AS `a.Category` ON `a`.`category_id` = `a.Category`.`category_id`
+WHERE `a`.`product_id` = @__product_Id_0
+LIMIT @__p_2 OFFSET @__p_1" (0723d8ff)
+2019-05-27T13:22:33.5190560+00:00 0HLN2KN3RHD9G:00000007 [INF] Executed action method "Turing_Back_ED.Controllers.CategoriesController.GetCategoriesInProduct (Turing_Back_ED)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 22.2991ms. (50a9e262)
+2019-05-27T13:22:33.5194806+00:00 0HLN2KN3RHD9G:00000007 [INF] Executing ObjectResult, writing value of type '"Turing_Back_ED.DomainModels.SearchResponseModel"'. (8a1b66c8)
+2019-05-27T13:22:33.5213707+00:00 0HLN2KN3RHD9G:00000007 [INF] Executed action "Turing_Back_ED.Controllers.CategoriesController.GetCategoriesInProduct (Turing_Back_ED)" in 27.7305ms (afa2e885)
+2019-05-27T13:22:33.5216354+00:00 0HLN2KN3RHD9G:00000007 [INF] Executed endpoint '"Turing_Back_ED.Controllers.CategoriesController.GetCategoriesInProduct (Turing_Back_ED)"' (99874f2b)
+2019-05-27T13:22:33.5222312+00:00 0HLN2KN3RHD9G:00000007 [INF] Request finished in 34.1164ms 200 application/json; charset=utf-8 (791a596a)
+2019-05-27T13:22:52.4340926+00:00 0HLN2KN3RHD9G:00000008 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/categories/inDepartment/1 application/json 67 (ca22a1cb)
+2019-05-27T13:22:52.4349485+00:00 0HLN2KN3RHD9G:00000008 [INF] Executing endpoint '"Turing_Back_ED.Controllers.CategoriesController.GetCategoriesInDepartment (Turing_Back_ED)"' (500cc934)
+2019-05-27T13:22:52.4623835+00:00 0HLN2KN3RHD9G:00000008 [INF] Route matched with "{action = \"GetCategoriesInDepartment\", controller = \"Categories\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetCategoriesInDepartment(Int32, Turing_Back_ED.DomainModels.GeneralQueryModel)" on controller "Turing_Back_ED.Controllers.CategoriesController" ("Turing_Back_ED"). (122b2fdf)
+2019-05-27T13:22:52.4649279+00:00 0HLN2KN3RHD9G:00000008 [INF] Executing action method "Turing_Back_ED.Controllers.CategoriesController.GetCategoriesInDepartment (Turing_Back_ED)" - Validation state: Valid (dad538d7)
+2019-05-27T13:22:52.4896776+00:00 0HLN2KN3RHD9G:00000008 [INF] Executed action method "Turing_Back_ED.Controllers.CategoriesController.GetCategoriesInDepartment (Turing_Back_ED)", returned result "Microsoft.AspNetCore.Mvc.BadRequestObjectResult" in 24.1918ms. (50a9e262)
+2019-05-27T13:22:52.4899740+00:00 0HLN2KN3RHD9G:00000008 [INF] Executing ObjectResult, writing value of type '"Turing_Back_ED.DomainModels.BadRequestModel"'. (8a1b66c8)
+2019-05-27T13:22:52.5025833+00:00 0HLN2KN3RHD9G:00000008 [INF] Executed action "Turing_Back_ED.Controllers.CategoriesController.GetCategoriesInDepartment (Turing_Back_ED)" in 39.9775ms (afa2e885)
+2019-05-27T13:22:52.5026953+00:00 0HLN2KN3RHD9G:00000008 [INF] Executed endpoint '"Turing_Back_ED.Controllers.CategoriesController.GetCategoriesInDepartment (Turing_Back_ED)"' (99874f2b)
+2019-05-27T13:22:52.5028705+00:00 0HLN2KN3RHD9G:00000008 [INF] Request finished in 69.2681ms 400 application/json; charset=utf-8 (791a596a)
+2019-05-27T13:24:38.2074676+00:00 0HLN2KQL74V1I:00000001 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/values   (ca22a1cb)
+2019-05-27T13:24:38.4559088+00:00 0HLN2KQL74V1I:00000001 [INF] Executing endpoint '"Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)"' (500cc934)
+2019-05-27T13:24:38.5021812+00:00 0HLN2KQL74V1I:00000001 [INF] Route matched with "{action = \"Get\", controller = \"Values\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[System.String]] Get()" on controller "Turing_Back_ED.Controllers.ValuesController" ("Turing_Back_ED"). (122b2fdf)
+2019-05-27T13:24:38.5405173+00:00 0HLN2KQL74V1I:00000001 [INF] Executing action method "Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)" - Validation state: Valid (dad538d7)
+2019-05-27T13:24:38.5546514+00:00 0HLN2KQL74V1I:00000001 [INF] Executed action method "Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 0.5857ms. (50a9e262)
+2019-05-27T13:24:38.5837795+00:00 0HLN2KQL74V1I:00000001 [INF] Executing ObjectResult, writing value of type '"System.String[]"'. (8a1b66c8)
+2019-05-27T13:24:38.7566275+00:00 0HLN2KQL74V1I:00000001 [INF] Executed action "Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)" in 224.4711ms (afa2e885)
+2019-05-27T13:24:38.7570734+00:00 0HLN2KQL74V1I:00000001 [INF] Executed endpoint '"Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)"' (99874f2b)
+2019-05-27T13:24:38.7896446+00:00 0HLN2KQL74V1I:00000001 [INF] Request finished in 601.1461ms 200 application/json; charset=utf-8 (791a596a)
+2019-05-27T13:24:46.3036070+00:00 0HLN2KQL74V1K:00000001 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/categories/inDepartment/1 application/json 67 (ca22a1cb)
+2019-05-27T13:24:46.3196227+00:00 0HLN2KQL74V1K:00000001 [INF] Executing endpoint '"Turing_Back_ED.Controllers.CategoriesController.GetCategoriesInDepartment (Turing_Back_ED)"' (500cc934)
+2019-05-27T13:24:46.4043838+00:00 0HLN2KQL74V1K:00000001 [INF] Route matched with "{action = \"GetCategoriesInDepartment\", controller = \"Categories\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetCategoriesInDepartment(Int32, Turing_Back_ED.DomainModels.GeneralQueryModel)" on controller "Turing_Back_ED.Controllers.CategoriesController" ("Turing_Back_ED"). (122b2fdf)
+2019-05-27T13:24:46.9714581+00:00 0HLN2KQL74V1K:00000001 [INF] Executing action method "Turing_Back_ED.Controllers.CategoriesController.GetCategoriesInDepartment (Turing_Back_ED)" - Validation state: Valid (dad538d7)
+2019-05-27T13:24:48.1747286+00:00 0HLN2KQL74V1K:00000001 [INF] Entity Framework Core "2.2.4-servicing-10062" initialized '"TuringshopContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "None" (9958f5bb)
+2019-05-27T13:24:48.3789271+00:00 0HLN2KQL74V1K:00000001 [WRN] Query: '"(from Category a in DbSet<Category> where [a].DepartmentId == __department_Id_0 select [a]).Skip(__p..."' uses a row limiting operation (Skip/Take) without OrderBy which may lead to unpredictable results. (32148ccc)
+2019-05-27T13:24:49.7799845+00:00 0HLN2KQL74V1K:00000001 [INF] Executed DbCommand ("231"ms) [Parameters=["@__department_Id_0='?' (DbType = Int32), @__p_2='?' (DbType = Int32), @__p_1='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `a`.`category_id`, `a`.`added`, `a`.`department_id`, `a`.`description`, `a`.`modified`, `a`.`name`, `a.Department`.`department_id`, `a.Department`.`added`, `a.Department`.`description`, `a.Department`.`modified`, `a.Department`.`name`
+FROM `turingshop`.`category` AS `a`
+INNER JOIN `turingshop`.`department` AS `a.Department` ON `a`.`department_id` = `a.Department`.`department_id`
+WHERE `a`.`department_id` = @__department_Id_0
+LIMIT @__p_2 OFFSET @__p_1" (0723d8ff)
+2019-05-27T13:24:50.4624732+00:00 0HLN2KQL74V1K:00000001 [INF] Executed action method "Turing_Back_ED.Controllers.CategoriesController.GetCategoriesInDepartment (Turing_Back_ED)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 3490.4716ms. (50a9e262)
+2019-05-27T13:24:50.5246454+00:00 0HLN2KQL74V1K:00000001 [INF] Executing ObjectResult, writing value of type '"Turing_Back_ED.DomainModels.SearchResponseModel"'. (8a1b66c8)
+2019-05-27T13:24:50.6185028+00:00 0HLN2KQL74V1K:00000001 [INF] Executed action "Turing_Back_ED.Controllers.CategoriesController.GetCategoriesInDepartment (Turing_Back_ED)" in 4213.7586ms (afa2e885)
+2019-05-27T13:24:50.6281666+00:00 0HLN2KQL74V1K:00000001 [INF] Executed endpoint '"Turing_Back_ED.Controllers.CategoriesController.GetCategoriesInDepartment (Turing_Back_ED)"' (99874f2b)
+2019-05-27T13:24:50.6518479+00:00 0HLN2KQL74V1K:00000001 [INF] Request finished in 4348.316ms 200 application/json; charset=utf-8 (791a596a)
+2019-05-27T13:26:32.3842109+00:00 0HLN2KRN2U9FU:00000001 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/values   (ca22a1cb)
+2019-05-27T13:26:33.1338442+00:00 0HLN2KRN2U9FU:00000001 [INF] Executing endpoint '"Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)"' (500cc934)
+2019-05-27T13:26:33.2479126+00:00 0HLN2KRN2U9FU:00000001 [INF] Route matched with "{action = \"Get\", controller = \"Values\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[System.String]] Get()" on controller "Turing_Back_ED.Controllers.ValuesController" ("Turing_Back_ED"). (122b2fdf)
+2019-05-27T13:26:33.6034630+00:00 0HLN2KRN2U9FU:00000001 [INF] Executing action method "Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)" - Validation state: Valid (dad538d7)
+2019-05-27T13:26:33.6272335+00:00 0HLN2KRN2U9FU:00000001 [INF] Executed action method "Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 1.028ms. (50a9e262)
+2019-05-27T13:26:33.8571531+00:00 0HLN2KRN2U9FU:00000001 [INF] Executing ObjectResult, writing value of type '"System.String[]"'. (8a1b66c8)
+2019-05-27T13:26:34.3889293+00:00 0HLN2KRN2U9FU:00000001 [INF] Executed action "Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)" in 1089.8829ms (afa2e885)
+2019-05-27T13:26:34.3891919+00:00 0HLN2KRN2U9FU:00000001 [INF] Executed endpoint '"Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)"' (99874f2b)
+2019-05-27T13:26:34.4205566+00:00 0HLN2KRN2U9FU:00000001 [INF] Request finished in 2073.04ms 200 application/json; charset=utf-8 (791a596a)
+2019-05-27T13:26:44.0199044+00:00 0HLN2KRN2U9G0:00000001 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/categories/inDepartment/1 application/json 67 (ca22a1cb)
+2019-05-27T13:26:44.0603040+00:00 0HLN2KRN2U9G0:00000001 [INF] Executing endpoint '"Turing_Back_ED.Controllers.CategoriesController.GetCategoriesInDepartment (Turing_Back_ED)"' (500cc934)
+2019-05-27T13:26:44.1759437+00:00 0HLN2KRN2U9G0:00000001 [INF] Route matched with "{action = \"GetCategoriesInDepartment\", controller = \"Categories\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetCategoriesInDepartment(Int32, Turing_Back_ED.DomainModels.GeneralQueryModel)" on controller "Turing_Back_ED.Controllers.CategoriesController" ("Turing_Back_ED"). (122b2fdf)
+2019-05-27T13:26:45.1230717+00:00 0HLN2KRN2U9G0:00000001 [INF] Executing action method "Turing_Back_ED.Controllers.CategoriesController.GetCategoriesInDepartment (Turing_Back_ED)" - Validation state: Valid (dad538d7)
+2019-05-27T13:26:46.7158402+00:00 0HLN2KRN2U9G0:00000001 [INF] Entity Framework Core "2.2.4-servicing-10062" initialized '"TuringshopContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "None" (9958f5bb)
+2019-05-27T13:26:46.9648928+00:00 0HLN2KRN2U9G0:00000001 [WRN] Query: '"(from Category a in DbSet<Category> where [a].DepartmentId == __department_Id_0 select [a]).Skip(__p..."' uses a row limiting operation (Skip/Take) without OrderBy which may lead to unpredictable results. (32148ccc)
+2019-05-27T13:26:48.6949483+00:00 0HLN2KRN2U9G0:00000001 [INF] Executed DbCommand ("188"ms) [Parameters=["@__department_Id_0='?' (DbType = Int32), @__p_2='?' (DbType = Int32), @__p_1='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `a`.`category_id`, `a`.`added`, `a`.`department_id`, `a`.`description`, `a`.`modified`, `a`.`name`, `a.Department`.`department_id`, `a.Department`.`added`, `a.Department`.`description`, `a.Department`.`modified`, `a.Department`.`name`
+FROM `turingshop`.`category` AS `a`
+INNER JOIN `turingshop`.`department` AS `a.Department` ON `a`.`department_id` = `a.Department`.`department_id`
+WHERE `a`.`department_id` = @__department_Id_0
+LIMIT @__p_2 OFFSET @__p_1" (0723d8ff)
+2019-05-27T13:26:49.0259237+00:00 0HLN2KRN2U9G0:00000001 [INF] Executed action method "Turing_Back_ED.Controllers.CategoriesController.GetCategoriesInDepartment (Turing_Back_ED)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 3902.5117ms. (50a9e262)
+2019-05-27T13:26:49.0525305+00:00 0HLN2KRN2U9G0:00000001 [INF] Executing ObjectResult, writing value of type '"Turing_Back_ED.DomainModels.SearchResponseModel"'. (8a1b66c8)
+2019-05-27T13:26:49.0809333+00:00 0HLN2KRN2U9G0:00000001 [INF] Executed action "Turing_Back_ED.Controllers.CategoriesController.GetCategoriesInDepartment (Turing_Back_ED)" in 4904.4337ms (afa2e885)
+2019-05-27T13:26:49.0860761+00:00 0HLN2KRN2U9G0:00000001 [INF] Executed endpoint '"Turing_Back_ED.Controllers.CategoriesController.GetCategoriesInDepartment (Turing_Back_ED)"' (99874f2b)
+2019-05-27T13:26:49.0988603+00:00 0HLN2KRN2U9G0:00000001 [INF] Request finished in 5079.5336ms 200 application/json; charset=utf-8 (791a596a)
