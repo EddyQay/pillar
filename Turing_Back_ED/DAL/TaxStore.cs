@@ -19,11 +19,11 @@ namespace Turing_Back_ED.DomainModels
     {
         private readonly IUserManager userManager;
         private readonly IAuthenticationManager authManager;
-        private readonly TuringshopContext _context;
+        private readonly DatabaseContext _context;
         private readonly TokenSection tokenSection;
         private readonly TokenManager tokenManager;
 
-        public TaxStore(TuringshopContext context, TokenManager _tokenManager, 
+        public TaxStore(DatabaseContext context, TokenManager _tokenManager, 
             IAuthenticationManager _authManager, IUserManager _userManager, 
             IOptions<TokenSection> _tokenSection)
         {

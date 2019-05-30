@@ -9,6 +9,7 @@ using Turing_Back_ED.Utilities;
 
 namespace Turing_Back_ED.Controllers
 {
+    [Obsolete("Used only for testing purposes", false)]
     [Route("api/[controller]")]
     [ApiController]
     public class ValuesController : ControllerBase

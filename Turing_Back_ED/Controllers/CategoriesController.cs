@@ -14,20 +14,25 @@ using Attribute = Turing_Back_ED.Models.Attribute;
 
 namespace Turing_Back_ED.Controllers
 {
+    /// <summary>
+    /// Facilitates the manipulation of product categories
+    /// </summary>
     [Route("api/[controller]")]
     [ApiController]
     public class CategoriesController : ControllerBase
     {
         private readonly CategoryStore categories;
-        readonly ILogger<CategoriesController> logger;
 
-        public CategoriesController(CategoryStore _categories, ILogger<CategoriesController> _logger)
+        public CategoriesController(CategoryStore _categories)
         {
             categories = _categories;
-            logger = _logger;
         }
 
-
+        /// <summary>
+        /// Gets all product categories
+        /// </summary>
+        /// <param name="model">An instance of the CategoryQueryModel class</param>
+        /// <returns>A List of category objects</returns>
         [HttpGet]
         [ModelValidate(allowNull: true)]
         public async Task<ActionResult> GetAll(CategoryQueryModel model)
@@ -68,6 +73,11 @@ namespace Turing_Back_ED.Controllers
         }
         
 
+        /// <summary>
+        /// Finds a particular category
+        /// </summary>
+        /// <param name="id">Id of a known category</param>
+        /// <returns>A category object</returns>
         [HttpGet("{id}")]
         [ModelValidate]
         public async Task<ActionResult> FindCategory(int id)
@@ -88,6 +98,12 @@ namespace Turing_Back_ED.Controllers
         }
         
 
+        /// <summary>
+        /// Finds all categories for a particular product
+        /// </summary>
+        /// <param name="product_Id">Id of a product</param>
+        /// <param name="model"></param>
+        /// <returns>A List of category objects</returns>
         [HttpGet("inProduct/{product_Id}")]
         [ModelValidate(allowNull:true)]
         public async Task<ActionResult> GetCategoriesInProduct(int product_Id, GeneralQueryModel model)
@@ -144,6 +160,12 @@ namespace Turing_Back_ED.Controllers
         }
 
 
+        /// <summary>
+        /// Finds all categories belonging to a particular department
+        /// </summary>
+        /// <param name="department_Id">Id of a department</param>
+        /// <param name="model">An instance the CategoryQueryModel class</param>
+        /// <returns>A list of category objects</returns>
         [HttpGet("inDepartment/{department_Id}")]
         [ModelValidate(allowNull: true)]
         public async Task<ActionResult> GetCategoriesInDepartment(int department_Id, GeneralQueryModel model)

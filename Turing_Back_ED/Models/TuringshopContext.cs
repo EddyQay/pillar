@@ -4,13 +4,13 @@ using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace Turing_Back_ED.Models
 {
-    public partial class TuringshopContext : DbContext
+    public partial class DatabaseContext : DbContext
     {
-        public TuringshopContext()
+        public DatabaseContext()
         {
         }
 
-        public TuringshopContext(DbContextOptions<TuringshopContext> options)
+        public DatabaseContext(DbContextOptions<DatabaseContext> options)
             : base(options)
         {
         }
@@ -22,7 +22,7 @@ namespace Turing_Back_ED.Models
         public virtual DbSet<Customer> Customers { get; set; }
         public virtual DbSet<Department> Departments { get; set; }
         public virtual DbSet<OrderDetail> OrderDetails { get; set; }
-        public virtual DbSet<Orders> Orders { get; set; }
+        public virtual DbSet<Order> Orders { get; set; }
         public virtual DbSet<Product> Products { get; set; }
         public virtual DbSet<ProductAttribute> ProductAttributes { get; set; }
         public virtual DbSet<ProductCategory> ProductCategories { get; set; }
@@ -290,7 +290,7 @@ namespace Turing_Back_ED.Models
                     .HasColumnType("decimal(10,2)");
             });
 
-            modelBuilder.Entity<Orders>(entity =>
+            modelBuilder.Entity<Order>(entity =>
             {
                 entity.HasKey(e => e.OrderId);
 
@@ -542,13 +542,13 @@ namespace Turing_Back_ED.Models
 
                 entity.Property(e => e.BuyNow)
                     .HasColumnName("buy_now")
-                    .HasColumnType("tinyint(1)")
+                    .HasColumnType("bit")
                     .HasDefaultValueSql("1");
 
                 entity.Property(e => e.CartId)
                     .IsRequired()
                     .HasColumnName("cart_id")
-                    .HasColumnType("char(32)");
+                    .HasColumnType("char(36)");
 
                 entity.Property(e => e.Modified).HasColumnName("modified");
 

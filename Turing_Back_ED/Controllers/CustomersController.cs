@@ -15,19 +15,25 @@ using Turing_Back_ED.Utilities;
 
 namespace Turing_Back_ED.Controllers
 {
+    /// <summary>
+    /// Facilitates the creation an manipulation of customers
+    /// </summary>
     [Route("api/[controller]")]
     [ApiController]
     public class CustomersController : ControllerBase
     {
         private readonly CustomerStore customers;
-        readonly ILogger<CustomersController> logger;
 
-        public CustomersController(CustomerStore _customers, ILogger<CustomersController> _logger)
+        public CustomersController(CustomerStore _customers)
         {
             customers = _customers;
-            logger = _logger;
         }
 
+        /// <summary>
+        /// Creates a new customer
+        /// </summary>
+        /// <param name="customer">A customer object to add</param>
+        /// <returns>A Customer object</returns>
         [HttpPost]
         [ModelValidate]
         public async Task<ActionResult> AddCustomer([FromBody] Customer customer)
@@ -55,6 +61,12 @@ namespace Turing_Back_ED.Controllers
             });
         }
 
+
+        /// <summary>
+        /// Signs a customer in, into their account
+        /// </summary>
+        /// <param name="credentials">An object of credentails</param>
+        /// <returns></returns>
         [HttpPost("login")]
         [ModelValidate]
         public async Task<ActionResult> SignIn([FromBody] LoginModel credentials)
@@ -79,6 +91,12 @@ namespace Turing_Back_ED.Controllers
             });
         }
         
+
+        /// <summary>
+        /// Updates a customer's credit card numbers
+        /// </summary>
+        /// <param name="credit_card">new credit-card number</param>
+        /// <returns>A Customer object</returns>
         [HttpPut("creditCard")]
         [ModelValidate]
         public async Task<ActionResult> UpdateCreditCard([FromBody]string credit_card)

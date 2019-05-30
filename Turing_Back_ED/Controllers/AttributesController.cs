@@ -14,20 +14,25 @@ using Attribute = Turing_Back_ED.Models.Attribute;
 
 namespace Turing_Back_ED.Controllers
 {
+    /// <summary>
+    /// Facilitates the creation and manipulation of attributes
+    /// </summary>
     [Route("api/[controller]")]
     [ApiController]
     public class AttributesController : ControllerBase
     {
         private readonly AttributeStore attributes;
-        readonly ILogger<AttributesController> logger;
 
-        public AttributesController(AttributeStore _attributes, ILogger<AttributesController> _logger)
+        public AttributesController(AttributeStore _attributes)
         {
             attributes = _attributes;
-            logger = _logger;
         }
         
-
+        /// <summary>
+        /// Finds an attributes using its Id
+        /// </summary>
+        /// <param name="id">attribute id</param>
+        /// <returns>an attribute  object</returns>
         [HttpGet("{id}")]
         [ModelValidate]
         public async Task<ActionResult> FindAttribute(int id)
@@ -47,6 +52,11 @@ namespace Turing_Back_ED.Controllers
             });
         }
 
+        /// <summary>
+        /// Retrieves all attributes
+        /// </summary>
+        /// <param name="model">An instance of the GeneralQueryModel class</param>
+        /// <returns>A list of attributes</returns>
         [HttpGet]
         [ModelValidate(allowNull: true)]
         public async Task<ActionResult> GetAll(GeneralQueryModel model)
@@ -70,6 +80,13 @@ namespace Turing_Back_ED.Controllers
                 });
         }
 
+
+        /// <summary>
+        /// Gets all values for an attribute
+        /// </summary>
+        /// <param name="attribute_Id">Id of the attribute</param>
+        /// <param name="model">An instance of the GeneralQueryModel class</param>
+        /// <returns>A list of attribute values</returns>
         [HttpGet("values/{attribute_Id}")]
         [ModelValidate]
         public async Task<ActionResult> GetValues(int attribute_Id, GeneralQueryModel model)
@@ -125,6 +142,13 @@ namespace Turing_Back_ED.Controllers
                 });
         }
 
+
+        /// <summary>
+        /// Gets attributes of a particular product
+        /// </summary>
+        /// <param name="product_Id">Id of the product</param>
+        /// <param name="model">An instance of the GeneralQueryModel class</param>
+        /// <returns>A list of attributes</returns>
         [HttpGet("inProduct/{product_Id}")]
         [ModelValidate]
         public async Task<ActionResult> GetAttibutesInProduct(int product_Id, GeneralQueryModel model)

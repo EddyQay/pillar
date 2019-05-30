@@ -1,34 +1,33 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 using Turing_Back_ED.DomainModels;
 using Turing_Back_ED.Middlewares;
-using Turing_Back_ED.Models;
 using Turing_Back_ED.Utilities;
 
 namespace Turing_Back_ED.Controllers
 {
+    /// <summary>
+    /// Handles tax related information
+    /// </summary>
     [Route("api/[controller]")]
     [ApiController]
     public class TaxController : ControllerBase
     {
         private readonly TaxStore taxes;
-        readonly ILogger<TaxController> logger;
 
-        public TaxController(TaxStore _taxes, ILogger<TaxController> _logger)
+        public TaxController(TaxStore _taxes)
         {
             taxes = _taxes;
-            logger = _logger;
         }
         
 
+        /// <summary>
+        /// Find information on a particular tax entry
+        /// </summary>
+        /// <param name="id">Tax Id</param>
+        /// <returns>A tax object</returns>
         [HttpGet("{id}")]
         [ModelValidate]
         public async Task<ActionResult> FindTax(int id)
@@ -48,14 +47,19 @@ namespace Turing_Back_ED.Controllers
             });
         }
 
+        /// <summary>
+        /// Gets all tax entries
+        /// </summary>
+        /// <param name="filter">An object of filtering options</param>
+        /// <returns>An array of tax objects</returns>
         [HttpGet]
         [ModelValidate(allowNull: true)]
-        public async Task<ActionResult> GetAll(GeneralQueryModel model)
+        public async Task<ActionResult> GetAll(GeneralQueryModel filter)
         {
-            if (model == null)
-                model = new GeneralQueryModel();
+            if (filter == null)
+                filter = new GeneralQueryModel();
 
-            var query = await taxes.GetAllAsync(model);
+            var query = await taxes.GetAllAsync(filter);
 
             if (query != null)
                 return new OkObjectResult(new SearchResponseModel

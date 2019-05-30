@@ -15,10 +15,10 @@ namespace Turing_Back_ED.DomainModels
 {
     public class ProductStore : IStore<Product>, IDisposable
     {
-        private readonly TuringshopContext _context;
+        private readonly DatabaseContext _context;
         private readonly TokenManager tokenManager;
 
-        public ProductStore(TuringshopContext context, TokenManager _tokenGetter)
+        public ProductStore(DatabaseContext context, TokenManager _tokenGetter)
         {
             _context = context;
             tokenManager = _tokenGetter;
@@ -123,14 +123,6 @@ namespace Turing_Back_ED.DomainModels
             return searchResult;
         }
 
-        public async Task<IEnumerable<Product>> FindByConditionAsync(Expression<Func<Product, bool>> expression)//, string includes
-        {
-            return null;
-            //return string.IsNullOrWhiteSpace(includes)
-            //    ? await _context.Products.Where(expression).AsNoTracking().ToListAsync()
-            //    : await _context.Products.Include(includes).Where(expression).AsNoTracking().ToListAsync();
-        }
-
         public async Task<IEnumerable<Product>> FindInCategory(int categoryId, GeneralQueryModel criteria)
         {
             return await _context.Products
@@ -170,7 +162,7 @@ namespace Turing_Back_ED.DomainModels
                 ? _context.Reviews.Max(p => p.ReviewId) + 1
                 : 1;
 
-            int custId = Convert.ToInt32(httpContext.User.Identity.Name);//(int)tokenManager.GetValueByRequest(httpContext.Request);
+            int custId = Convert.ToInt32(httpContext.User.Identity.Name);
 
             if (custId > 0)
             {
@@ -198,20 +190,17 @@ namespace Turing_Back_ED.DomainModels
         {
             //remove entity from context
             _context.Products.Remove(entity);
-            //then mark it for deletion, so it gets
-            //deleted from the database once 
-            //'SaveChanges' is called
-            _context.Entry(entity).State = EntityState.Deleted;
         }
 
-        public Task<Product> UpdateAsync(Product entity)
+        public async Task<Product> UpdateAsync(Product entity)
         {
             //mark entity as modified, so to be
             //modified in the database when
             //'SaveChanges' is called
             _context.Entry(entity).State = EntityState.Modified;
-            //return entity;
-            throw new NotImplementedException();
+
+            await SaveChangesAsync();
+            return entity;
         }
 
 
@@ -221,6 +210,12 @@ namespace Turing_Back_ED.DomainModels
             //mechanism
             return await _context.SaveChangesAsync();
         }
+
+        public Task<IEnumerable<Product>> FindByConditionAsync(Expression<Func<Product, bool>> expression)
+        {
+            throw new NotImplementedException();
+        }
+
 
         #region IDisposable Support
         private bool disposedValue = false; // To detect redundant calls

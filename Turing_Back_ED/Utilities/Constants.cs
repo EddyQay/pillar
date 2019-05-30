@@ -39,7 +39,13 @@ namespace Turing_Back_ED.Utilities
         public const string ValidSortFileds_category_id = "category_id";
         public const string ValidSortFileds_name = "name";
 
-
+        public enum OrderStatuses
+        {
+            PendingShipment,
+            Shipped,
+            Cancelled,
+            Delievered
+        }
 
         public enum ErrorCodes
         {
@@ -203,6 +209,8 @@ namespace Turing_Back_ED.Utilities
             public const string TAX_01 = "No tax information with this ID exists";
 
             public const string ERR_01 = "No {0} with this ID exists";
+
+            public const string ERR_02 = "Something unexpectedly happened while processing your request.";
 
 
             public const string PAG_01 = "The order format does not match 'field,(DESC|ASC). Use Ex. 'name,DESC'";

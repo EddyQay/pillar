@@ -1,5 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Microsoft.Extensions.Options;
 using System;
 using System.Collections.Generic;
@@ -17,18 +16,13 @@ namespace Turing_Back_ED.DomainModels
 {
     public class CustomerStore : IStore<Customer>
     {
-        private readonly IUserManager userManager;
-        private readonly IAuthenticationManager authManager;
-        private readonly TuringshopContext _context;
+        private readonly DatabaseContext _context;
         private readonly TokenSection tokenSection;
         private readonly TokenManager tokenManager;
 
-        public CustomerStore(TuringshopContext context, TokenManager _tokenManager, 
-            IAuthenticationManager _authManager, IUserManager _userManager, 
-            IOptions<TokenSection> _tokenSection)
+        public CustomerStore(DatabaseContext context, TokenManager _tokenManager, 
+            IOptions<TokenSection> _tokenSection) //from Startup's dependency injection
         {
-            authManager = _authManager;
-            userManager = _userManager;
             _context = context;
             tokenManager = _tokenManager;
             tokenSection = _tokenSection.Value;
@@ -51,12 +45,6 @@ namespace Turing_Back_ED.DomainModels
                 //the item count specified in the 'Limit' param
                 .Take((int)criteria.Limit);
             return await searchResult.ToListAsync();
-        }
-        
-        //NOT IMPLEMENTED
-        Task<Customer> IStore<Customer>.AddAsync(Customer entity)
-        {
-            throw new NotImplementedException();
         }
 
         public async Task<AuthResponseModel> AddAsync(Customer customer)
@@ -172,61 +160,6 @@ namespace Turing_Back_ED.DomainModels
             return await _context.Customers.FindAsync(Id);
         }
 
-        [Obsolete]
-        public async Task<IEnumerable<Customer>> FindAllAsync(SearchModel criteria)
-        {
-            IEnumerable<Customer> searchResult = null;
-            switch (criteria.All_Words)
-            {
-                case "on":
-                    searchResult = await _context.Customers
-                        //find all products names that contain 'Query_String' value
-                        .Where(p => p.Name.Contains(criteria.Query_String) ||
-                        //or product description contains 'Query_String' value
-                        p.Address1.Contains(criteria.Query_String))
-                        //for pagination eg. if page is given as 3, and
-                        //limit = 10, then pages to skip are 1 and 2
-                        //so skip = page -1 (that's equal to 2)
-                        //then, the skip (2) x number of items per page
-                        //gives us number of items to skip, taking us
-                        //to where to start querying from.
-                        .Skip(criteria.Limit * (criteria.Page - 1))
-                        //once we know where to start, we query
-                        //the item count specified in the 'Limit' param 
-                        .Take(criteria.Limit).ToListAsync();
-                    break;
-                case "off":
-                    searchResult = await _context.Customers
-                        //find all products whose names that DO NOT 
-                        //contain 'Query_String' value
-                        .Where(p => !p.Name.Contains(criteria.Query_String) &&
-                        //AND descriptions DO NOT contain 'Query_String' value
-                        !p.Address1.Contains(criteria.Query_String))
-                        .Skip(criteria.Limit * (criteria.Page - 1))
-                        .Take(criteria.Limit).ToListAsync();
-                    break;
-                default:
-                    searchResult = await _context.Customers
-                        .Where(p => p.Name.Contains(criteria.Query_String) ||
-                        p.Address1.Contains(criteria.Query_String))
-                        .Skip(criteria.Limit * (criteria.Page - 1))
-                        .Take(criteria.Limit).ToListAsync();
-                    break;
-            }
-
-            return searchResult;
-        }
-
-        public void Remove(Customer entity)
-        {
-            throw new NotImplementedException();
-        }
-
-        public async Task<int> SaveChangesAsync()
-        {
-            return await _context.SaveChangesAsync();
-        }
-
         public async Task<Customer> UpdateAsync(Customer entity)
         {
             var customerInStore = await FindByIdAsync(entity.CustomerId);
@@ -315,9 +248,72 @@ namespace Turing_Back_ED.DomainModels
             });
         }
 
+        public async Task<int> SaveChangesAsync()
+        {
+            return await _context.SaveChangesAsync();
+        }
+
+        #region NOT IMPLEMENTED
+        Task<Customer> IStore<Customer>.AddAsync(Customer entity)
+        {
+            throw new NotImplementedException();
+        }
+
+        [Obsolete]
+        public async Task<IEnumerable<Customer>> FindAllAsync(SearchModel criteria)
+        {
+            IEnumerable<Customer> searchResult = null;
+            switch (criteria.All_Words)
+            {
+                case "on":
+                    searchResult = await _context.Customers
+                        //find all products names that contain 'Query_String' value
+                        .Where(p => p.Name.Contains(criteria.Query_String) ||
+                        //or product description contains 'Query_String' value
+                        p.Address1.Contains(criteria.Query_String))
+                        //for pagination eg. if page is given as 3, and
+                        //limit = 10, then pages to skip are 1 and 2
+                        //so skip = page -1 (that's equal to 2)
+                        //then, the skip (2) x number of items per page
+                        //gives us number of items to skip, taking us
+                        //to where to start querying from.
+                        .Skip(criteria.Limit * (criteria.Page - 1))
+                        //once we know where to start, we query
+                        //the item count specified in the 'Limit' param 
+                        .Take(criteria.Limit).ToListAsync();
+                    break;
+                case "off":
+                    searchResult = await _context.Customers
+                        //find all products whose names that DO NOT 
+                        //contain 'Query_String' value
+                        .Where(p => !p.Name.Contains(criteria.Query_String) &&
+                        //AND descriptions DO NOT contain 'Query_String' value
+                        !p.Address1.Contains(criteria.Query_String))
+                        .Skip(criteria.Limit * (criteria.Page - 1))
+                        .Take(criteria.Limit).ToListAsync();
+                    break;
+                default:
+                    searchResult = await _context.Customers
+                        .Where(p => p.Name.Contains(criteria.Query_String) ||
+                        p.Address1.Contains(criteria.Query_String))
+                        .Skip(criteria.Limit * (criteria.Page - 1))
+                        .Take(criteria.Limit).ToListAsync();
+                    break;
+            }
+
+            return searchResult;
+        }
+
+        public void Remove(Customer entity)
+        {
+            throw new NotImplementedException();
+        }
+
         public Task<IEnumerable<Customer>> FindByConditionAsync(Expression<Func<Customer, bool>> expression)
         {
             throw new NotImplementedException();
         }
+
+        #endregion
     }
 }

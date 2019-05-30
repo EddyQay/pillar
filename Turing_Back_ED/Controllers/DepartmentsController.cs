@@ -15,25 +15,30 @@ using Turing_Back_ED.Utilities;
 
 namespace Turing_Back_ED.Controllers
 {
+    /// <summary>
+    /// Controls all department information
+    /// </summary>
     [Route("api/[controller]")]
     [ApiController]
     public class DepartmentsController : ControllerBase
     {
         private readonly DepartmentStore departments;
-        readonly ILogger<DepartmentsController> logger;
 
-        public DepartmentsController(DepartmentStore _departments, ILogger<DepartmentsController> _logger)
+        public DepartmentsController(DepartmentStore _departments)
         {
             departments = _departments;
-            logger = _logger;
         }
         
-
+        /// <summary>
+        /// Finds a particular department
+        /// </summary>
+        /// <param name="Id">Department Id</param>
+        /// <returns>A Department object</returns>
         [HttpGet("{id}")]
         [ModelValidate]
-        public async Task<ActionResult> FindDepartment(int id)
+        public async Task<ActionResult> FindDepartment(int Id)
         {
-            var department = await departments.FindByIdAsync(id);
+            var department = await departments.FindByIdAsync(Id);
 
             if (department != null)
             {
@@ -48,14 +53,19 @@ namespace Turing_Back_ED.Controllers
             });
         }
 
+        /// <summary>
+        /// Gets all departments there is
+        /// </summary>
+        /// <param name="filter">an object of filtering options</param>
+        /// <returns></returns>
         [HttpGet]
         [ModelValidate(allowNull: true)]
-        public async Task<ActionResult> GetAll(GeneralQueryModel model)
+        public async Task<ActionResult> GetAll(GeneralQueryModel filter)
         {
-            if (model == null)
-                model = new GeneralQueryModel();
+            if (filter == null)
+                filter = new GeneralQueryModel();
 
-            var query = await departments.GetAllAsync(model);
+            var query = await departments.GetAllAsync(filter);
 
             if (query != null)
                 return new OkObjectResult(new SearchResponseModel

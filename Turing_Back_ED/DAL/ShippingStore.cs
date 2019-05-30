@@ -13,18 +13,13 @@ namespace Turing_Back_ED.DAL
 {
     public class ShippingStore : IStore<Shipping>
     {
-        private readonly IUserManager userManager;
-        private readonly IAuthenticationManager authManager;
-        private readonly TuringshopContext _context;
+        private readonly DatabaseContext _context;
         private readonly TokenSection tokenSection;
         private readonly TokenManager tokenManager;
 
-        public ShippingStore(TuringshopContext context, TokenManager _tokenManager, 
-            IAuthenticationManager _authManager, IUserManager _userManager, 
+        public ShippingStore(DatabaseContext context, TokenManager _tokenManager, 
             IOptions<TokenSection> _tokenSection)
         {
-            authManager = _authManager;
-            userManager = _userManager;
             _context = context;
             tokenManager = _tokenManager;
             tokenSection = _tokenSection.Value;

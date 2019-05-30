@@ -8,24 +8,18 @@ using System.Threading.Tasks;
 using Turing_Back_ED.DomainModels;
 using Turing_Back_ED.Models;
 using Turing_Back_ED.Utilities;
-using Attribute = Turing_Back_ED.Models.Attribute;
 
 namespace Turing_Back_ED.DAL
 {
     public class CategoryStore : IStore<Category>
     {
-        private readonly IUserManager userManager;
-        private readonly IAuthenticationManager authManager;
-        private readonly TuringshopContext _context;
+        private readonly DatabaseContext _context;
         private readonly TokenSection tokenSection;
         private readonly TokenManager tokenManager;
 
-        public CategoryStore(TuringshopContext context, TokenManager _tokenManager, 
-            IAuthenticationManager _authManager, IUserManager _userManager, 
+        public CategoryStore(DatabaseContext context, TokenManager _tokenManager, 
             IOptions<TokenSection> _tokenSection)
         {
-            authManager = _authManager;
-            userManager = _userManager;
             _context = context;
             tokenManager = _tokenManager;
             tokenSection = _tokenSection.Value;
@@ -153,7 +147,13 @@ namespace Turing_Back_ED.DAL
             return await _context.Categories.FindAsync(Id);
         }
 
+        public async Task<int> SaveChangesAsync()
+        {
+            return await _context.SaveChangesAsync();
+        }
+
         #region NOT IMPLEMENTED
+
         public Task<Category> AddAsync(Category entity)
         {
             throw new NotImplementedException();
@@ -180,11 +180,6 @@ namespace Turing_Back_ED.DAL
         }
 
         public Task<IEnumerable<Category>> FindByConditionAsync(Expression<Func<Category, bool>> expression)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<int> SaveChangesAsync()
         {
             throw new NotImplementedException();
         }

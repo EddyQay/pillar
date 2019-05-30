@@ -14,18 +14,13 @@ namespace Turing_Back_ED.DAL
 {
     public class AttributeStore : IStore<Attribute>
     {
-        private readonly IUserManager userManager;
-        private readonly IAuthenticationManager authManager;
-        private readonly TuringshopContext _context;
+        private readonly DatabaseContext _context;
         private readonly TokenSection tokenSection;
         private readonly TokenManager tokenManager;
 
-        public AttributeStore(TuringshopContext context, TokenManager _tokenManager, 
-            IAuthenticationManager _authManager, IUserManager _userManager, 
+        public AttributeStore(DatabaseContext context, TokenManager _tokenManager, 
             IOptions<TokenSection> _tokenSection)
         {
-            authManager = _authManager;
-            userManager = _userManager;
             _context = context;
             tokenManager = _tokenManager;
             tokenSection = _tokenSection.Value;
@@ -43,10 +38,10 @@ namespace Turing_Back_ED.DAL
                 //then, the skip -> 2 x number of items per page
                 //gives us number of items to skip, taking us
                 //to where to start querying from.
-                .Skip((int)((criteria.Page - 1) * criteria.Limit))
+                .Skip((criteria.Page - 1) * criteria.Limit)
                 //once we know where to start, we query
                 //the item count specified in the 'Limit' param
-                .Take((int)criteria.Limit);
+                .Take(criteria.Limit);
             return await searchResult.ToListAsync();
         }
 
@@ -79,7 +74,13 @@ namespace Turing_Back_ED.DAL
             return await _context.Attributes.FindAsync(Id);
         }
 
-        //NOT IMPLEMENTED
+        public async Task<int> SaveChangesAsync()
+        {
+            return await _context.SaveChangesAsync();
+        }
+
+        #region  NOT IMPLEMENTED
+
         public Task<Attribute> AddAsync(Attribute entity)
         {
             throw new NotImplementedException();
@@ -110,9 +111,6 @@ namespace Turing_Back_ED.DAL
             throw new NotImplementedException();
         }
 
-        public Task<int> SaveChangesAsync()
-        {
-            throw new NotImplementedException();
-        }
+        #endregion
     }
 }

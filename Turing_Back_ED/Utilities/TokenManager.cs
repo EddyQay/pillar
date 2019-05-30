@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Security.Claims;
+using System.Security.Cryptography;
 using System.Threading.Tasks;
 using Turing_Back_ED.DAL;
 using Turing_Back_ED.DomainModels;
@@ -80,13 +81,6 @@ namespace Turing_Back_ED.Utilities
             return localCache.Session[encryptedToken] != null;
         }
 
-        //private bool GetSaveCustomerIdWithNewToken(TokenSection tokenSection, RegisterModel model, object userId, object value)
-        //{
-        //    var encryptedToken = GetNewToken(tokenSection, model, userId);
-        //    localCache.Session[encryptedToken] = value;
-        //    return localCache.Session[encryptedToken] != null;
-        //}
-
         public string GetNewToken(TokenSection tokenSection, string name, string email, object userId)
         {
             var securityKey = new SymmetricSecurityKey(Convert.FromBase64String((string)tokenSection.SignKey));
@@ -106,6 +100,20 @@ namespace Turing_Back_ED.Utilities
             );
 
             return new JwtSecurityTokenHandler().WriteToken(token);
+        }
+
+        public string GenerateGenericAuthCode()
+        {
+            byte[] rawCode;
+
+            //generate a 48-bit salt using a secure PRNG
+            rawCode = new byte[48 / 8];
+            using (var rng = RandomNumberGenerator.Create())
+            {
+                rng.GetBytes(rawCode);
+            }
+
+            return Convert.ToBase64String(rawCode);
         }
 
         private bool SaveNewToken(object value)

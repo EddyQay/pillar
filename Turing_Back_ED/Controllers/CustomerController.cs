@@ -15,20 +15,25 @@ using Turing_Back_ED.Utilities;
 
 namespace Turing_Back_ED.Controllers
 {
+    /// <summary>
+    /// Manipulates a particular customer
+    /// </summary>
     [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class CustomerController : ControllerBase
     {
         private readonly CustomerStore customers;
-        readonly ILogger<CustomerController> logger;
 
-        public CustomerController(CustomerStore _customers, ILogger<CustomerController> _logger)
+        public CustomerController(CustomerStore _customers)
         {
             customers = _customers;
-            logger = _logger;
         }
         
+        /// <summary>
+        /// Finds a particular customer
+        /// </summary>
+        /// <returns>A Customer object</returns>
         [HttpGet]
         public async Task<ActionResult> FindCustomer()
         {
@@ -48,6 +53,11 @@ namespace Turing_Back_ED.Controllers
             });
         }
 
+        /// <summary>
+        /// Updates a partuclar customer's information
+        /// </summary>
+        /// <param name="customer">A customer object with updated information</param>
+        /// <returns>A Customer object</returns>
         [HttpPut]
         public async Task<ActionResult> UpdateCustomer(CustomerForUpdate customer)
         {

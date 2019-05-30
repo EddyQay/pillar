@@ -1002,3 +1002,694 @@ LIMIT @__p_2 OFFSET @__p_1" (0723d8ff)
 2019-05-27T13:26:49.0809333+00:00 0HLN2KRN2U9G0:00000001 [INF] Executed action "Turing_Back_ED.Controllers.CategoriesController.GetCategoriesInDepartment (Turing_Back_ED)" in 4904.4337ms (afa2e885)
 2019-05-27T13:26:49.0860761+00:00 0HLN2KRN2U9G0:00000001 [INF] Executed endpoint '"Turing_Back_ED.Controllers.CategoriesController.GetCategoriesInDepartment (Turing_Back_ED)"' (99874f2b)
 2019-05-27T13:26:49.0988603+00:00 0HLN2KRN2U9G0:00000001 [INF] Request finished in 5079.5336ms 200 application/json; charset=utf-8 (791a596a)
+2019-05-27T22:38:24.6850767+00:00 0HLN2UG3AHQJ1:00000001 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/values   (ca22a1cb)
+2019-05-27T22:38:24.9966150+00:00 0HLN2UG3AHQJ1:00000001 [INF] Executing endpoint '"Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)"' (500cc934)
+2019-05-27T22:38:25.0547479+00:00 0HLN2UG3AHQJ1:00000001 [INF] Route matched with "{action = \"Get\", controller = \"Values\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[System.String]] Get()" on controller "Turing_Back_ED.Controllers.ValuesController" ("Turing_Back_ED"). (122b2fdf)
+2019-05-27T22:38:25.1003697+00:00 0HLN2UG3AHQJ1:00000001 [INF] Executing action method "Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)" - Validation state: Valid (dad538d7)
+2019-05-27T22:38:25.1144372+00:00 0HLN2UG3AHQJ1:00000001 [INF] Executed action method "Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 1.4549ms. (50a9e262)
+2019-05-27T22:38:25.1446064+00:00 0HLN2UG3AHQJ1:00000001 [INF] Executing ObjectResult, writing value of type '"System.String[]"'. (8a1b66c8)
+2019-05-27T22:38:25.2971409+00:00 0HLN2UG3AHQJ1:00000001 [INF] Executed action "Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)" in 227.9263ms (afa2e885)
+2019-05-27T22:38:25.2975858+00:00 0HLN2UG3AHQJ1:00000001 [INF] Executed endpoint '"Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)"' (99874f2b)
+2019-05-27T22:38:25.3376901+00:00 0HLN2UG3AHQJ1:00000001 [INF] Request finished in 686.5945ms 200 application/json; charset=utf-8 (791a596a)
+2019-05-27T23:03:40.3479130+00:00 0HLN2UG3AHQJ3:00000001 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/shoppingCart/uniqueId application/json 67 (ca22a1cb)
+2019-05-27T23:03:40.3793272+00:00 0HLN2UG3AHQJ3:00000001 [INF] Executing endpoint '"Turing_Back_ED.Controllers.ShoppingCartController.GetUniqueId (Turing_Back_ED)"' (500cc934)
+2019-05-27T23:03:40.3883070+00:00 0HLN2UG3AHQJ3:00000001 [INF] Route matched with "{action = \"GetUniqueId\", controller = \"ShoppingCart\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult GetUniqueId()" on controller "Turing_Back_ED.Controllers.ShoppingCartController" ("Turing_Back_ED"). (122b2fdf)
+2019-05-27T23:03:41.1555397+00:00 0HLN2UG3AHQJ3:00000001 [INF] Executing action method "Turing_Back_ED.Controllers.ShoppingCartController.GetUniqueId (Turing_Back_ED)" - Validation state: Valid (dad538d7)
+2019-05-27T23:03:41.1582863+00:00 0HLN2UG3AHQJ3:00000001 [INF] Executed action method "Turing_Back_ED.Controllers.ShoppingCartController.GetUniqueId (Turing_Back_ED)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 2.1256ms. (50a9e262)
+2019-05-27T23:03:41.1592270+00:00 0HLN2UG3AHQJ3:00000001 [INF] Executing ObjectResult, writing value of type '"<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'. (8a1b66c8)
+2019-05-27T23:03:41.2414991+00:00 0HLN2UG3AHQJ3:00000001 [INF] Executed action "Turing_Back_ED.Controllers.ShoppingCartController.GetUniqueId (Turing_Back_ED)" in 851.8135ms (afa2e885)
+2019-05-27T23:03:41.2416536+00:00 0HLN2UG3AHQJ3:00000001 [INF] Executed endpoint '"Turing_Back_ED.Controllers.ShoppingCartController.GetUniqueId (Turing_Back_ED)"' (99874f2b)
+2019-05-27T23:03:41.2423499+00:00 0HLN2UG3AHQJ3:00000001 [INF] Request finished in 895.0511ms 200 application/json; charset=utf-8 (791a596a)
+2019-05-27T23:03:41.3090826+00:00  [INF] Connection id ""0HLN2UG3AHQJ3"", Request id ""0HLN2UG3AHQJ3:00000001"": the application completed without reading the entire request body. (54ac9468)
+2019-05-27T23:06:10.6060187+00:00 0HLN2UG3AHQJ5:00000001 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/shoppingCart application/json 90 (ca22a1cb)
+2019-05-27T23:06:10.6133829+00:00 0HLN2UG3AHQJ5:00000001 [INF] Request finished in 7.6536ms 404  (791a596a)
+2019-05-27T23:06:10.6149051+00:00  [INF] Connection id ""0HLN2UG3AHQJ5"", Request id ""0HLN2UG3AHQJ5:00000001"": the application completed without reading the entire request body. (54ac9468)
+2019-05-27T23:07:07.6687417+00:00 0HLN2UG3AHQJ7:00000001 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/values   (ca22a1cb)
+2019-05-27T23:07:07.6693619+00:00 0HLN2UG3AHQJ7:00000001 [INF] Executing endpoint '"Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)"' (500cc934)
+2019-05-27T23:07:07.6702902+00:00 0HLN2UG3AHQJ7:00000001 [INF] Route matched with "{action = \"Get\", controller = \"Values\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[System.String]] Get()" on controller "Turing_Back_ED.Controllers.ValuesController" ("Turing_Back_ED"). (122b2fdf)
+2019-05-27T23:07:07.6707250+00:00 0HLN2UG3AHQJ7:00000001 [INF] Executing action method "Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)" - Validation state: Valid (dad538d7)
+2019-05-27T23:07:07.6714145+00:00 0HLN2UG3AHQJ7:00000001 [INF] Executed action method "Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 0.3823ms. (50a9e262)
+2019-05-27T23:07:07.6718459+00:00 0HLN2UG3AHQJ7:00000001 [INF] Executing ObjectResult, writing value of type '"System.String[]"'. (8a1b66c8)
+2019-05-27T23:07:07.6727775+00:00 0HLN2UG3AHQJ7:00000001 [INF] Executed action "Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)" in 2.2937ms (afa2e885)
+2019-05-27T23:07:07.6730694+00:00 0HLN2UG3AHQJ7:00000001 [INF] Executed endpoint '"Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)"' (99874f2b)
+2019-05-27T23:07:07.6733831+00:00 0HLN2UG3AHQJ7:00000001 [INF] Request finished in 4.8468ms 200 application/json; charset=utf-8 (791a596a)
+2019-05-27T23:07:59.3549111+00:00 0HLN2V0K3K4HR:00000001 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/values   (ca22a1cb)
+2019-05-27T23:08:00.1242981+00:00 0HLN2V0K3K4HR:00000001 [INF] Executing endpoint '"Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)"' (500cc934)
+2019-05-27T23:08:00.2855807+00:00 0HLN2V0K3K4HR:00000001 [INF] Route matched with "{action = \"Get\", controller = \"Values\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[System.String]] Get()" on controller "Turing_Back_ED.Controllers.ValuesController" ("Turing_Back_ED"). (122b2fdf)
+2019-05-27T23:08:00.3767022+00:00 0HLN2V0K3K4HR:00000001 [INF] Executing action method "Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)" - Validation state: Valid (dad538d7)
+2019-05-27T23:08:00.3958176+00:00 0HLN2V0K3K4HR:00000001 [INF] Executed action method "Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 0.8349ms. (50a9e262)
+2019-05-27T23:08:00.4381464+00:00 0HLN2V0K3K4HR:00000001 [INF] Executing ObjectResult, writing value of type '"System.String[]"'. (8a1b66c8)
+2019-05-27T23:08:00.8499266+00:00 0HLN2V0K3K4HR:00000001 [INF] Executed action "Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)" in 552.3264ms (afa2e885)
+2019-05-27T23:08:00.8502434+00:00 0HLN2V0K3K4HR:00000001 [INF] Executed endpoint '"Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)"' (99874f2b)
+2019-05-27T23:08:00.9041011+00:00 0HLN2V0K3K4HR:00000001 [INF] Request finished in 1624.7535ms 200 application/json; charset=utf-8 (791a596a)
+2019-05-27T23:08:14.5452397+00:00 0HLN2V0K3K4HT:00000001 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/shoppingCart application/json 90 (ca22a1cb)
+2019-05-27T23:08:14.5647525+00:00 0HLN2V0K3K4HT:00000001 [INF] Executing endpoint '"Turing_Back_ED.Controllers.ShoppingCartController.AddToCart (Turing_Back_ED)"' (500cc934)
+2019-05-27T23:08:14.6491682+00:00 0HLN2V0K3K4HT:00000001 [INF] Route matched with "{action = \"AddToCart\", controller = \"ShoppingCart\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] AddToCart(Turing_Back_ED.Models.ShoppingCart)" on controller "Turing_Back_ED.Controllers.ShoppingCartController" ("Turing_Back_ED"). (122b2fdf)
+2019-05-27T23:08:15.1794683+00:00 0HLN2V0K3K4HT:00000001 [INF] Executing action method "Turing_Back_ED.Controllers.ShoppingCartController.AddToCart (Turing_Back_ED)" - Validation state: Valid (dad538d7)
+2019-05-27T23:08:16.9071728+00:00 0HLN2V0K3K4HT:00000001 [INF] Entity Framework Core "2.2.4-servicing-10062" initialized '"TuringshopContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "None" (9958f5bb)
+2019-05-27T23:08:20.0194475+00:00 0HLN2V0K3K4HT:00000001 [ERR] Failed executing DbCommand ("105"ms) [Parameters=["@p0='?' (DbType = DateTimeOffset), @p1='?' (Size = 1000) (DbType = AnsiString), @p2='?' (DbType = SByte), @p3='?' (Size = -1) (DbType = AnsiStringFixedLength), @p4='?' (DbType = DateTimeOffset), @p5='?' (DbType = Int32), @p6='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO `turingshop`.`shopping_cart` (`added_on`, `attributes`, `buy_now`, `cart_id`, `modified`, `product_id`, `quantity`)
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+SELECT `item_id`
+FROM `turingshop`.`shopping_cart`
+WHERE ROW_COUNT() = 1 AND `item_id` = LAST_INSERT_ID();" (627a98df)
+MySql.Data.MySqlClient.MySqlException (0x80004005): Column 'added_on' cannot be null ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Column 'added_on' cannot be null
+   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in C:\projects\mysqlconnector\src\MySqlConnector\Core\ResultSet.cs:line 42
+   at MySql.Data.MySqlClient.MySqlDataReader.ActivateResultSet(ResultSet resultSet) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlDataReader.cs:line 74
+   at MySql.Data.MySqlClient.MySqlDataReader.ReadFirstResultSetAsync(IOBehavior ioBehavior) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlDataReader.cs:line 299
+   at MySql.Data.MySqlClient.MySqlDataReader.CreateAsync(MySqlCommand command, CommandBehavior behavior, ResultSetProtocol resultSetProtocol, IOBehavior ioBehavior) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlDataReader.cs:line 284
+   at MySqlConnector.Core.TextCommandExecutor.ExecuteReaderAsync(String commandText, MySqlParameterCollection parameterCollection, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in C:\projects\mysqlconnector\src\MySqlConnector\Core\TextCommandExecutor.cs:line 37
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+2019-05-27T23:08:20.1008328+00:00 0HLN2V0K3K4HT:00000001 [ERR] An exception occurred in the database while saving changes for context type '"Turing_Back_ED.Models.TuringshopContext"'."
+""Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> MySql.Data.MySqlClient.MySqlException: Column 'added_on' cannot be null ---> MySql.Data.MySqlClient.MySqlException: Column 'added_on' cannot be null
+   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in C:\projects\mysqlconnector\src\MySqlConnector\Core\ResultSet.cs:line 42
+   --- End of inner exception stack trace ---
+   at MySql.Data.MySqlClient.MySqlDataReader.ActivateResultSet(ResultSet resultSet) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlDataReader.cs:line 74
+   at MySql.Data.MySqlClient.MySqlDataReader.ReadFirstResultSetAsync(IOBehavior ioBehavior) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlDataReader.cs:line 299
+   at MySql.Data.MySqlClient.MySqlDataReader.CreateAsync(MySqlCommand command, CommandBehavior behavior, ResultSetProtocol resultSetProtocol, IOBehavior ioBehavior) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlDataReader.cs:line 284
+   at MySqlConnector.Core.TextCommandExecutor.ExecuteReaderAsync(String commandText, MySqlParameterCollection parameterCollection, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in C:\projects\mysqlconnector\src\MySqlConnector\Core\TextCommandExecutor.cs:line 37
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(DbContext _, ValueTuple`2 parameters, CancellationToken cancellationToken)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IReadOnlyList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)" (170f029e)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> MySql.Data.MySqlClient.MySqlException: Column 'added_on' cannot be null ---> MySql.Data.MySqlClient.MySqlException: Column 'added_on' cannot be null
+   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in C:\projects\mysqlconnector\src\MySqlConnector\Core\ResultSet.cs:line 42
+   --- End of inner exception stack trace ---
+   at MySql.Data.MySqlClient.MySqlDataReader.ActivateResultSet(ResultSet resultSet) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlDataReader.cs:line 74
+   at MySql.Data.MySqlClient.MySqlDataReader.ReadFirstResultSetAsync(IOBehavior ioBehavior) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlDataReader.cs:line 299
+   at MySql.Data.MySqlClient.MySqlDataReader.CreateAsync(MySqlCommand command, CommandBehavior behavior, ResultSetProtocol resultSetProtocol, IOBehavior ioBehavior) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlDataReader.cs:line 284
+   at MySqlConnector.Core.TextCommandExecutor.ExecuteReaderAsync(String commandText, MySqlParameterCollection parameterCollection, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in C:\projects\mysqlconnector\src\MySqlConnector\Core\TextCommandExecutor.cs:line 37
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(DbContext _, ValueTuple`2 parameters, CancellationToken cancellationToken)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IReadOnlyList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Turing_Back_ED.DAL.ShoppingCartStore.SaveChangesAsync() in E:\a_PROJECTS\DOTNET-Core\Turing_Back_ED\Turing_Back_ED\DAL\ShoppinCartStore.cs:line 143
+   at Turing_Back_ED.DAL.ShoppingCartStore.AddAsync(ShoppingCart entity) in E:\a_PROJECTS\DOTNET-Core\Turing_Back_ED\Turing_Back_ED\DAL\ShoppinCartStore.cs:line 43
+   at Turing_Back_ED.Controllers.ShoppingCartController.AddToCart(ShoppingCart cartItem) in E:\a_PROJECTS\DOTNET-Core\Turing_Back_ED\Turing_Back_ED\Controllers\ShoppingCartController.cs:line 43
+2019-05-27T23:08:20.1626281+00:00 0HLN2V0K3K4HT:00000001 [INF] Executed action "Turing_Back_ED.Controllers.ShoppingCartController.AddToCart (Turing_Back_ED)" in 5513.174ms (afa2e885)
+2019-05-27T23:08:20.1674889+00:00 0HLN2V0K3K4HT:00000001 [INF] Executed endpoint '"Turing_Back_ED.Controllers.ShoppingCartController.AddToCart (Turing_Back_ED)"' (99874f2b)
+2019-05-27T23:08:20.1943973+00:00 0HLN2V0K3K4HT:00000001 [ERR] An error occurred while updating the entries. See the inner exception for details. (5d65ae99)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> MySql.Data.MySqlClient.MySqlException: Column 'added_on' cannot be null ---> MySql.Data.MySqlClient.MySqlException: Column 'added_on' cannot be null
+   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in C:\projects\mysqlconnector\src\MySqlConnector\Core\ResultSet.cs:line 42
+   --- End of inner exception stack trace ---
+   at MySql.Data.MySqlClient.MySqlDataReader.ActivateResultSet(ResultSet resultSet) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlDataReader.cs:line 74
+   at MySql.Data.MySqlClient.MySqlDataReader.ReadFirstResultSetAsync(IOBehavior ioBehavior) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlDataReader.cs:line 299
+   at MySql.Data.MySqlClient.MySqlDataReader.CreateAsync(MySqlCommand command, CommandBehavior behavior, ResultSetProtocol resultSetProtocol, IOBehavior ioBehavior) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlDataReader.cs:line 284
+   at MySqlConnector.Core.TextCommandExecutor.ExecuteReaderAsync(String commandText, MySqlParameterCollection parameterCollection, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in C:\projects\mysqlconnector\src\MySqlConnector\Core\TextCommandExecutor.cs:line 37
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(DbContext _, ValueTuple`2 parameters, CancellationToken cancellationToken)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IReadOnlyList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Turing_Back_ED.DAL.ShoppingCartStore.SaveChangesAsync() in E:\a_PROJECTS\DOTNET-Core\Turing_Back_ED\Turing_Back_ED\DAL\ShoppinCartStore.cs:line 143
+   at Turing_Back_ED.DAL.ShoppingCartStore.AddAsync(ShoppingCart entity) in E:\a_PROJECTS\DOTNET-Core\Turing_Back_ED\Turing_Back_ED\DAL\ShoppinCartStore.cs:line 43
+   at Turing_Back_ED.Controllers.ShoppingCartController.AddToCart(ShoppingCart cartItem) in E:\a_PROJECTS\DOTNET-Core\Turing_Back_ED\Turing_Back_ED\Controllers\ShoppingCartController.cs:line 43
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Turing_Back_ED.ErrorMiddleware.Invoke(HttpContext context) in E:\a_PROJECTS\DOTNET-Core\Turing_Back_ED\Turing_Back_ED\Middlewares\ErrorMiddleware.cs:line 39
+2019-05-27T23:08:20.2276579+00:00 0HLN2V0K3K4HT:00000001 [INF] Request finished in 5682.6087ms 500 application/json (791a596a)
+2019-05-27T23:09:10.1485299+00:00 0HLN2V18LAM9U:00000001 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/values   (ca22a1cb)
+2019-05-27T23:09:10.6874185+00:00 0HLN2V18LAM9U:00000001 [INF] Executing endpoint '"Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)"' (500cc934)
+2019-05-27T23:09:10.8107327+00:00 0HLN2V18LAM9U:00000001 [INF] Route matched with "{action = \"Get\", controller = \"Values\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[System.String]] Get()" on controller "Turing_Back_ED.Controllers.ValuesController" ("Turing_Back_ED"). (122b2fdf)
+2019-05-27T23:09:10.8489453+00:00 0HLN2V18LAM9U:00000001 [INF] Executing action method "Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)" - Validation state: Valid (dad538d7)
+2019-05-27T23:09:10.8666981+00:00 0HLN2V18LAM9U:00000001 [INF] Executed action method "Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 0.6103ms. (50a9e262)
+2019-05-27T23:09:10.8894421+00:00 0HLN2V18LAM9U:00000001 [INF] Executing ObjectResult, writing value of type '"System.String[]"'. (8a1b66c8)
+2019-05-27T23:09:11.2177002+00:00 0HLN2V18LAM9U:00000001 [INF] Executed action "Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)" in 333.231ms (afa2e885)
+2019-05-27T23:09:11.2240095+00:00 0HLN2V18LAM9U:00000001 [INF] Executed endpoint '"Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)"' (99874f2b)
+2019-05-27T23:09:11.2450011+00:00 0HLN2V18LAM9U:00000001 [INF] Request finished in 1127.6105ms 200 application/json; charset=utf-8 (791a596a)
+2019-05-27T23:09:42.9653827+00:00 0HLN2V18LAMA0:00000001 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/shoppingCart application/json 90 (ca22a1cb)
+2019-05-27T23:09:43.0035901+00:00 0HLN2V18LAMA0:00000001 [INF] Executing endpoint '"Turing_Back_ED.Controllers.ShoppingCartController.AddToCart (Turing_Back_ED)"' (500cc934)
+2019-05-27T23:09:43.1127882+00:00 0HLN2V18LAMA0:00000001 [INF] Route matched with "{action = \"AddToCart\", controller = \"ShoppingCart\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] AddToCart(Turing_Back_ED.Models.ShoppingCart)" on controller "Turing_Back_ED.Controllers.ShoppingCartController" ("Turing_Back_ED"). (122b2fdf)
+2019-05-27T23:09:45.4259875+00:00 0HLN2V18LAMA0:00000001 [INF] Executing action method "Turing_Back_ED.Controllers.ShoppingCartController.AddToCart (Turing_Back_ED)" - Validation state: Valid (dad538d7)
+2019-05-27T23:10:07.1150568+00:00 0HLN2V18LAMA0:00000001 [INF] Entity Framework Core "2.2.4-servicing-10062" initialized '"TuringshopContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "None" (9958f5bb)
+2019-05-27T23:10:56.4019621+00:00 0HLN2V18LAMA0:00000001 [ERR] Failed executing DbCommand ("101"ms) [Parameters=["@p0='?' (DbType = DateTimeOffset), @p1='?' (Size = 1000) (DbType = AnsiString), @p2='?' (DbType = SByte), @p3='?' (Size = -1) (DbType = AnsiStringFixedLength), @p4='?' (DbType = DateTimeOffset), @p5='?' (DbType = Int32), @p6='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO `turingshop`.`shopping_cart` (`added_on`, `attributes`, `buy_now`, `cart_id`, `modified`, `product_id`, `quantity`)
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+SELECT `item_id`
+FROM `turingshop`.`shopping_cart`
+WHERE ROW_COUNT() = 1 AND `item_id` = LAST_INSERT_ID();" (627a98df)
+MySql.Data.MySqlClient.MySqlException (0x80004005): Column 'added_on' cannot be null ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Column 'added_on' cannot be null
+   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in C:\projects\mysqlconnector\src\MySqlConnector\Core\ResultSet.cs:line 42
+   at MySql.Data.MySqlClient.MySqlDataReader.ActivateResultSet(ResultSet resultSet) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlDataReader.cs:line 74
+   at MySql.Data.MySqlClient.MySqlDataReader.ReadFirstResultSetAsync(IOBehavior ioBehavior) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlDataReader.cs:line 299
+   at MySql.Data.MySqlClient.MySqlDataReader.CreateAsync(MySqlCommand command, CommandBehavior behavior, ResultSetProtocol resultSetProtocol, IOBehavior ioBehavior) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlDataReader.cs:line 284
+   at MySqlConnector.Core.TextCommandExecutor.ExecuteReaderAsync(String commandText, MySqlParameterCollection parameterCollection, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in C:\projects\mysqlconnector\src\MySqlConnector\Core\TextCommandExecutor.cs:line 37
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+2019-05-27T23:10:56.5177852+00:00 0HLN2V18LAMA0:00000001 [ERR] An exception occurred in the database while saving changes for context type '"Turing_Back_ED.Models.TuringshopContext"'."
+""Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> MySql.Data.MySqlClient.MySqlException: Column 'added_on' cannot be null ---> MySql.Data.MySqlClient.MySqlException: Column 'added_on' cannot be null
+   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in C:\projects\mysqlconnector\src\MySqlConnector\Core\ResultSet.cs:line 42
+   --- End of inner exception stack trace ---
+   at MySql.Data.MySqlClient.MySqlDataReader.ActivateResultSet(ResultSet resultSet) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlDataReader.cs:line 74
+   at MySql.Data.MySqlClient.MySqlDataReader.ReadFirstResultSetAsync(IOBehavior ioBehavior) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlDataReader.cs:line 299
+   at MySql.Data.MySqlClient.MySqlDataReader.CreateAsync(MySqlCommand command, CommandBehavior behavior, ResultSetProtocol resultSetProtocol, IOBehavior ioBehavior) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlDataReader.cs:line 284
+   at MySqlConnector.Core.TextCommandExecutor.ExecuteReaderAsync(String commandText, MySqlParameterCollection parameterCollection, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in C:\projects\mysqlconnector\src\MySqlConnector\Core\TextCommandExecutor.cs:line 37
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(DbContext _, ValueTuple`2 parameters, CancellationToken cancellationToken)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IReadOnlyList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)" (170f029e)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> MySql.Data.MySqlClient.MySqlException: Column 'added_on' cannot be null ---> MySql.Data.MySqlClient.MySqlException: Column 'added_on' cannot be null
+   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in C:\projects\mysqlconnector\src\MySqlConnector\Core\ResultSet.cs:line 42
+   --- End of inner exception stack trace ---
+   at MySql.Data.MySqlClient.MySqlDataReader.ActivateResultSet(ResultSet resultSet) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlDataReader.cs:line 74
+   at MySql.Data.MySqlClient.MySqlDataReader.ReadFirstResultSetAsync(IOBehavior ioBehavior) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlDataReader.cs:line 299
+   at MySql.Data.MySqlClient.MySqlDataReader.CreateAsync(MySqlCommand command, CommandBehavior behavior, ResultSetProtocol resultSetProtocol, IOBehavior ioBehavior) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlDataReader.cs:line 284
+   at MySqlConnector.Core.TextCommandExecutor.ExecuteReaderAsync(String commandText, MySqlParameterCollection parameterCollection, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in C:\projects\mysqlconnector\src\MySqlConnector\Core\TextCommandExecutor.cs:line 37
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(DbContext _, ValueTuple`2 parameters, CancellationToken cancellationToken)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IReadOnlyList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Turing_Back_ED.DAL.ShoppingCartStore.SaveChangesAsync() in E:\a_PROJECTS\DOTNET-Core\Turing_Back_ED\Turing_Back_ED\DAL\ShoppinCartStore.cs:line 143
+2019-05-27T23:10:57.5037182+00:00 0HLN2V18LAMA0:00000001 [INF] Executed action "Turing_Back_ED.Controllers.ShoppingCartController.AddToCart (Turing_Back_ED)" in 74385.6172ms (afa2e885)
+2019-05-27T23:10:57.5164131+00:00 0HLN2V18LAMA0:00000001 [INF] Executed endpoint '"Turing_Back_ED.Controllers.ShoppingCartController.AddToCart (Turing_Back_ED)"' (99874f2b)
+2019-05-27T23:10:58.0439898+00:00 0HLN2V18LAMA0:00000001 [ERR] An error occurred while updating the entries. See the inner exception for details. (5d65ae99)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> MySql.Data.MySqlClient.MySqlException: Column 'added_on' cannot be null ---> MySql.Data.MySqlClient.MySqlException: Column 'added_on' cannot be null
+   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in C:\projects\mysqlconnector\src\MySqlConnector\Core\ResultSet.cs:line 42
+   --- End of inner exception stack trace ---
+   at MySql.Data.MySqlClient.MySqlDataReader.ActivateResultSet(ResultSet resultSet) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlDataReader.cs:line 74
+   at MySql.Data.MySqlClient.MySqlDataReader.ReadFirstResultSetAsync(IOBehavior ioBehavior) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlDataReader.cs:line 299
+   at MySql.Data.MySqlClient.MySqlDataReader.CreateAsync(MySqlCommand command, CommandBehavior behavior, ResultSetProtocol resultSetProtocol, IOBehavior ioBehavior) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlDataReader.cs:line 284
+   at MySqlConnector.Core.TextCommandExecutor.ExecuteReaderAsync(String commandText, MySqlParameterCollection parameterCollection, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in C:\projects\mysqlconnector\src\MySqlConnector\Core\TextCommandExecutor.cs:line 37
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(DbContext _, ValueTuple`2 parameters, CancellationToken cancellationToken)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IReadOnlyList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Turing_Back_ED.DAL.ShoppingCartStore.SaveChangesAsync() in E:\a_PROJECTS\DOTNET-Core\Turing_Back_ED\Turing_Back_ED\DAL\ShoppinCartStore.cs:line 143
+   at Turing_Back_ED.DAL.ShoppingCartStore.AddAsync(ShoppingCart entity) in E:\a_PROJECTS\DOTNET-Core\Turing_Back_ED\Turing_Back_ED\DAL\ShoppinCartStore.cs:line 43
+   at Turing_Back_ED.Controllers.ShoppingCartController.AddToCart(ShoppingCart cartItem) in E:\a_PROJECTS\DOTNET-Core\Turing_Back_ED\Turing_Back_ED\Controllers\ShoppingCartController.cs:line 43
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Turing_Back_ED.ErrorMiddleware.Invoke(HttpContext context) in E:\a_PROJECTS\DOTNET-Core\Turing_Back_ED\Turing_Back_ED\Middlewares\ErrorMiddleware.cs:line 39
+2019-05-27T23:10:58.2417712+00:00 0HLN2V18LAMA0:00000001 [INF] Request finished in 75175.48ms 500 application/json (791a596a)
+2019-05-27T23:17:49.2359344+00:00 0HLN2V642DB7P:00000001 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/values   (ca22a1cb)
+2019-05-27T23:17:49.6012980+00:00 0HLN2V642DB7P:00000001 [INF] Executing endpoint '"Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)"' (500cc934)
+2019-05-27T23:17:49.6760484+00:00 0HLN2V642DB7P:00000001 [INF] Route matched with "{action = \"Get\", controller = \"Values\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[System.String]] Get()" on controller "Turing_Back_ED.Controllers.ValuesController" ("Turing_Back_ED"). (122b2fdf)
+2019-05-27T23:17:49.7239067+00:00 0HLN2V642DB7P:00000001 [INF] Executing action method "Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)" - Validation state: Valid (dad538d7)
+2019-05-27T23:17:49.7429079+00:00 0HLN2V642DB7P:00000001 [INF] Executed action method "Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 0.6796ms. (50a9e262)
+2019-05-27T23:17:49.7762579+00:00 0HLN2V642DB7P:00000001 [INF] Executing ObjectResult, writing value of type '"System.String[]"'. (8a1b66c8)
+2019-05-27T23:17:49.9711166+00:00 0HLN2V642DB7P:00000001 [INF] Executed action "Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)" in 263.3623ms (afa2e885)
+2019-05-27T23:17:49.9715639+00:00 0HLN2V642DB7P:00000001 [INF] Executed endpoint '"Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)"' (99874f2b)
+2019-05-27T23:17:49.9996216+00:00 0HLN2V642DB7P:00000001 [INF] Request finished in 782.9179ms 200 application/json; charset=utf-8 (791a596a)
+2019-05-27T23:18:15.0297940+00:00 0HLN2V6ABETLO:00000001 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/values   (ca22a1cb)
+2019-05-27T23:18:15.5992309+00:00 0HLN2V6ABETLO:00000001 [INF] Executing endpoint '"Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)"' (500cc934)
+2019-05-27T23:18:15.7959779+00:00 0HLN2V6ABETLO:00000001 [INF] Route matched with "{action = \"Get\", controller = \"Values\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[System.String]] Get()" on controller "Turing_Back_ED.Controllers.ValuesController" ("Turing_Back_ED"). (122b2fdf)
+2019-05-27T23:18:15.9763118+00:00 0HLN2V6ABETLO:00000001 [INF] Executing action method "Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)" - Validation state: Valid (dad538d7)
+2019-05-27T23:18:16.0004900+00:00 0HLN2V6ABETLO:00000001 [INF] Executed action method "Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 0.8535ms. (50a9e262)
+2019-05-27T23:18:16.0623297+00:00 0HLN2V6ABETLO:00000001 [INF] Executing ObjectResult, writing value of type '"System.String[]"'. (8a1b66c8)
+2019-05-27T23:18:16.5842709+00:00 0HLN2V6ABETLO:00000001 [INF] Executed action "Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)" in 701.3711ms (afa2e885)
+2019-05-27T23:18:16.6229638+00:00 0HLN2V6ABETLO:00000001 [INF] Executed endpoint '"Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)"' (99874f2b)
+2019-05-27T23:18:16.7122543+00:00 0HLN2V6ABETLO:00000001 [INF] Request finished in 1737.123ms 200 application/json; charset=utf-8 (791a596a)
+2019-05-27T23:18:59.2830714+00:00 0HLN2V6ABETLQ:00000001 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/shoppingCart application/json 90 (ca22a1cb)
+2019-05-27T23:18:59.3068706+00:00 0HLN2V6ABETLQ:00000001 [INF] Executing endpoint '"Turing_Back_ED.Controllers.ShoppingCartController.AddToCart (Turing_Back_ED)"' (500cc934)
+2019-05-27T23:18:59.3663540+00:00 0HLN2V6ABETLQ:00000001 [INF] Route matched with "{action = \"AddToCart\", controller = \"ShoppingCart\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] AddToCart(Turing_Back_ED.Models.ShoppingCart)" on controller "Turing_Back_ED.Controllers.ShoppingCartController" ("Turing_Back_ED"). (122b2fdf)
+2019-05-27T23:19:00.4209978+00:00 0HLN2V6ABETLQ:00000001 [INF] Executing action method "Turing_Back_ED.Controllers.ShoppingCartController.AddToCart (Turing_Back_ED)" - Validation state: Valid (dad538d7)
+2019-05-27T23:19:18.5519650+00:00 0HLN2V6ABETLQ:00000001 [INF] Entity Framework Core "2.2.4-servicing-10062" initialized '"TuringshopContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "None" (9958f5bb)
+2019-05-27T23:19:36.5498710+00:00 0HLN2V6ABETLQ:00000001 [ERR] Failed executing DbCommand ("424"ms) [Parameters=["@p0='?' (DbType = DateTimeOffset), @p1='?' (Size = 1000) (DbType = AnsiString), @p2='?' (DbType = SByte), @p3='?' (Size = -1) (DbType = AnsiStringFixedLength), @p4='?' (DbType = DateTimeOffset), @p5='?' (DbType = Int32), @p6='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO `turingshop`.`shopping_cart` (`added_on`, `attributes`, `buy_now`, `cart_id`, `modified`, `product_id`, `quantity`)
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+SELECT `item_id`
+FROM `turingshop`.`shopping_cart`
+WHERE ROW_COUNT() = 1 AND `item_id` = LAST_INSERT_ID();" (627a98df)
+MySql.Data.MySqlClient.MySqlException (0x80004005): Data too long for column 'cart_id' at row 1 ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Data too long for column 'cart_id' at row 1
+   at MySqlConnector.Core.ServerSession.TryAsyncContinuation(Task`1 task) in C:\projects\mysqlconnector\src\MySqlConnector\Core\ServerSession.cs:line 1245
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+--- End of stack trace from previous location where exception was thrown ---
+   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in C:\projects\mysqlconnector\src\MySqlConnector\Core\ResultSet.cs:line 42
+   at MySql.Data.MySqlClient.MySqlDataReader.ActivateResultSet(ResultSet resultSet) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlDataReader.cs:line 74
+   at MySql.Data.MySqlClient.MySqlDataReader.ReadFirstResultSetAsync(IOBehavior ioBehavior) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlDataReader.cs:line 299
+   at MySql.Data.MySqlClient.MySqlDataReader.CreateAsync(MySqlCommand command, CommandBehavior behavior, ResultSetProtocol resultSetProtocol, IOBehavior ioBehavior) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlDataReader.cs:line 284
+   at MySqlConnector.Core.TextCommandExecutor.ExecuteReaderAsync(String commandText, MySqlParameterCollection parameterCollection, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in C:\projects\mysqlconnector\src\MySqlConnector\Core\TextCommandExecutor.cs:line 37
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+2019-05-27T23:19:36.7895527+00:00 0HLN2V6ABETLQ:00000001 [ERR] An exception occurred in the database while saving changes for context type '"Turing_Back_ED.Models.TuringshopContext"'."
+""Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> MySql.Data.MySqlClient.MySqlException: Data too long for column 'cart_id' at row 1 ---> MySql.Data.MySqlClient.MySqlException: Data too long for column 'cart_id' at row 1
+   at MySqlConnector.Core.ServerSession.TryAsyncContinuation(Task`1 task) in C:\projects\mysqlconnector\src\MySqlConnector\Core\ServerSession.cs:line 1245
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+--- End of stack trace from previous location where exception was thrown ---
+   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in C:\projects\mysqlconnector\src\MySqlConnector\Core\ResultSet.cs:line 42
+   --- End of inner exception stack trace ---
+   at MySql.Data.MySqlClient.MySqlDataReader.ActivateResultSet(ResultSet resultSet) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlDataReader.cs:line 74
+   at MySql.Data.MySqlClient.MySqlDataReader.ReadFirstResultSetAsync(IOBehavior ioBehavior) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlDataReader.cs:line 299
+   at MySql.Data.MySqlClient.MySqlDataReader.CreateAsync(MySqlCommand command, CommandBehavior behavior, ResultSetProtocol resultSetProtocol, IOBehavior ioBehavior) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlDataReader.cs:line 284
+   at MySqlConnector.Core.TextCommandExecutor.ExecuteReaderAsync(String commandText, MySqlParameterCollection parameterCollection, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in C:\projects\mysqlconnector\src\MySqlConnector\Core\TextCommandExecutor.cs:line 37
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(DbContext _, ValueTuple`2 parameters, CancellationToken cancellationToken)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IReadOnlyList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)" (170f029e)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> MySql.Data.MySqlClient.MySqlException: Data too long for column 'cart_id' at row 1 ---> MySql.Data.MySqlClient.MySqlException: Data too long for column 'cart_id' at row 1
+   at MySqlConnector.Core.ServerSession.TryAsyncContinuation(Task`1 task) in C:\projects\mysqlconnector\src\MySqlConnector\Core\ServerSession.cs:line 1245
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+--- End of stack trace from previous location where exception was thrown ---
+   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in C:\projects\mysqlconnector\src\MySqlConnector\Core\ResultSet.cs:line 42
+   --- End of inner exception stack trace ---
+   at MySql.Data.MySqlClient.MySqlDataReader.ActivateResultSet(ResultSet resultSet) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlDataReader.cs:line 74
+   at MySql.Data.MySqlClient.MySqlDataReader.ReadFirstResultSetAsync(IOBehavior ioBehavior) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlDataReader.cs:line 299
+   at MySql.Data.MySqlClient.MySqlDataReader.CreateAsync(MySqlCommand command, CommandBehavior behavior, ResultSetProtocol resultSetProtocol, IOBehavior ioBehavior) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlDataReader.cs:line 284
+   at MySqlConnector.Core.TextCommandExecutor.ExecuteReaderAsync(String commandText, MySqlParameterCollection parameterCollection, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in C:\projects\mysqlconnector\src\MySqlConnector\Core\TextCommandExecutor.cs:line 37
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(DbContext _, ValueTuple`2 parameters, CancellationToken cancellationToken)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IReadOnlyList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2019-05-27T23:19:38.1130943+00:00 0HLN2V6ABETLQ:00000001 [INF] Executed action "Turing_Back_ED.Controllers.ShoppingCartController.AddToCart (Turing_Back_ED)" in 38741.3984ms (afa2e885)
+2019-05-27T23:19:38.1225423+00:00 0HLN2V6ABETLQ:00000001 [INF] Executed endpoint '"Turing_Back_ED.Controllers.ShoppingCartController.AddToCart (Turing_Back_ED)"' (99874f2b)
+2019-05-27T23:19:38.5410230+00:00 0HLN2V6ABETLQ:00000001 [ERR] An error occurred while updating the entries. See the inner exception for details. (5d65ae99)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> MySql.Data.MySqlClient.MySqlException: Data too long for column 'cart_id' at row 1 ---> MySql.Data.MySqlClient.MySqlException: Data too long for column 'cart_id' at row 1
+   at MySqlConnector.Core.ServerSession.TryAsyncContinuation(Task`1 task) in C:\projects\mysqlconnector\src\MySqlConnector\Core\ServerSession.cs:line 1245
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+--- End of stack trace from previous location where exception was thrown ---
+   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in C:\projects\mysqlconnector\src\MySqlConnector\Core\ResultSet.cs:line 42
+   --- End of inner exception stack trace ---
+   at MySql.Data.MySqlClient.MySqlDataReader.ActivateResultSet(ResultSet resultSet) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlDataReader.cs:line 74
+   at MySql.Data.MySqlClient.MySqlDataReader.ReadFirstResultSetAsync(IOBehavior ioBehavior) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlDataReader.cs:line 299
+   at MySql.Data.MySqlClient.MySqlDataReader.CreateAsync(MySqlCommand command, CommandBehavior behavior, ResultSetProtocol resultSetProtocol, IOBehavior ioBehavior) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlDataReader.cs:line 284
+   at MySqlConnector.Core.TextCommandExecutor.ExecuteReaderAsync(String commandText, MySqlParameterCollection parameterCollection, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in C:\projects\mysqlconnector\src\MySqlConnector\Core\TextCommandExecutor.cs:line 37
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(DbContext _, ValueTuple`2 parameters, CancellationToken cancellationToken)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IReadOnlyList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Turing_Back_ED.DAL.ShoppingCartStore.SaveChangesAsync() in E:\a_PROJECTS\DOTNET-Core\Turing_Back_ED\Turing_Back_ED\DAL\ShoppinCartStore.cs:line 145
+   at Turing_Back_ED.DAL.ShoppingCartStore.AddAsync(ShoppingCart entity) in E:\a_PROJECTS\DOTNET-Core\Turing_Back_ED\Turing_Back_ED\DAL\ShoppinCartStore.cs:line 44
+   at Turing_Back_ED.Controllers.ShoppingCartController.AddToCart(ShoppingCart cartItem) in E:\a_PROJECTS\DOTNET-Core\Turing_Back_ED\Turing_Back_ED\Controllers\ShoppingCartController.cs:line 43
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Turing_Back_ED.ErrorMiddleware.Invoke(HttpContext context) in E:\a_PROJECTS\DOTNET-Core\Turing_Back_ED\Turing_Back_ED\Middlewares\ErrorMiddleware.cs:line 39
+2019-05-27T23:19:38.5842126+00:00 0HLN2V6ABETLQ:00000001 [INF] Request finished in 39300.7048ms 500 application/json (791a596a)
+2019-05-27T23:34:32.6454098+00:00 0HLN2VFE9BVOE:00000001 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/values   (ca22a1cb)
+2019-05-27T23:34:33.0918187+00:00 0HLN2VFE9BVOE:00000001 [INF] Executing endpoint '"Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)"' (500cc934)
+2019-05-27T23:34:33.1944240+00:00 0HLN2VFE9BVOE:00000001 [INF] Route matched with "{action = \"Get\", controller = \"Values\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[System.String]] Get()" on controller "Turing_Back_ED.Controllers.ValuesController" ("Turing_Back_ED"). (122b2fdf)
+2019-05-27T23:34:33.2433287+00:00 0HLN2VFE9BVOE:00000001 [INF] Executing action method "Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)" - Validation state: Valid (dad538d7)
+2019-05-27T23:34:33.2667535+00:00 0HLN2VFE9BVOE:00000001 [INF] Executed action method "Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 0.8243ms. (50a9e262)
+2019-05-27T23:34:33.2958566+00:00 0HLN2VFE9BVOE:00000001 [INF] Executing ObjectResult, writing value of type '"System.String[]"'. (8a1b66c8)
+2019-05-27T23:34:33.5193923+00:00 0HLN2VFE9BVOE:00000001 [INF] Executed action "Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)" in 307.755ms (afa2e885)
+2019-05-27T23:34:33.5239865+00:00 0HLN2VFE9BVOE:00000001 [INF] Executed endpoint '"Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)"' (99874f2b)
+2019-05-27T23:34:33.5458167+00:00 0HLN2VFE9BVOE:00000001 [INF] Request finished in 928.2754ms 200 application/json; charset=utf-8 (791a596a)
+2019-05-27T23:34:49.9338108+00:00 0HLN2VFE9BVOG:00000001 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/shoppingCart application/json 90 (ca22a1cb)
+2019-05-27T23:34:49.9747570+00:00 0HLN2VFE9BVOG:00000001 [INF] Executing endpoint '"Turing_Back_ED.Controllers.ShoppingCartController.AddToCart (Turing_Back_ED)"' (500cc934)
+2019-05-27T23:34:50.0858845+00:00 0HLN2VFE9BVOG:00000001 [INF] Route matched with "{action = \"AddToCart\", controller = \"ShoppingCart\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] AddToCart(Turing_Back_ED.Models.ShoppingCart)" on controller "Turing_Back_ED.Controllers.ShoppingCartController" ("Turing_Back_ED"). (122b2fdf)
+2019-05-27T23:34:51.7211377+00:00 0HLN2VFE9BVOG:00000001 [INF] Executing action method "Turing_Back_ED.Controllers.ShoppingCartController.AddToCart (Turing_Back_ED)" - Validation state: Valid (dad538d7)
+2019-05-27T23:35:05.7091727+00:00 0HLN2VFE9BVOG:00000001 [INF] Entity Framework Core "2.2.4-servicing-10062" initialized '"TuringshopContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "None" (9958f5bb)
+2019-05-27T23:35:23.9222365+00:00 0HLN2VFE9BVOG:00000001 [INF] Executed DbCommand ("1,626"ms) [Parameters=["@p0='?' (DbType = DateTimeOffset), @p1='?' (Size = 1000) (DbType = AnsiString), @p2='?' (DbType = SByte), @p3='?' (Size = 36) (DbType = AnsiStringFixedLength), @p4='?' (DbType = DateTimeOffset), @p5='?' (DbType = Int32), @p6='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO `turingshop`.`shopping_cart` (`added_on`, `attributes`, `buy_now`, `cart_id`, `modified`, `product_id`, `quantity`)
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+SELECT `item_id`
+FROM `turingshop`.`shopping_cart`
+WHERE ROW_COUNT() = 1 AND `item_id` = LAST_INSERT_ID();" (0723d8ff)
+2019-05-27T23:35:53.4184206+00:00 0HLN2VFE9BVOG:00000001 [INF] Executed action method "Turing_Back_ED.Controllers.ShoppingCartController.AddToCart (Turing_Back_ED)", returned result "Microsoft.AspNetCore.Mvc.OkObjectResult" in 61689.9656ms. (50a9e262)
+2019-05-27T23:35:53.4635019+00:00 0HLN2VFE9BVOG:00000001 [INF] Executing ObjectResult, writing value of type '"Turing_Back_ED.Models.ShoppingCart"'. (8a1b66c8)
+2019-05-27T23:35:53.5057575+00:00 0HLN2VFE9BVOG:00000001 [INF] Executed action "Turing_Back_ED.Controllers.ShoppingCartController.AddToCart (Turing_Back_ED)" in 63410.0464ms (afa2e885)
+2019-05-27T23:35:53.5183833+00:00 0HLN2VFE9BVOG:00000001 [INF] Executed endpoint '"Turing_Back_ED.Controllers.ShoppingCartController.AddToCart (Turing_Back_ED)"' (99874f2b)
+2019-05-27T23:35:53.5710583+00:00 0HLN2VFE9BVOG:00000001 [INF] Request finished in 63618.3068ms 200 application/json; charset=utf-8 (791a596a)
+2019-05-27T23:40:12.3816326+00:00 0HLN2VIJVBIQK:00000001 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/values   (ca22a1cb)
+2019-05-27T23:40:12.8337257+00:00 0HLN2VIJVBIQK:00000001 [INF] Executing endpoint '"Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)"' (500cc934)
+2019-05-27T23:40:12.9046531+00:00 0HLN2VIJVBIQK:00000001 [INF] Route matched with "{action = \"Get\", controller = \"Values\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[System.String]] Get()" on controller "Turing_Back_ED.Controllers.ValuesController" ("Turing_Back_ED"). (122b2fdf)
+2019-05-27T23:40:12.9353378+00:00 0HLN2VIJVBIQK:00000001 [INF] Executing action method "Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)" - Validation state: Valid (dad538d7)
+2019-05-27T23:40:12.9552286+00:00 0HLN2VIJVBIQK:00000001 [INF] Executed action method "Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 0.7358ms. (50a9e262)
+2019-05-27T23:40:12.9925898+00:00 0HLN2VIJVBIQK:00000001 [INF] Executing ObjectResult, writing value of type '"System.String[]"'. (8a1b66c8)
+2019-05-27T23:40:13.2177339+00:00 0HLN2VIJVBIQK:00000001 [INF] Executed action "Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)" in 249.908ms (afa2e885)
+2019-05-27T23:40:13.3093247+00:00 0HLN2VIJVBIQK:00000001 [INF] Executed endpoint '"Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)"' (99874f2b)
+2019-05-27T23:40:13.3770280+00:00 0HLN2VIJVBIQK:00000001 [INF] Request finished in 979.0167ms 200 application/json; charset=utf-8 (791a596a)
+2019-05-27T23:40:20.6167245+00:00 0HLN2VIJVBIQM:00000001 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/shoppingCart/a66254bc-4c8a-48df-992d-ec9b9bd20c8e application/json 45 (ca22a1cb)
+2019-05-27T23:40:20.6459878+00:00 0HLN2VIJVBIQM:00000001 [INF] Executing endpoint '"Turing_Back_ED.Controllers.ShoppingCartController.ProductsInCart (Turing_Back_ED)"' (500cc934)
+2019-05-27T23:40:20.7256680+00:00 0HLN2VIJVBIQM:00000001 [INF] Route matched with "{action = \"ProductsInCart\", controller = \"ShoppingCart\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] ProductsInCart(System.String, Turing_Back_ED.DomainModels.GeneralQueryModel)" on controller "Turing_Back_ED.Controllers.ShoppingCartController" ("Turing_Back_ED"). (122b2fdf)
+2019-05-27T23:40:22.4331167+00:00 0HLN2VIJVBIQM:00000001 [INF] Executing action method "Turing_Back_ED.Controllers.ShoppingCartController.ProductsInCart (Turing_Back_ED)" - Validation state: Valid (dad538d7)
+2019-05-27T23:40:24.4178185+00:00 0HLN2VIJVBIQM:00000001 [INF] Entity Framework Core "2.2.4-servicing-10062" initialized '"TuringshopContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "None" (9958f5bb)
+2019-05-27T23:40:25.0661723+00:00 0HLN2VIJVBIQM:00000001 [WRN] Query: '"(from ShoppingCart c in DbSet<ShoppingCart> where bool [c].CartId.Equals(__cartId_0) select [c]).Ski..."' uses a row limiting operation (Skip/Take) without OrderBy which may lead to unpredictable results. (32148ccc)
+2019-05-27T23:40:28.2023555+00:00 0HLN2VIJVBIQM:00000001 [INF] Executed DbCommand ("339"ms) [Parameters=["@__cartId_0='?' (Size = 36) (DbType = AnsiStringFixedLength), @__p_2='?' (DbType = Int32), @__p_1='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `c`.`item_id`, `c`.`added_on`, `c`.`attributes`, `c`.`buy_now`, `c`.`cart_id`, `c`.`modified`, `c`.`product_id`, `c`.`quantity`
+FROM `turingshop`.`shopping_cart` AS `c`
+WHERE `c`.`cart_id` = @__cartId_0
+LIMIT @__p_2 OFFSET @__p_1" (0723d8ff)
+2019-05-27T23:40:28.6232764+00:00 0HLN2VIJVBIQM:00000001 [ERR] An exception occurred while iterating over the results of a query for context type '"Turing_Back_ED.Models.TuringshopContext"'."
+""System.InvalidCastException: Unable to cast object of type 'System.Boolean' to type 'System.SByte'.
+   at MySql.Data.MySqlClient.MySqlDataReader.GetFieldValue[T](Int32 ordinal) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlDataReader.cs:line 256
+   at lambda_method(Closure , DbDataReader )
+   at Microsoft.EntityFrameworkCore.Storage.Internal.TypedRelationalValueBufferFactory.Create(DbDataReader dataReader)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.BufferlessMoveNext(DbContext _, Boolean buffer, CancellationToken cancellationToken)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.SelectEnumerableAsyncIterator`2.MoveNextCore(CancellationToken cancellationToken) in D:\a\1\s\Ix.NET\Source\System.Interactive.Async\Select.cs:line 106
+   at System.Linq.AsyncEnumerable.AsyncIterator`1.MoveNext(CancellationToken cancellationToken) in D:\a\1\s\Ix.NET\Source\System.Interactive.Async\AsyncIterator.cs:line 98
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext(CancellationToken cancellationToken)" (f5c7ac34)
+System.InvalidCastException: Unable to cast object of type 'System.Boolean' to type 'System.SByte'.
+   at MySql.Data.MySqlClient.MySqlDataReader.GetFieldValue[T](Int32 ordinal) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlDataReader.cs:line 256
+   at lambda_method(Closure , DbDataReader )
+   at Microsoft.EntityFrameworkCore.Storage.Internal.TypedRelationalValueBufferFactory.Create(DbDataReader dataReader)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.BufferlessMoveNext(DbContext _, Boolean buffer, CancellationToken cancellationToken)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.SelectEnumerableAsyncIterator`2.MoveNextCore(CancellationToken cancellationToken) in D:\a\1\s\Ix.NET\Source\System.Interactive.Async\Select.cs:line 106
+   at System.Linq.AsyncEnumerable.AsyncIterator`1.MoveNext(CancellationToken cancellationToken) in D:\a\1\s\Ix.NET\Source\System.Interactive.Async\AsyncIterator.cs:line 98
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext(CancellationToken cancellationToken)
+2019-05-27T23:40:29.2777435+00:00 0HLN2VIJVBIQM:00000001 [INF] Executed action "Turing_Back_ED.Controllers.ShoppingCartController.ProductsInCart (Turing_Back_ED)" in 8548.121ms (afa2e885)
+2019-05-27T23:40:29.2871209+00:00 0HLN2VIJVBIQM:00000001 [INF] Executed endpoint '"Turing_Back_ED.Controllers.ShoppingCartController.ProductsInCart (Turing_Back_ED)"' (99874f2b)
+2019-05-27T23:40:29.9175551+00:00 0HLN2VIJVBIQM:00000001 [ERR] Unable to cast object of type 'System.Boolean' to type 'System.SByte'. (a8dc4926)
+System.InvalidCastException: Unable to cast object of type 'System.Boolean' to type 'System.SByte'.
+   at MySql.Data.MySqlClient.MySqlDataReader.GetFieldValue[T](Int32 ordinal) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlDataReader.cs:line 256
+   at lambda_method(Closure , DbDataReader )
+   at Microsoft.EntityFrameworkCore.Storage.Internal.TypedRelationalValueBufferFactory.Create(DbDataReader dataReader)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.BufferlessMoveNext(DbContext _, Boolean buffer, CancellationToken cancellationToken)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.SelectEnumerableAsyncIterator`2.MoveNextCore(CancellationToken cancellationToken) in D:\a\1\s\Ix.NET\Source\System.Interactive.Async\Select.cs:line 106
+   at System.Linq.AsyncEnumerable.AsyncIterator`1.MoveNext(CancellationToken cancellationToken) in D:\a\1\s\Ix.NET\Source\System.Interactive.Async\AsyncIterator.cs:line 98
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.Aggregate_[TSource,TAccumulate,TResult](IAsyncEnumerable`1 source, TAccumulate seed, Func`3 accumulator, Func`2 resultSelector, CancellationToken cancellationToken) in D:\a\1\s\Ix.NET\Source\System.Interactive.Async\Aggregate.cs:line 120
+   at Turing_Back_ED.DAL.ShoppingCartStore.FindAllByCartIdAsync(String cartId, GeneralQueryModel criteria) in E:\a_PROJECTS\DOTNET-Core\Turing_Back_ED\Turing_Back_ED\DAL\ShoppinCartStore.cs:line 50
+   at Turing_Back_ED.Controllers.ShoppingCartController.ProductsInCart(String cartId, GeneralQueryModel model) in E:\a_PROJECTS\DOTNET-Core\Turing_Back_ED\Turing_Back_ED\Controllers\ShoppingCartController.cs:line 67
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Turing_Back_ED.ErrorMiddleware.Invoke(HttpContext context) in E:\a_PROJECTS\DOTNET-Core\Turing_Back_ED\Turing_Back_ED\Middlewares\ErrorMiddleware.cs:line 39
+2019-05-27T23:40:29.9584875+00:00 0HLN2VIJVBIQM:00000001 [INF] Request finished in 9340.1939ms 500 application/json (791a596a)
+2019-05-27T23:43:03.4329054+00:00 0HLN2VK72U33A:00000001 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/values   (ca22a1cb)
+2019-05-27T23:43:03.8264172+00:00 0HLN2VK72U33A:00000001 [INF] Executing endpoint '"Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)"' (500cc934)
+2019-05-27T23:43:03.9048476+00:00 0HLN2VK72U33A:00000001 [INF] Route matched with "{action = \"Get\", controller = \"Values\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[System.String]] Get()" on controller "Turing_Back_ED.Controllers.ValuesController" ("Turing_Back_ED"). (122b2fdf)
+2019-05-27T23:43:03.9536696+00:00 0HLN2VK72U33A:00000001 [INF] Executing action method "Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)" - Validation state: Valid (dad538d7)
+2019-05-27T23:43:03.9705738+00:00 0HLN2VK72U33A:00000001 [INF] Executed action method "Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 0.657ms. (50a9e262)
+2019-05-27T23:43:04.0137061+00:00 0HLN2VK72U33A:00000001 [INF] Executing ObjectResult, writing value of type '"System.String[]"'. (8a1b66c8)
+2019-05-27T23:43:04.2175155+00:00 0HLN2VK72U33A:00000001 [INF] Executed action "Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)" in 280.7935ms (afa2e885)
+2019-05-27T23:43:04.2371584+00:00 0HLN2VK72U33A:00000001 [INF] Executed endpoint '"Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)"' (99874f2b)
+2019-05-27T23:43:04.2672612+00:00 0HLN2VK72U33A:00000001 [INF] Request finished in 856.3481ms 200 application/json; charset=utf-8 (791a596a)
+2019-05-27T23:43:12.2653119+00:00 0HLN2VK72U33C:00000001 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/shoppingCart/a66254bc-4c8a-48df-992d-ec9b9bd20c8e application/json 45 (ca22a1cb)
+2019-05-27T23:43:12.2989699+00:00 0HLN2VK72U33C:00000001 [INF] Executing endpoint '"Turing_Back_ED.Controllers.ShoppingCartController.ProductsInCart (Turing_Back_ED)"' (500cc934)
+2019-05-27T23:43:12.3869304+00:00 0HLN2VK72U33C:00000001 [INF] Route matched with "{action = \"ProductsInCart\", controller = \"ShoppingCart\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] ProductsInCart(System.String, Turing_Back_ED.DomainModels.GeneralQueryModel)" on controller "Turing_Back_ED.Controllers.ShoppingCartController" ("Turing_Back_ED"). (122b2fdf)
+2019-05-27T23:43:13.5429471+00:00 0HLN2VK72U33C:00000001 [INF] Executing action method "Turing_Back_ED.Controllers.ShoppingCartController.ProductsInCart (Turing_Back_ED)" - Validation state: Valid (dad538d7)
+2019-05-27T23:44:03.2762231+00:00 0HLN2VK72U33C:00000001 [INF] Entity Framework Core "2.2.4-servicing-10062" initialized '"TuringshopContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "None" (9958f5bb)
+2019-05-27T23:44:03.4990099+00:00 0HLN2VK72U33C:00000001 [WRN] Query: '"(from ShoppingCart c in DbSet<ShoppingCart> where bool [c].CartId.Equals(__cartId_0) select [c]).Ski..."' uses a row limiting operation (Skip/Take) without OrderBy which may lead to unpredictable results. (32148ccc)
+2019-05-27T23:44:07.2525110+00:00 0HLN2VK72U33C:00000001 [INF] Executed DbCommand ("235"ms) [Parameters=["@__cartId_0='?' (Size = 36) (DbType = AnsiStringFixedLength), @__p_2='?' (DbType = Int32), @__p_1='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `c`.`item_id`, `c`.`added_on`, `c`.`attributes`, `c`.`buy_now`, `c`.`cart_id`, `c`.`modified`, `c`.`product_id`, `c`.`quantity`
+FROM `turingshop`.`shopping_cart` AS `c`
+WHERE `c`.`cart_id` = @__cartId_0
+LIMIT @__p_2 OFFSET @__p_1" (0723d8ff)
+2019-05-27T23:44:07.5394332+00:00 0HLN2VK72U33C:00000001 [ERR] An exception occurred while iterating over the results of a query for context type '"Turing_Back_ED.Models.TuringshopContext"'."
+""System.InvalidCastException: Unable to cast object of type 'System.Boolean' to type 'System.SByte'.
+   at MySql.Data.MySqlClient.MySqlDataReader.GetFieldValue[T](Int32 ordinal) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlDataReader.cs:line 256
+   at lambda_method(Closure , DbDataReader )
+   at Microsoft.EntityFrameworkCore.Storage.Internal.TypedRelationalValueBufferFactory.Create(DbDataReader dataReader)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.BufferlessMoveNext(DbContext _, Boolean buffer, CancellationToken cancellationToken)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.SelectEnumerableAsyncIterator`2.MoveNextCore(CancellationToken cancellationToken) in D:\a\1\s\Ix.NET\Source\System.Interactive.Async\Select.cs:line 106
+   at System.Linq.AsyncEnumerable.AsyncIterator`1.MoveNext(CancellationToken cancellationToken) in D:\a\1\s\Ix.NET\Source\System.Interactive.Async\AsyncIterator.cs:line 98
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext(CancellationToken cancellationToken)" (f5c7ac34)
+System.InvalidCastException: Unable to cast object of type 'System.Boolean' to type 'System.SByte'.
+   at MySql.Data.MySqlClient.MySqlDataReader.GetFieldValue[T](Int32 ordinal) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlDataReader.cs:line 256
+   at lambda_method(Closure , DbDataReader )
+   at Microsoft.EntityFrameworkCore.Storage.Internal.TypedRelationalValueBufferFactory.Create(DbDataReader dataReader)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.BufferlessMoveNext(DbContext _, Boolean buffer, CancellationToken cancellationToken)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.SelectEnumerableAsyncIterator`2.MoveNextCore(CancellationToken cancellationToken) in D:\a\1\s\Ix.NET\Source\System.Interactive.Async\Select.cs:line 106
+   at System.Linq.AsyncEnumerable.AsyncIterator`1.MoveNext(CancellationToken cancellationToken) in D:\a\1\s\Ix.NET\Source\System.Interactive.Async\AsyncIterator.cs:line 98
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext(CancellationToken cancellationToken)
+2019-05-27T23:44:08.5219572+00:00 0HLN2VK72U33C:00000001 [INF] Executed action "Turing_Back_ED.Controllers.ShoppingCartController.ProductsInCart (Turing_Back_ED)" in 56128.2527ms (afa2e885)
+2019-05-27T23:44:08.5419514+00:00 0HLN2VK72U33C:00000001 [INF] Executed endpoint '"Turing_Back_ED.Controllers.ShoppingCartController.ProductsInCart (Turing_Back_ED)"' (99874f2b)
+2019-05-27T23:44:09.3111478+00:00 0HLN2VK72U33C:00000001 [ERR] Unable to cast object of type 'System.Boolean' to type 'System.SByte'. (a8dc4926)
+System.InvalidCastException: Unable to cast object of type 'System.Boolean' to type 'System.SByte'.
+   at MySql.Data.MySqlClient.MySqlDataReader.GetFieldValue[T](Int32 ordinal) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlDataReader.cs:line 256
+   at lambda_method(Closure , DbDataReader )
+   at Microsoft.EntityFrameworkCore.Storage.Internal.TypedRelationalValueBufferFactory.Create(DbDataReader dataReader)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.BufferlessMoveNext(DbContext _, Boolean buffer, CancellationToken cancellationToken)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.SelectEnumerableAsyncIterator`2.MoveNextCore(CancellationToken cancellationToken) in D:\a\1\s\Ix.NET\Source\System.Interactive.Async\Select.cs:line 106
+   at System.Linq.AsyncEnumerable.AsyncIterator`1.MoveNext(CancellationToken cancellationToken) in D:\a\1\s\Ix.NET\Source\System.Interactive.Async\AsyncIterator.cs:line 98
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.Aggregate_[TSource,TAccumulate,TResult](IAsyncEnumerable`1 source, TAccumulate seed, Func`3 accumulator, Func`2 resultSelector, CancellationToken cancellationToken) in D:\a\1\s\Ix.NET\Source\System.Interactive.Async\Aggregate.cs:line 120
+   at Turing_Back_ED.DAL.ShoppingCartStore.FindAllByCartIdAsync(String cartId, GeneralQueryModel criteria) in E:\a_PROJECTS\DOTNET-Core\Turing_Back_ED\Turing_Back_ED\DAL\ShoppinCartStore.cs:line 50
+   at Turing_Back_ED.Controllers.ShoppingCartController.ProductsInCart(String cartId, GeneralQueryModel model) in E:\a_PROJECTS\DOTNET-Core\Turing_Back_ED\Turing_Back_ED\Controllers\ShoppingCartController.cs:line 67
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Turing_Back_ED.ErrorMiddleware.Invoke(HttpContext context) in E:\a_PROJECTS\DOTNET-Core\Turing_Back_ED\Turing_Back_ED\Middlewares\ErrorMiddleware.cs:line 39
+2019-05-27T23:44:09.4057593+00:00 0HLN2VK72U33C:00000001 [INF] Request finished in 57150.279ms 500 application/json (791a596a)
+2019-05-27T23:50:46.6898525+00:00 0HLN2VOGONTRJ:00000001 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/values   (ca22a1cb)
+2019-05-27T23:50:48.8696696+00:00 0HLN2VOGONTRJ:00000001 [INF] Executing endpoint '"Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)"' (500cc934)
+2019-05-27T23:50:49.2362888+00:00 0HLN2VOGONTRJ:00000001 [INF] Route matched with "{action = \"Get\", controller = \"Values\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[System.String]] Get()" on controller "Turing_Back_ED.Controllers.ValuesController" ("Turing_Back_ED"). (122b2fdf)
+2019-05-27T23:50:49.2960910+00:00 0HLN2VOGONTRJ:00000001 [INF] Executing action method "Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)" - Validation state: Valid (dad538d7)
+2019-05-27T23:50:49.3164355+00:00 0HLN2VOGONTRJ:00000001 [INF] Executed action method "Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 0.7476ms. (50a9e262)
+2019-05-27T23:50:49.3715029+00:00 0HLN2VOGONTRJ:00000001 [INF] Executing ObjectResult, writing value of type '"System.String[]"'. (8a1b66c8)
+2019-05-27T23:50:50.1759192+00:00 0HLN2VOGONTRJ:00000001 [INF] Executed action "Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)" in 680.3866ms (afa2e885)
+2019-05-27T23:50:50.3594070+00:00 0HLN2VOGONTRJ:00000001 [INF] Executed endpoint '"Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)"' (99874f2b)
+2019-05-27T23:50:50.4239562+00:00 0HLN2VOGONTRJ:00000001 [INF] Request finished in 3764.7847ms 200 application/json; charset=utf-8 (791a596a)
+2019-05-27T23:51:13.7385878+00:00 0HLN2VOGONTRL:00000001 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/shoppingCart/a66254bc-4c8a-48df-992d-ec9b9bd20c8e application/json 45 (ca22a1cb)
+2019-05-27T23:51:13.7667151+00:00 0HLN2VOGONTRL:00000001 [INF] Executing endpoint '"Turing_Back_ED.Controllers.ShoppingCartController.ProductsInCart (Turing_Back_ED)"' (500cc934)
+2019-05-27T23:51:13.8542495+00:00 0HLN2VOGONTRL:00000001 [INF] Route matched with "{action = \"ProductsInCart\", controller = \"ShoppingCart\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] ProductsInCart(System.String, Turing_Back_ED.DomainModels.GeneralQueryModel)" on controller "Turing_Back_ED.Controllers.ShoppingCartController" ("Turing_Back_ED"). (122b2fdf)
+2019-05-27T23:51:15.2493624+00:00 0HLN2VOGONTRL:00000001 [INF] Executing action method "Turing_Back_ED.Controllers.ShoppingCartController.ProductsInCart (Turing_Back_ED)" - Validation state: Valid (dad538d7)
+2019-05-27T23:51:32.1004429+00:00 0HLN2VOGONTRL:00000001 [INF] Executed action "Turing_Back_ED.Controllers.ShoppingCartController.ProductsInCart (Turing_Back_ED)" in 18241.1827ms (afa2e885)
+2019-05-27T23:51:32.1067205+00:00 0HLN2VOGONTRL:00000001 [INF] Executed endpoint '"Turing_Back_ED.Controllers.ShoppingCartController.ProductsInCart (Turing_Back_ED)"' (99874f2b)
+2019-05-27T23:51:32.4209360+00:00 0HLN2VOGONTRL:00000001 [ERR] The property 'ShoppingCart.BuyNow' is of type 'byte' which is not supported by current database provider. Either change the property CLR type or ignore the property using the '[NotMapped]' attribute or by using 'EntityTypeBuilder.Ignore' in 'OnModelCreating'. (99f85b97)
+System.InvalidOperationException: The property 'ShoppingCart.BuyNow' is of type 'byte' which is not supported by current database provider. Either change the property CLR type or ignore the property using the '[NotMapped]' attribute or by using 'EntityTypeBuilder.Ignore' in 'OnModelCreating'.
+   at Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal.PropertyMappingValidationConvention.Apply(InternalModelBuilder modelBuilder)
+   at Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal.ConventionDispatcher.ImmediateConventionScope.OnModelBuilt(InternalModelBuilder modelBuilder)
+   at Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal.ConventionDispatcher.OnModelBuilt(InternalModelBuilder modelBuilder)
+   at Microsoft.EntityFrameworkCore.Metadata.Internal.Model.Validate()
+   at Microsoft.EntityFrameworkCore.ModelBuilder.FinalizeModel()
+   at Microsoft.EntityFrameworkCore.Infrastructure.ModelSource.CreateModel(DbContext context, IConventionSetBuilder conventionSetBuilder, IModelValidator validator)
+   at Microsoft.EntityFrameworkCore.Infrastructure.ModelSource.<>c__DisplayClass5_0.<GetModel>b__1()
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+   at System.Lazy`1.ExecutionAndPublication(LazyHelper executionAndPublication, Boolean useDefaultConstructor)
+   at System.Lazy`1.CreateValue()
+   at Microsoft.EntityFrameworkCore.Infrastructure.ModelSource.GetModel(DbContext context, IConventionSetBuilder conventionSetBuilder, IModelValidator validator)
+   at Microsoft.EntityFrameworkCore.Internal.DbContextServices.CreateModel()
+   at Microsoft.EntityFrameworkCore.Internal.DbContextServices.get_Model()
+   at Microsoft.EntityFrameworkCore.Infrastructure.EntityFrameworkServicesBuilder.<>c.<TryAddCoreServices>b__7_2(IServiceProvider p)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitFactory(FactoryCallSite factoryCallSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScoped(ScopedCallSite scopedCallSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScoped(ScopedCallSite scopedCallSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine.<>c__DisplayClass1_0.<RealizeService>b__0(ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at Microsoft.EntityFrameworkCore.DbContext.get_DbContextDependencies()
+   at Microsoft.EntityFrameworkCore.DbContext.get_InternalServiceProvider()
+   at Microsoft.EntityFrameworkCore.DbContext.get_DbContextDependencies()
+   at Microsoft.EntityFrameworkCore.DbContext.get_Model()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.get_EntityType()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.get_EntityQueryable()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.System.Linq.IQueryable.get_Provider()
+   at System.Linq.Queryable.Where[TSource](IQueryable`1 source, Expression`1 predicate)
+   at Turing_Back_ED.DAL.ShoppingCartStore.FindAllByCartIdAsync(String cartId, GeneralQueryModel criteria) in E:\a_PROJECTS\DOTNET-Core\Turing_Back_ED\Turing_Back_ED\DAL\ShoppinCartStore.cs:line 50
+   at Turing_Back_ED.Controllers.ShoppingCartController.ProductsInCart(String cartId, GeneralQueryModel model) in E:\a_PROJECTS\DOTNET-Core\Turing_Back_ED\Turing_Back_ED\Controllers\ShoppingCartController.cs:line 67
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Turing_Back_ED.ErrorMiddleware.Invoke(HttpContext context) in E:\a_PROJECTS\DOTNET-Core\Turing_Back_ED\Turing_Back_ED\Middlewares\ErrorMiddleware.cs:line 39
+2019-05-27T23:51:32.6048560+00:00 0HLN2VOGONTRL:00000001 [INF] Request finished in 18762.0161ms 500 application/json (791a596a)
+2019-05-27T23:54:44.2560367+00:00 0HLN2VQNBRLL8:00000001 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/values   (ca22a1cb)
+2019-05-27T23:54:44.7740039+00:00 0HLN2VQNBRLL8:00000001 [INF] Executing endpoint '"Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)"' (500cc934)
+2019-05-27T23:54:44.9068281+00:00 0HLN2VQNBRLL8:00000001 [INF] Route matched with "{action = \"Get\", controller = \"Values\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[System.String]] Get()" on controller "Turing_Back_ED.Controllers.ValuesController" ("Turing_Back_ED"). (122b2fdf)
+2019-05-27T23:54:44.9598228+00:00 0HLN2VQNBRLL8:00000001 [INF] Executing action method "Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)" - Validation state: Valid (dad538d7)
+2019-05-27T23:54:44.9852945+00:00 0HLN2VQNBRLL8:00000001 [INF] Executed action method "Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)", returned result "Microsoft.AspNetCore.Mvc.ObjectResult" in 1.301ms. (50a9e262)
+2019-05-27T23:54:45.0282032+00:00 0HLN2VQNBRLL8:00000001 [INF] Executing ObjectResult, writing value of type '"System.String[]"'. (8a1b66c8)
+2019-05-27T23:54:45.7202906+00:00 0HLN2VQNBRLL8:00000001 [INF] Executed action "Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)" in 618.1571ms (afa2e885)
+2019-05-27T23:54:45.8250118+00:00 0HLN2VQNBRLL8:00000001 [INF] Executed endpoint '"Turing_Back_ED.Controllers.ValuesController.Get (Turing_Back_ED)"' (99874f2b)
+2019-05-27T23:54:45.9594195+00:00 0HLN2VQNBRLL8:00000001 [INF] Request finished in 1620.405ms 200 application/json; charset=utf-8 (791a596a)
+2019-05-27T23:55:02.1277286+00:00 0HLN2VQNBRLLA:00000001 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/shoppingCart/a66254bc-4c8a-48df-992d-ec9b9bd20c8e application/json 45 (ca22a1cb)
+2019-05-27T23:55:02.3165517+00:00 0HLN2VQNBRLLA:00000001 [INF] Executing endpoint '"Turing_Back_ED.Controllers.ShoppingCartController.ProductsInCart (Turing_Back_ED)"' (500cc934)
+2019-05-27T23:55:02.6379929+00:00 0HLN2VQNBRLLA:00000001 [INF] Route matched with "{action = \"ProductsInCart\", controller = \"ShoppingCart\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] ProductsInCart(System.String, Turing_Back_ED.DomainModels.GeneralQueryModel)" on controller "Turing_Back_ED.Controllers.ShoppingCartController" ("Turing_Back_ED"). (122b2fdf)
+2019-05-27T23:55:04.8475323+00:00 0HLN2VQNBRLLA:00000001 [INF] Executing action method "Turing_Back_ED.Controllers.ShoppingCartController.ProductsInCart (Turing_Back_ED)" - Validation state: Valid (dad538d7)
+2019-05-27T23:55:16.5493384+00:00 0HLN2VQNBRLLA:00000001 [WRN] The 'bool' property '"BuyNow"' on entity type '"ShoppingCart"' is configured with a database-generated default. This default will always be used for inserts when the property has the value 'false', since this is the CLR default for the 'bool' type. Consider using the nullable 'bool?' type instead so that the default will only be used for inserts when the property value is 'null'. (a2a8ca4b)
+2019-05-27T23:55:16.8160227+00:00 0HLN2VQNBRLLA:00000001 [INF] Entity Framework Core "2.2.4-servicing-10062" initialized '"TuringshopContext"' using provider '"Pomelo.EntityFrameworkCore.MySql"' with options: "None" (9958f5bb)
+2019-05-27T23:55:17.0631053+00:00 0HLN2VQNBRLLA:00000001 [WRN] Query: '"(from ShoppingCart c in DbSet<ShoppingCart> where bool [c].CartId.Equals(__cartId_0) select [c]).Ski..."' uses a row limiting operation (Skip/Take) without OrderBy which may lead to unpredictable results. (32148ccc)
+2019-05-27T23:55:19.9292961+00:00 0HLN2VQNBRLLA:00000001 [INF] Executed DbCommand ("496"ms) [Parameters=["@__cartId_0='?' (Size = 36) (DbType = AnsiStringFixedLength), @__p_2='?' (DbType = Int32), @__p_1='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT `c`.`item_id`, `c`.`added_on`, `c`.`attributes`, `c`.`buy_now`, `c`.`cart_id`, `c`.`modified`, `c`.`product_id`, `c`.`quantity`
+FROM `turingshop`.`shopping_cart` AS `c`
+WHERE `c`.`cart_id` = @__cartId_0
+LIMIT @__p_2 OFFSET @__p_1" (0723d8ff)
+2019-05-27T23:55:21.0100477+00:00 0HLN2VQNBRLLA:00000001 [ERR] An exception occurred while iterating over the results of a query for context type '"Turing_Back_ED.Models.TuringshopContext"'."
+""System.InvalidCastException: Unable to cast object of type 'System.Guid' to type 'System.String'.
+   at MySql.Data.MySqlClient.MySqlDataReader.GetString(Int32 ordinal) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlDataReader.cs:line 204
+   at lambda_method(Closure , DbDataReader )
+   at Microsoft.EntityFrameworkCore.Storage.Internal.TypedRelationalValueBufferFactory.Create(DbDataReader dataReader)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.BufferlessMoveNext(DbContext _, Boolean buffer, CancellationToken cancellationToken)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.SelectEnumerableAsyncIterator`2.MoveNextCore(CancellationToken cancellationToken) in D:\a\1\s\Ix.NET\Source\System.Interactive.Async\Select.cs:line 106
+   at System.Linq.AsyncEnumerable.AsyncIterator`1.MoveNext(CancellationToken cancellationToken) in D:\a\1\s\Ix.NET\Source\System.Interactive.Async\AsyncIterator.cs:line 98
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext(CancellationToken cancellationToken)" (f5c7ac34)
+System.InvalidCastException: Unable to cast object of type 'System.Guid' to type 'System.String'.
+   at MySql.Data.MySqlClient.MySqlDataReader.GetString(Int32 ordinal) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlDataReader.cs:line 204
+   at lambda_method(Closure , DbDataReader )
+   at Microsoft.EntityFrameworkCore.Storage.Internal.TypedRelationalValueBufferFactory.Create(DbDataReader dataReader)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.BufferlessMoveNext(DbContext _, Boolean buffer, CancellationToken cancellationToken)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.SelectEnumerableAsyncIterator`2.MoveNextCore(CancellationToken cancellationToken) in D:\a\1\s\Ix.NET\Source\System.Interactive.Async\Select.cs:line 106
+   at System.Linq.AsyncEnumerable.AsyncIterator`1.MoveNext(CancellationToken cancellationToken) in D:\a\1\s\Ix.NET\Source\System.Interactive.Async\AsyncIterator.cs:line 98
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext(CancellationToken cancellationToken)
+2019-05-27T23:55:22.1762082+00:00 0HLN2VQNBRLLA:00000001 [INF] Executed action "Turing_Back_ED.Controllers.ShoppingCartController.ProductsInCart (Turing_Back_ED)" in 19532.1973ms (afa2e885)
+2019-05-27T23:55:22.1874257+00:00 0HLN2VQNBRLLA:00000001 [INF] Executed endpoint '"Turing_Back_ED.Controllers.ShoppingCartController.ProductsInCart (Turing_Back_ED)"' (99874f2b)
+2019-05-27T23:55:22.9329191+00:00 0HLN2VQNBRLLA:00000001 [ERR] Unable to cast object of type 'System.Guid' to type 'System.String'. (a7ebfb47)
+System.InvalidCastException: Unable to cast object of type 'System.Guid' to type 'System.String'.
+   at MySql.Data.MySqlClient.MySqlDataReader.GetString(Int32 ordinal) in C:\projects\mysqlconnector\src\MySqlConnector\MySql.Data.MySqlClient\MySqlDataReader.cs:line 204
+   at lambda_method(Closure , DbDataReader )
+   at Microsoft.EntityFrameworkCore.Storage.Internal.TypedRelationalValueBufferFactory.Create(DbDataReader dataReader)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.BufferlessMoveNext(DbContext _, Boolean buffer, CancellationToken cancellationToken)
+   at Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.SelectEnumerableAsyncIterator`2.MoveNextCore(CancellationToken cancellationToken) in D:\a\1\s\Ix.NET\Source\System.Interactive.Async\Select.cs:line 106
+   at System.Linq.AsyncEnumerable.AsyncIterator`1.MoveNext(CancellationToken cancellationToken) in D:\a\1\s\Ix.NET\Source\System.Interactive.Async\AsyncIterator.cs:line 98
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.Aggregate_[TSource,TAccumulate,TResult](IAsyncEnumerable`1 source, TAccumulate seed, Func`3 accumulator, Func`2 resultSelector, CancellationToken cancellationToken) in D:\a\1\s\Ix.NET\Source\System.Interactive.Async\Aggregate.cs:line 120
+   at Turing_Back_ED.DAL.ShoppingCartStore.FindAllByCartIdAsync(String cartId, GeneralQueryModel criteria) in E:\a_PROJECTS\DOTNET-Core\Turing_Back_ED\Turing_Back_ED\DAL\ShoppinCartStore.cs:line 50
+   at Turing_Back_ED.Controllers.ShoppingCartController.ProductsInCart(String cartId, GeneralQueryModel model) in E:\a_PROJECTS\DOTNET-Core\Turing_Back_ED\Turing_Back_ED\Controllers\ShoppingCartController.cs:line 67
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Turing_Back_ED.ErrorMiddleware.Invoke(HttpContext context) in E:\a_PROJECTS\DOTNET-Core\Turing_Back_ED\Turing_Back_ED\Middlewares\ErrorMiddleware.cs:line 39
+2019-05-27T23:55:23.0769197+00:00 0HLN2VQNBRLLA:00000001 [INF] Request finished in 20970.6463ms 500 application/json (791a596a)

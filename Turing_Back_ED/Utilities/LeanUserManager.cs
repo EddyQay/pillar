@@ -9,9 +9,9 @@ namespace Turing_Back_ED.Utilities
 {
     public class LeanUserManager : IUserManager
     {
-        public readonly TuringshopContext _context;
+        public readonly DatabaseContext _context;
 
-        public LeanUserManager(TuringshopContext context)
+        public LeanUserManager(DatabaseContext context)
         {
             _context = context;
         }

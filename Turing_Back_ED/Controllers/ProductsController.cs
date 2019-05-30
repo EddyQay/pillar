@@ -17,28 +17,34 @@ using Microsoft.AspNetCore.Session;
 
 namespace Turing_Back_ED.Controllers
 {
-    //[Authorize]
+    /// <summary>
+    /// Facilitates product creation and manipulation 
+    /// </summary>
     [Route("api/[controller]")]
     [ApiController]
     public class ProductsController : ControllerBase
     {
         private readonly ProductStore products;
-        readonly ILogger<ProductsController> logger;
 
-        public ProductsController(ProductStore _products, ILogger<ProductsController> _logger)
+        public ProductsController(ProductStore _products)
         {
             products = _products;
-            logger = _logger;
         }
 
+
+        /// <summary>
+        /// Gets all products there is
+        /// </summary>
+        /// <param name="filter">An object of filtering options</param>
+        /// <returns>An array of Products</returns>
         [HttpGet]
         [ModelValidate(allowNull: true)]
-        public async Task<ActionResult<IEnumerable<Product>>> GetAll(GeneralQueryModel model)
+        public async Task<ActionResult<IEnumerable<Product>>> GetAll(GeneralQueryModel filter)
         {
-            if(model == null)
-                model = new GeneralQueryModel();
+            if(filter == null)
+                filter = new GeneralQueryModel();
             
-            var query = await products.GetAllAsync(model);
+            var query = await products.GetAllAsync(filter);
 
             if (query != null)
                 return new OkObjectResult(new SearchResponseModel
@@ -54,6 +60,12 @@ namespace Turing_Back_ED.Controllers
                 });
         }
 
+
+        /// <summary>
+        /// Finds a particular product
+        /// </summary>
+        /// <param name="id">Id of prodcut</param>
+        /// <returns>A Product object</returns>
         [HttpGet("{id}")]
         [ModelValidate]
         public async Task<ActionResult<IEnumerable<Product>>> Find(int id)
@@ -61,18 +73,30 @@ namespace Turing_Back_ED.Controllers
             return new OkObjectResult(await products.FindByIdAsync(id));
         }
 
+
+        /// <summary>
+        /// Get detailed information in a particular product
+        /// </summary>
+        /// <param name="Id">Id of product</param>
+        /// <returns>An object of product details</returns>
         [HttpGet("{id}/details")]
         [ModelValidate]
-        public async Task<ActionResult> FindDetails(int id)
+        public async Task<ActionResult> FindDetails(int Id)
         {
-            return new OkObjectResult(await products.FindById_D(id));
+            return new OkObjectResult(await products.FindById_D(Id));
         }
 
+
+        /// <summary>
+        /// Finds products based on defined set of options
+        /// </summary>
+        /// <param name="filter">An object of filtering options</param>
+        /// <returns>An array of products</returns>
         [HttpGet("search")]
         [ModelValidate]
-        public async Task<ActionResult<IEnumerable<Product>>> FindBySearch(SearchModel model)
+        public async Task<ActionResult<IEnumerable<Product>>> FindBySearch(SearchModel filter)
         {
-            var searchResult = await products.FindAllAsync(model);
+            var searchResult = await products.FindAllAsync(filter);
 
             if (searchResult != null)
                 return new OkObjectResult(new SearchResponseModel
@@ -88,20 +112,23 @@ namespace Turing_Back_ED.Controllers
                 });
         }
 
+
+        /// <summary>
+        /// Finds all products that belong to a particular category
+        /// </summary>
+        /// <param name="Id">Id of category</param>
+        /// <param name="filter">An object of filtering options</param>
+        /// <returns>An Array of products</returns>
         [HttpGet("inCategory/{id}")]
         [ModelValidate(allowNull: true)]
-        public async Task<ActionResult<IEnumerable<Product>>> InCategory(int Id, GeneralQueryModel model)
+        public async Task<ActionResult<IEnumerable<Product>>> InCategory(int Id, GeneralQueryModel filter)
         {
             if (!ModelState.IsValid && Id < 1)
             {
-                //List<JProperty> errors = new List<JProperty>();
-                //ModelState.Values.SelectMany(a => a.Errors).ToList().ForEach(delegate (ModelError modelError) {
-                //    errors.Add((JProperty)JToken.Parse($"message:{ modelError.ErrorMessage}"));
-                //});
 
-                var errors = JToken.FromObject(ModelState.Values.SelectMany(a => a.Errors), new Newtonsoft.Json.JsonSerializer
-                {
-                    NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore
+                var errors = JToken.FromObject(ModelState.Values.SelectMany(a => a.Errors), 
+                    new Newtonsoft.Json.JsonSerializer{
+                        NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore
                 });
 
                 return new BadRequestObjectResult(new BadRequestModel
@@ -114,13 +141,10 @@ namespace Turing_Back_ED.Controllers
             }
             else if (Id < 1)
             {
-                //List<JProperty> errors = new List<JProperty>();
-                //ModelState.Values.SelectMany(a => a.Errors).ToList().ForEach(delegate (ModelError modelError) {
-                //    errors.Add((JProperty)JToken..Parse($"message:{ modelError.ErrorMessage}"));
-                //});
 
-                var errors = JToken.FromObject(ModelState.Values.SelectMany(a => a.Errors), new Newtonsoft.Json.JsonSerializer {
-                    NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore
+                var errors = JToken.FromObject(ModelState.Values.SelectMany(a => a.Errors), 
+                    new Newtonsoft.Json.JsonSerializer {
+                        NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore
                 });
 
                 return new BadRequestObjectResult(new BadRequestModel
@@ -132,10 +156,10 @@ namespace Turing_Back_ED.Controllers
                 });
             }
 
-            if (model == null)
-                model = new GeneralQueryModel();
+            if (filter == null)
+                filter = new GeneralQueryModel();
 
-            var searchResult = await products.FindInCategory(Id, model);
+            var searchResult = await products.FindInCategory(Id, filter);
 
             if (searchResult != null)
                 return new OkObjectResult(new SearchResponseModel
@@ -151,16 +175,23 @@ namespace Turing_Back_ED.Controllers
                 });
         }
 
+
+        /// <summary>
+        /// Finds all products that belong to a particular department
+        /// </summary>
+        /// <param name="Id">Id of department</param>
+        /// <param name="filter">An object of filtering options</param>
+        /// <returns>An array of products</returns>
         [HttpGet("inDepartment/{id}")]
         [ModelValidate(allowNull: true)]
-        public async Task<ActionResult<IEnumerable<Product>>> InDepartment(int Id, GeneralQueryModel model)
+        public async Task<ActionResult<IEnumerable<Product>>> InDepartment(int Id, GeneralQueryModel filter)
         {
             if (!ModelState.IsValid && Id < 1)
             {
-                var errors = JToken.FromObject(ModelState.Values.SelectMany(a => a.Errors), new Newtonsoft.Json.JsonSerializer
-                {
-                    NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore
-                });
+                var errors = JToken.FromObject(ModelState.Values.SelectMany(a => a.Errors), 
+                    new Newtonsoft.Json.JsonSerializer{
+                        NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore
+                    });
 
                 return new BadRequestObjectResult(new BadRequestModel
                 {
@@ -173,10 +204,10 @@ namespace Turing_Back_ED.Controllers
             }
             else if (Id < 1)
             {
-                var errors = JToken.FromObject(ModelState.Values.SelectMany(a => a.Errors), new Newtonsoft.Json.JsonSerializer
-                {
-                    NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore
-                });
+                var errors = JToken.FromObject(ModelState.Values.SelectMany(a => a.Errors), 
+                    new Newtonsoft.Json.JsonSerializer{
+                        NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore
+                    });
 
                 return new BadRequestObjectResult(new BadRequestModel
                 {
@@ -187,10 +218,10 @@ namespace Turing_Back_ED.Controllers
                 });
             }
 
-            if (model == null)
-                model = new GeneralQueryModel();
+            if (filter == null)
+                filter = new GeneralQueryModel();
 
-            var searchResult = await products.FindInDepartment(Id, model);
+            var searchResult = await products.FindInDepartment(Id, filter);
 
             if (searchResult != null)
                 return new OkObjectResult(new SearchResponseModel
@@ -206,50 +237,50 @@ namespace Turing_Back_ED.Controllers
                 });
         }
 
+
+        /// <summary>
+        /// Finds all locations for a particular product 
+        /// </summary>
+        /// <param name="Id">Id of product</param>
+        /// <returns>An array of product locations</returns>
         [HttpGet("{id}/locations")]
         [ModelValidate]
         public async Task<ActionResult<ProductLocation>> Locations(int Id)
         {
             var searchResult = await products.FindLocations(Id);
             return new OkObjectResult(searchResult);
-            //var searchResult = 
-            //if (searchResult != null)
-            //    return new OkObjectResult(searchResult);
-            //else
-            //    return new OkObjectResult(new ProductLocationsModel
-            //    {
-            //        Count = 0,
-            //        Rows = searchResult
-            //    });
         }
 
+
+        /// <summary>
+        /// Gets all reviews on a particular product
+        /// </summary>
+        /// <param name="Id">Id of product</param>
+        /// <returns></returns>
         [HttpGet("{id}/reviews")]
         [ModelValidate]
         public async Task<ActionResult<IEnumerable<Review_>>> GetReviews(int Id)
         {
             var searchResult = await products.GetReviews(Id);
             return new OkObjectResult(searchResult);
-            //var searchResult = 
-            //if (searchResult != null)
-            //    return new OkObjectResult(searchResult);
-            //else
-            //    return new OkObjectResult(new ProductLocationsModel
-            //    {
-            //        Count = 0,
-            //        Rows = searchResult
-            //    });
         }
 
+        /// <summary>
+        /// Add a review on a particular product
+        /// </summary>
+        /// <param name="Id">Id of product</param>
+        /// <param name="reviewItem">review object of review details</param>
+        /// <returns>No content</returns>
         [Authorize]
         [HttpPost("{id}/reviews")]
         [ModelValidate]
-        public async Task<ActionResult<IEnumerable<Review_>>> AddReview(int id, ReviewModel model)
+        public async Task<ActionResult<IEnumerable<Review_>>> AddReview(int Id, ReviewModel reviewItem)
         {
             var review = new Review_
             {
-                ProductId = id,
-                Review = model.Review,
-                Rating = model.Rating
+                ProductId = Id,
+                Review = reviewItem.Review,
+                Rating = reviewItem.Rating
             };
 
             products.AddReview(review, HttpContext);
