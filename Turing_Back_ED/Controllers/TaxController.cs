@@ -15,9 +15,9 @@ namespace Turing_Back_ED.Controllers
     [ApiController]
     public class TaxController : ControllerBase
     {
-        private readonly TaxStore taxes;
+        private readonly TaxWorker taxes;
 
-        public TaxController(TaxStore _taxes)
+        public TaxController(TaxWorker _taxes)
         {
             taxes = _taxes;
         }

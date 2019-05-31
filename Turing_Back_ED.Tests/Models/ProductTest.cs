@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using Turing_Back_ED.DAL;
+using Turing_Back_ED.Workers;
 
 namespace Turing_Back_ED.Tests.Models
 {

@@ -22,9 +22,9 @@ namespace Turing_Back_ED.Controllers
     [ApiController]
     public class CustomersController : ControllerBase
     {
-        private readonly CustomerStore customers;
+        private readonly CustomerWorker customers;
 
-        public CustomersController(CustomerStore _customers)
+        public CustomersController(CustomerWorker _customers)
         {
             customers = _customers;
         }

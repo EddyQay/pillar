@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json.Linq;
-using Turing_Back_ED.DAL;
+using Turing_Back_ED.Workers;
 using Turing_Back_ED.DomainModels;
 using Turing_Back_ED.Middlewares;
 using Turing_Back_ED.Models;
@@ -22,9 +22,9 @@ namespace Turing_Back_ED.Controllers
     [ApiController]
     public class ShoppingCartController : ControllerBase
     {
-        private readonly ShoppingCartStore shoppingCart;
+        private readonly ShoppingCartsWorker shoppingCart;
 
-        public ShoppingCartController(ShoppingCartStore _shoppingCart)
+        public ShoppingCartController(ShoppingCartsWorker _shoppingCart)
         {
             shoppingCart = _shoppingCart;
         }

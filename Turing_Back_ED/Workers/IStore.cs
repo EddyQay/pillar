@@ -5,7 +5,7 @@ using System.Linq.Expressions;
 using System.Threading.Tasks;
 using Turing_Back_ED.DomainModels;
 
-namespace Turing_Back_ED.DAL
+namespace Turing_Back_ED.Workers
 {
     public interface IStore<T> where T : IEntity 
     {

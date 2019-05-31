@@ -14,19 +14,19 @@ using System.Text;
 using System.Text.Encodings.Web;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
-using Turing_Back_ED.DAL;
+using Turing_Back_ED.Workers;
 using Turing_Back_ED.Models;
 using Turing_Back_ED.Utilities;
 
 namespace Turing_Back_ED.DomainModels
 {
-    public class PaymentsStore
+    public class PaymentsWorker
     {
         private readonly DatabaseContext _context;
         private readonly TokenSection tokenSection;
         private readonly TokenManager tokenManager;
 
-        public PaymentsStore(DatabaseContext context, TokenManager _tokenManager,
+        public PaymentsWorker(DatabaseContext context, TokenManager _tokenManager,
             IOptions<TokenSection> _tokenSection)
         {
             _context = context;

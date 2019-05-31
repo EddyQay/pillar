@@ -5,19 +5,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
-using Turing_Back_ED.DAL;
+using Turing_Back_ED.Workers;
 using Turing_Back_ED.Models;
 using Turing_Back_ED.Utilities;
 
 namespace Turing_Back_ED.DomainModels
 {
-    public class DepartmentStore : IStore<Department>
+    public class DepartmentsWorker : IStore<Department>
     {
         private readonly DatabaseContext _context;
         private readonly TokenSection tokenSection;
         private readonly TokenManager tokenManager;
 
-        public DepartmentStore(DatabaseContext context, TokenManager _tokenManager, 
+        public DepartmentsWorker(DatabaseContext context, TokenManager _tokenManager, 
             IOptions<TokenSection> _tokenSection)
         {
             _context = context;

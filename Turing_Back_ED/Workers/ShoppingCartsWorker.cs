@@ -10,15 +10,15 @@ using Turing_Back_ED.DomainModels;
 using Turing_Back_ED.Models;
 using Turing_Back_ED.Utilities;
 
-namespace Turing_Back_ED.DAL
+namespace Turing_Back_ED.Workers
 {
-    public class ShoppingCartStore : IStore<ShoppingCart>
+    public class ShoppingCartsWorker : IStore<ShoppingCart>
     {
         private readonly DatabaseContext _context;
         private readonly TokenSection tokenSection;
         private readonly TokenManager tokenManager;
 
-        public ShoppingCartStore(DatabaseContext context, TokenManager _tokenManager,
+        public ShoppingCartsWorker(DatabaseContext context, TokenManager _tokenManager,
             IOptions<TokenSection> _tokenSection)
         {
             _context = context;

@@ -9,13 +9,13 @@ using System.Text;
 using System.Text.Encodings.Web;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
-using Turing_Back_ED.DAL;
+using Turing_Back_ED.Workers;
 using Turing_Back_ED.Models;
 using Turing_Back_ED.Utilities;
 
 namespace Turing_Back_ED.DomainModels
 {
-    public class TaxStore : IStore<Tax>
+    public class TaxWorker : IStore<Tax>
     {
         private readonly IUserManager userManager;
         private readonly IAuthenticationManager authManager;
@@ -23,7 +23,7 @@ namespace Turing_Back_ED.DomainModels
         private readonly TokenSection tokenSection;
         private readonly TokenManager tokenManager;
 
-        public TaxStore(DatabaseContext context, TokenManager _tokenManager, 
+        public TaxWorker(DatabaseContext context, TokenManager _tokenManager, 
             IAuthenticationManager _authManager, IUserManager _userManager, 
             IOptions<TokenSection> _tokenSection)
         {

@@ -10,7 +10,7 @@ using Turing_Back_ED.Tests.DomainModels;
 using Turing_Back_ED.Tests.Controllers;
 using Microsoft.AspNetCore.Mvc;
 using Turing_Back_ED.Controllers;
-using Turing_Back_ED.DAL;
+using Turing_Back_ED.Workers;
 using Turing_Back_ED.DomainModels;
 
 namespace Turing_Back_ED.Tests
@@ -28,7 +28,7 @@ namespace Turing_Back_ED.Tests
             //products = new ProductStore(new Models.TestContext);
             //productsController = new ProductsController(products);
 
-            var repo = new Mock<ProductStore>();
+            var repo = new Mock<ProductsWorker>();
             repo.Setup(p => p.GetAllAsync(new GeneralQueryModel()))
                 .ReturnsAsync(GetProductList);
 

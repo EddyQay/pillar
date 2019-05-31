@@ -7,18 +7,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
-using Turing_Back_ED.DAL;
+using Turing_Back_ED.Workers;
 using Turing_Back_ED.Models;
 using Turing_Back_ED.Utilities;
 
 namespace Turing_Back_ED.DomainModels
 {
-    public class ProductStore : IStore<Product>, IDisposable
+    public class ProductsWorker : IStore<Product>, IDisposable
     {
         private readonly DatabaseContext _context;
         private readonly TokenManager tokenManager;
 
-        public ProductStore(DatabaseContext context, TokenManager _tokenGetter)
+        public ProductsWorker(DatabaseContext context, TokenManager _tokenGetter)
         {
             _context = context;
             tokenManager = _tokenGetter;
