@@ -22,9 +22,9 @@ namespace Turing_Back_ED.Controllers
     [ApiController]
     public class DepartmentsController : ControllerBase
     {
-        private readonly DepartmentStore departments;
+        private readonly DepartmentsWorker departments;
 
-        public DepartmentsController(DepartmentStore _departments)
+        public DepartmentsController(DepartmentsWorker _departments)
         {
             departments = _departments;
         }

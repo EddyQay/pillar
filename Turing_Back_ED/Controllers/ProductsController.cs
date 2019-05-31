@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Microsoft.Extensions.Logging;
-using Turing_Back_ED.DAL;
+using Turing_Back_ED.Workers;
 using Turing_Back_ED.DomainModels;
 using Turing_Back_ED.Models;
 using Turing_Back_ED.Utilities;
@@ -24,9 +24,9 @@ namespace Turing_Back_ED.Controllers
     [ApiController]
     public class ProductsController : ControllerBase
     {
-        private readonly ProductStore products;
+        private readonly ProductsWorker products;
 
-        public ProductsController(ProductStore _products)
+        public ProductsController(ProductsWorker _products)
         {
             products = _products;
         }

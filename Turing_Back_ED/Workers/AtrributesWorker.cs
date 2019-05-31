@@ -10,15 +10,15 @@ using Turing_Back_ED.Models;
 using Turing_Back_ED.Utilities;
 using Attribute = Turing_Back_ED.Models.Attribute;
 
-namespace Turing_Back_ED.DAL
+namespace Turing_Back_ED.Workers
 {
-    public class AttributeStore : IStore<Attribute>
+    public class AttributesWorker : IStore<Attribute>
     {
         private readonly DatabaseContext _context;
         private readonly TokenSection tokenSection;
         private readonly TokenManager tokenManager;
 
-        public AttributeStore(DatabaseContext context, TokenManager _tokenManager, 
+        public AttributesWorker(DatabaseContext context, TokenManager _tokenManager, 
             IOptions<TokenSection> _tokenSection)
         {
             _context = context;

@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-using Turing_Back_ED.DAL;
+using Turing_Back_ED.Workers;
 using Turing_Back_ED.DomainModels;
 using Turing_Back_ED.Middlewares;
 using Turing_Back_ED.Models;
@@ -21,9 +21,9 @@ namespace Turing_Back_ED.Controllers
     [ApiController]
     public class AttributesController : ControllerBase
     {
-        private readonly AttributeStore attributes;
+        private readonly AttributesWorker attributes;
 
-        public AttributesController(AttributeStore _attributes)
+        public AttributesController(AttributesWorker _attributes)
         {
             attributes = _attributes;
         }

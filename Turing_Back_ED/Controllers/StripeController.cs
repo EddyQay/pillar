@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Stripe;
-using Turing_Back_ED.DAL;
+using Turing_Back_ED.Workers;
 using Turing_Back_ED.DomainModels;
 using Turing_Back_ED.Middlewares;
 using Turing_Back_ED.Utilities;
@@ -19,9 +19,9 @@ namespace Turing_Back_ED.Controllers
     [ApiController]
     public class StripeController : ControllerBase
     {
-        private readonly PaymentsStore payments;
+        private readonly PaymentsWorker payments;
 
-        public StripeController(PaymentsStore _payments)
+        public StripeController(PaymentsWorker _payments)
         {
             payments = _payments;
         }

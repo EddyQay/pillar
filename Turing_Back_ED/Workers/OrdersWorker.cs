@@ -9,14 +9,14 @@ using Turing_Back_ED.DomainModels;
 using Turing_Back_ED.Models;
 using Turing_Back_ED.Utilities;
 
-namespace Turing_Back_ED.DAL
+namespace Turing_Back_ED.Workers
 {
-    public class OrderStore : IStore<Order>
+    public class OrdersWorker : IStore<Order>
     {
         private readonly DatabaseContext _context;
         private readonly TokenSection tokenSection;
         private readonly TokenManager tokenManager;
-        readonly ShoppingCartStore shoppingcart;
+        readonly ShoppingCartsWorker shoppingcart;
 
         /// <summary>
         /// Initiatlizes an instanceof the OrderStore class
@@ -25,8 +25,8 @@ namespace Turing_Back_ED.DAL
         /// <param name="_tokenManager">An instance of the TokenManager class</param>
         /// <param name="_tokenSection">An instance of the TokenSection class</param>
         /// <param name="_shoppingcart">An instance of the ShoppingCartStore class</param>
-        public OrderStore(DatabaseContext context, TokenManager _tokenManager, 
-            IOptions<TokenSection> _tokenSection, ShoppingCartStore _shoppingcart)
+        public OrdersWorker(DatabaseContext context, TokenManager _tokenManager, 
+            IOptions<TokenSection> _tokenSection, ShoppingCartsWorker _shoppingcart)
         {
             _context = context;
             tokenManager = _tokenManager;

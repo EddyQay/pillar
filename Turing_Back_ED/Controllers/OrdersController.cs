@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json.Linq;
-using Turing_Back_ED.DAL;
+using Turing_Back_ED.Workers;
 using Turing_Back_ED.DomainModels;
 using Turing_Back_ED.Middlewares;
 using Turing_Back_ED.Models;
@@ -24,9 +24,9 @@ namespace Turing_Back_ED.Controllers
     [ApiController]
     public class OrdersController : ControllerBase
     {
-        private readonly OrderStore orders;
+        private readonly OrdersWorker orders;
 
-        public OrdersController(OrderStore _orders)
+        public OrdersController(OrdersWorker _orders)
         {
             orders = _orders;
         }

@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Turing_Back_ED.Tests.DAL
 {
-    public interface IStoreTest<T> where T : Turing_Back_ED.DAL.IEntity
+    public interface IStoreTest<T> where T : Turing_Back_ED.Workers.IEntity
     {
         void Add(T entity);
         T Update(T entity);

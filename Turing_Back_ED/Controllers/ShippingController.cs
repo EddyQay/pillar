@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Turing_Back_ED.DAL;
+using Turing_Back_ED.Workers;
 using Turing_Back_ED.DomainModels;
 using Turing_Back_ED.Middlewares;
 using Turing_Back_ED.Models;
@@ -18,9 +18,9 @@ namespace Turing_Back_ED.Controllers
     [ApiController]
     public class ShippingController : ControllerBase
     {
-        private readonly ShippingStore shippings;
+        private readonly ShippingsWorker shippings;
 
-        public ShippingController(ShippingStore _shippings)
+        public ShippingController(ShippingsWorker _shippings)
         {
             shippings = _shippings;
         }
