@@ -40,6 +40,16 @@ namespace Turing_Back_ED.Controllers
         [ModelValidate]
         public async Task<ActionResult> CreateOrder(OrderInputModel order)
         {
+            if (order.CartId == Guid.Empty)
+            {
+                return new InternalServerErrorResultObject(new ErrorRequestModel()
+                {
+                    Code = nameof(Constants.ErrorMessages.ERR_01),
+                    Message = "A valid shopping cart id is required",
+                    Status = StatusCodes.Status400BadRequest
+                });
+            }
+
             order.CustomerId = Convert.ToInt32(User.Identity.Name);
             var orderId = await orders.AddAsync(order);
 
@@ -75,7 +85,7 @@ namespace Turing_Back_ED.Controllers
                 return new BadRequestObjectResult(new ErrorRequestModel()
                 {
                     Code = nameof(Constants.ErrorMessages.ERR_01),
-                    Message = Constants.ErrorMessages.ERR_01,
+                    Message = string.Format(Constants.ErrorMessages.ERR_01, "order"),
                     Status = StatusCodes.Status400BadRequest
                 });
         }
@@ -97,7 +107,7 @@ namespace Turing_Back_ED.Controllers
                 return new BadRequestObjectResult(new ErrorRequestModel()
                 {
                     Code = nameof(Constants.ErrorMessages.ERR_01),
-                    Message = Constants.ErrorMessages.ERR_01,
+                    Message = string.Format(Constants.ErrorMessages.ERR_01, "order"),
                     Status = StatusCodes.Status400BadRequest
                 });
         }

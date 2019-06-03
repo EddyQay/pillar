@@ -1,5 +1,6 @@
 ﻿using Newtonsoft.Json;
 using System;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Turing_Back_ED.Models
@@ -33,8 +34,10 @@ namespace Turing_Back_ED.Models
 
         public int Quantity { get; set; }
 
+        [DataType(DataType.Currency)]
         public decimal Price { get; set; }
 
+        [DataType(DataType.Currency)]
         public decimal SubTotal { get; set; }
 
         [JsonIgnore]
@@ -92,14 +95,14 @@ namespace Turing_Back_ED.Models
             ProductId = cartItem.ProductId;
             Attributes = cartItem.Attributes;
             Quantity = cartItem.Quantity;
+            DiscountedPrice = Product.DiscountedPrice;
 
             Price = ((Product.DiscountedPrice < Product.Price) && Product.DiscountedPrice > 0.0m)
                 ? Product.DiscountedPrice
                 : Product.Price;
 
-            DiscountedPrice = Product.DiscountedPrice;
 
-            SubTotal = Price * Quantity;
+            SubTotal = decimal.Round((Price * Quantity), 4);
 
             BuyNow = cartItem.BuyNow;
             CategoryId = Product.CategoryId;
@@ -128,12 +131,12 @@ namespace Turing_Back_ED.Models
             ProductId = cartItem.ProductId;
             Attributes = cartItem.Attributes;
             Quantity = cartItem.Quantity;
-            Price = Product.Price;
             DiscountedPrice = Product.DiscountedPrice;
+            Price = ((DiscountedPrice < Product.Price) && DiscountedPrice > 0.0m)
+                ? DiscountedPrice
+                : Product.Price;
 
-            SubTotal = ((Product.DiscountedPrice < Product.Price) && Product.DiscountedPrice > 0.0m) 
-                ? Product.DiscountedPrice * cartItem.Quantity 
-                : Product.Price * cartItem.Quantity;
+            SubTotal = decimal.Round((Price * Quantity), 4);
 
             BuyNow = cartItem.BuyNow;
             CategoryId = Product.CategoryId;

@@ -70,7 +70,16 @@ namespace Turing_Back_ED.Controllers
         [ModelValidate]
         public async Task<ActionResult<IEnumerable<Product>>> Find(int id)
         {
-            return new OkObjectResult(await products.FindByIdAsync(id));
+            var product = await products.FindByIdAsync(id);
+            if (product != null)
+                return new OkObjectResult(product);
+            else
+                return new BadRequestObjectResult(new ErrorRequestModel()
+                {
+                    Code = nameof(Constants.ErrorMessages.ERR_01),
+                    Message = string.Format(Constants.ErrorMessages.ERR_01, "product"),
+                    Status = StatusCodes.Status400BadRequest
+                });
         }
 
 
@@ -83,7 +92,16 @@ namespace Turing_Back_ED.Controllers
         [ModelValidate]
         public async Task<ActionResult> FindDetails(int Id)
         {
-            return new OkObjectResult(await products.FindById_D(Id));
+            var product = await products.FindById_D(Id);
+            if (product != null)
+                return new OkObjectResult(product);
+            else
+                return new BadRequestObjectResult(new ErrorRequestModel()
+                {
+                    Code = nameof(Constants.ErrorMessages.ERR_01),
+                    Message = string.Format(Constants.ErrorMessages.ERR_01, "product"),
+                    Status = StatusCodes.Status400BadRequest
+                });
         }
 
 
@@ -248,7 +266,16 @@ namespace Turing_Back_ED.Controllers
         public async Task<ActionResult<ProductLocation>> Locations(int Id)
         {
             var searchResult = await products.FindLocations(Id);
-            return new OkObjectResult(searchResult);
+            if (searchResult != null)
+                return new OkObjectResult(searchResult);
+            else
+                return new BadRequestObjectResult(new ErrorRequestModel()
+                {
+                    Code = nameof(Constants.ErrorMessages.ERR_01),
+                    Message = string.Format(Constants.ErrorMessages.ERR_01, "product"),
+                    Status = StatusCodes.Status400BadRequest
+                });
+
         }
 
 
@@ -262,7 +289,15 @@ namespace Turing_Back_ED.Controllers
         public async Task<ActionResult<IEnumerable<Review_>>> GetReviews(int Id)
         {
             var searchResult = await products.GetReviews(Id);
-            return new OkObjectResult(searchResult);
+            if (searchResult != null)
+                return new OkObjectResult(searchResult);
+            else
+                return new BadRequestObjectResult(new ErrorRequestModel()
+                {
+                    Code = nameof(Constants.ErrorMessages.ERR_01),
+                    Message = string.Format(Constants.ErrorMessages.ERR_01, "product"),
+                    Status = StatusCodes.Status400BadRequest
+                });
         }
 
         /// <summary>
@@ -276,6 +311,16 @@ namespace Turing_Back_ED.Controllers
         [ModelValidate]
         public async Task<ActionResult<IEnumerable<Review_>>> AddReview(int Id, ReviewModel reviewItem)
         {
+            var product = await products.FindByIdAsync(Id);
+
+            if(product == null)
+                return new BadRequestObjectResult(new ErrorRequestModel()
+                {
+                    Code = nameof(Constants.ErrorMessages.ERR_01),
+                    Message = string.Format(Constants.ErrorMessages.ERR_01, "product"),
+                    Status = StatusCodes.Status400BadRequest
+                });
+
             var review = new Review_
             {
                 ProductId = Id,

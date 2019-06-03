@@ -239,6 +239,7 @@ namespace Turing_Back_ED
                             });
 
                             //Write the response to the HttpResponse object
+                            context.Response.StatusCode = StatusCodes.Status401Unauthorized;
                             return context.Response.WriteAsync(response.ToString());
                         }
                     };

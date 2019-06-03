@@ -35,7 +35,7 @@ namespace Turing_Back_ED.Workers
         {
             entity.BuyNow = true;
             entity.Added = DateTime.UtcNow;
-            entity.Quantity = 1;
+            entity.Quantity = entity.Quantity > 0 ? entity.Quantity : 1;
             await _context.ShoppingCarts.AddAsync(entity);
             await SaveChangesAsync();
             return await FindByIdVerboseAsync(entity.ItemId);
@@ -67,7 +67,7 @@ namespace Turing_Back_ED.Workers
             return ShoppingCartProductItems.From(itemsList);
         }
 
-        public IEnumerable<ShoppingCartProductItem> FindAllActiveByCartIdAsync(Guid cartId)
+        public IEnumerable<ShoppingCartProductItem> FindAllActiveByCartId(Guid cartId)
         {
             var itemsList = _context.ShoppingCarts
                 .Where(c => c.CartId.Equals(cartId) && c.BuyNow == true)
@@ -82,9 +82,14 @@ namespace Turing_Back_ED.Workers
         public async Task<ShoppingCart> UpdateAsync(int itemId, int quantity)
         {
             var item = await FindByIdAsync(itemId);
-            item.Quantity = (quantity > 0) ? quantity : item.Quantity;
+            if (item != null)
+            {
+                item.Quantity = (quantity > 0) ? quantity : item.Quantity;
 
-            return await UpdateAsync(item);
+                return await UpdateAsync(item);
+            }
+
+            return item;
         }
 
         public async Task<ShoppingCart> UpdateAsync(ShoppingCart entity)
@@ -132,22 +137,20 @@ namespace Turing_Back_ED.Workers
             return -1;
         }
 
-        public decimal GetTotalItemCountForCart(Guid cartId)
+        public decimal GetTotalAmountForCart(Guid cartId)
         {
-            //If we need the total amount for shopping cart 
-            //in terms of money
+            //Get all items in the shopping cart that haven't
+            //been saved for later
+            var cartProductItems = FindAllActiveByCartId(cartId);
+            if (cartProductItems?.Count() > 0)
+            {
+                //Compute the total amount by computing the sum
+                //of the subtotals(quantity * price) of every item
+                return ShoppingCartProductItems
+                    .ComputeTotalAmount(cartProductItems);
+            }
 
-            var cartProductItems = FindAllActiveByCartIdAsync(cartId);
-
-            return ShoppingCartProductItems
-                .ComputeTotalAmount(cartProductItems);
-
-            //else, if the goal of this is to get the total items
-            //in the shopping cart, the we'll uncomment this block
-
-            /*return await _context.ShoppingCarts
-                .Where(cart => cart.CartId.Equals(cartId))
-                .CountAsync();*/
+            return 0.0m;
 
 
         }
