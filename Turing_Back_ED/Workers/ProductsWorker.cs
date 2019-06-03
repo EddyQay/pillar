@@ -65,19 +65,28 @@ namespace Turing_Back_ED.DomainModels
             return await _context.Products.FindAsync(Id);
         }
 
+        public async Task<int> FindByIdCountAsync(int Id)
+        {
+            return await _context.Products.Where(p => p.ProductId == Id).CountAsync();
+        }
+
         public async Task<ProductDetail> FindById_D(int Id)
         {
             var result = await _context.Products.FindAsync(Id);
-            return new ProductDetail
-            {
-                ProductId = result.ProductId,
-                Name = result.Name,
-                Description = result.Description,
-                Price = result.Price,
-                DiscountedPrice = result.DiscountedPrice,
-                Image = result.Image,
-                Image2 = result.Image2
-            };
+
+            if (result != null)
+                return new ProductDetail
+                {
+                    ProductId = result.ProductId,
+                    Name = result.Name,
+                    Description = result.Description,
+                    Price = result.Price,
+                    DiscountedPrice = result.DiscountedPrice,
+                    Image = result.Image,
+                    Image2 = result.Image2
+                };
+            else
+                return null;
         }
 
         public async Task<IEnumerable<Product>> FindAllAsync(SearchModel criteria)

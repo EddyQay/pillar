@@ -23,10 +23,12 @@ namespace Turing_Back_ED.Controllers
     public class ShoppingCartController : ControllerBase
     {
         private readonly ShoppingCartsWorker shoppingCart;
+        private readonly ProductsWorker products;
 
-        public ShoppingCartController(ShoppingCartsWorker _shoppingCart)
+        public ShoppingCartController(ShoppingCartsWorker _shoppingCart, ProductsWorker _products)
         {
             shoppingCart = _shoppingCart;
+            products = _products;
         }
 
         /// <summary>
@@ -52,17 +54,28 @@ namespace Turing_Back_ED.Controllers
         [ModelValidate]
         public async Task<ActionResult> AddToCart(ShoppingCartForInput cartItem)
         {
-            var addedItem = await shoppingCart.AddAsync((ShoppingCart)cartItem);
-
-            if (addedItem != null)
+            int count = await products.FindByIdCountAsync(cartItem.ProductId);
+            if (count > 0)
             {
-                return new OkObjectResult(new ShoppingCartProductItem().From(addedItem));
+                var addedItem = await shoppingCart.AddAsync((ShoppingCart)cartItem);
+
+                if (addedItem != null)
+                {
+                    return new OkObjectResult(new ShoppingCartProductItem().From(addedItem));
+                }
+
+                return new InternalServerErrorResultObject(new ErrorRequestModel()
+                {
+                    Code = nameof(Constants.ErrorMessages.ERR_02),
+                    Message = Constants.ErrorMessages.ERR_02,
+                    Status = StatusCodes.Status500InternalServerError
+                });
             }
 
-            return new InternalServerErrorResultObject(new ErrorRequestModel()
+            return new BadRequestObjectResult(new ErrorRequestModel()
             {
-                Code = nameof(Constants.ErrorMessages.ERR_02),
-                Message = Constants.ErrorMessages.ERR_02,
+                Code = nameof(Constants.ErrorMessages.ERR_01),
+                Message = string.Format(Constants.ErrorMessages.ERR_01, "product"),
                 Status = StatusCodes.Status500InternalServerError
             });
         }
@@ -113,9 +126,9 @@ namespace Turing_Back_ED.Controllers
             else
                 return new InternalServerErrorResultObject(new ErrorRequestModel()
                 {
-                    Code = nameof(Constants.ErrorMessages.ERR_02),
-                    Message = Constants.ErrorMessages.ERR_02,
-                    Status = StatusCodes.Status500InternalServerError
+                    Code = nameof(Constants.ErrorMessages.ERR_01),
+                    Message = string.Format(Constants.ErrorMessages.ERR_01, "shopping cart item"),
+                    Status = StatusCodes.Status400BadRequest
                 });
         }
         
@@ -191,19 +204,19 @@ namespace Turing_Back_ED.Controllers
 
 
         /// <summary>
-        /// Computes the total cost of item in a shopping cart
+        /// Computes the total cost of items in a shopping cart
         /// </summary>
         /// <param name="cartId">Cart Id</param>
-        /// <returns>An object with a single property - totalItems</returns>
-        [HttpGet("totalItems/{cartId}")]
+        /// <returns>An object with a single property - totalAmount</returns>
+        [HttpGet("totalAmount/{cartId}")]
         [ModelValidate]
-        public async Task<ActionResult> CountTotalItemsInCart(Guid cartId)
+        public ActionResult ComputeTotalAmountForCart(Guid cartId)
         {
-            var totalItems = await shoppingCart.GetTotalItemCountForCart(cartId);
+            var totalAmount = shoppingCart.GetTotalAmountForCart(cartId);
 
             return new OkObjectResult(new
             {
-                totalItems
+                totalAmount = decimal.Round(totalAmount, 4)
             });
         }
 

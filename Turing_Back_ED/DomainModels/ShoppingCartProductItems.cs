@@ -71,7 +71,7 @@ namespace Turing_Back_ED.Models
                 totalAmount += cartItem.SubTotal;
             }
 
-            return totalAmount;
+            return decimal.Round(totalAmount, 4);
         }
 
         /// <summary>
@@ -82,7 +82,7 @@ namespace Turing_Back_ED.Models
         /// <returns>decimal</returns>
         public static decimal ComputeTotalAmount(IQueryable<ShoppingCartProductItem> cartItemList)
         {
-            return cartItemList.Select(a => a.SubTotal).Sum();
+            return decimal.Round(cartItemList.Select(a => a.SubTotal).Sum(), 4);
 
             #region OLD IMPLEMENTATION
             //decimal totalAmount = 0.00m;

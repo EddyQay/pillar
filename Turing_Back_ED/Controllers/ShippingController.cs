@@ -69,7 +69,7 @@ namespace Turing_Back_ED.Controllers
             return new BadRequestObjectResult(new ErrorRequestModel()
             {
                 Code = Constants.ErrorCodes.ERR_01.ToString("g"),
-                Message = string.Format(Constants.ErrorMessages.ERR_01, nameof(ShippingRegion).ToLower() + "information"),
+                Message = string.Format(Constants.ErrorMessages.ERR_01, "Shipping Region information"),
                 Status = StatusCodes.Status400BadRequest
             });
         }

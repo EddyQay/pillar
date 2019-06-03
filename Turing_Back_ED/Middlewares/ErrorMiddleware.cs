@@ -61,10 +61,9 @@ namespace Turing_Back_ED
                         Status = (int)HttpStatusCode.InternalServerError,
                         Code = nameof(Constants.ErrorMessages.ERR_02),
                         Message = env_s.IsProduction()
-                                      ? ex.Message + Environment.NewLine + ex.InnerException
-                                            + Environment.NewLine + ex.StackTrace
-                                      : ex.Message + Environment.NewLine + ex.InnerException
-                                            + Environment.NewLine + ex.StackTrace
+                                      ? ex.Message//ex.Message + Environment.NewLine + ex.InnerException
+                                            //+ Environment.NewLine + ex.StackTrace Constants.ErrorMessages.ERR_02: 
+                                      : ex.Message
                     }
                 );
 

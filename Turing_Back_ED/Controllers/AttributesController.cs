@@ -88,7 +88,7 @@ namespace Turing_Back_ED.Controllers
         /// <param name="model">An instance of the GeneralQueryModel class</param>
         /// <returns>A list of attribute values</returns>
         [HttpGet("values/{attribute_Id}")]
-        [ModelValidate]
+        [ModelValidate(allowNull: true)]
         public async Task<ActionResult> GetValues(int attribute_Id, GeneralQueryModel model)
         {
             if (!ModelState.IsValid && attribute_Id < 1)
@@ -150,7 +150,7 @@ namespace Turing_Back_ED.Controllers
         /// <param name="model">An instance of the GeneralQueryModel class</param>
         /// <returns>A list of attributes</returns>
         [HttpGet("inProduct/{product_Id}")]
-        [ModelValidate]
+        [ModelValidate(allowNull: true)]
         public async Task<ActionResult> GetAttibutesInProduct(int product_Id, GeneralQueryModel model)
         {
             if (!ModelState.IsValid && product_Id < 1)

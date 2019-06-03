@@ -260,3 +260,4 @@ paket-files/
 __pycache__/
 *.pyc
 /SecretGenerator
+/Turing_Back_ED/Logs

@@ -17,7 +17,7 @@ namespace Turing_Back_ED.Models
 
         [DataType(DataType.Password)]
         [MinLength(12)]
-        public string Password { get; set; } = string.Empty;
+        public string Password { get; set; } = null;
         public string CreditCard { get; set; } = string.Empty;
         public string Address1 { get; set; } = string.Empty;
         public string Address2 { get; set; } = string.Empty;

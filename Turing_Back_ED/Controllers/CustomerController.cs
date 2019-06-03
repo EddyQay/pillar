@@ -59,6 +59,7 @@ namespace Turing_Back_ED.Controllers
         /// <param name="customer">A customer object with updated information</param>
         /// <returns>A Customer object</returns>
         [HttpPut]
+        [ModelValidate]
         public async Task<ActionResult> UpdateCustomer(CustomerForUpdate customer)
         {
             customer.CustomerId= Convert.ToInt32(User.Identity.Name);

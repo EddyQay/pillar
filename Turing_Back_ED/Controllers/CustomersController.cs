@@ -103,6 +103,14 @@ namespace Turing_Back_ED.Controllers
         {
             int custId = Convert.ToInt32(User.Identity.Name);
 
+            if(custId < 1)
+            return new UnauthorizedObjectResult(new ErrorRequestModel()
+            {
+                Code = Constants.ErrorCodes.AUT_02.ToString("g"),
+                Message = Constants.ErrorMessages.AUT_02,
+                Status = StatusCodes.Status401Unauthorized
+            });
+
             var result = await customers.UpdateAsync(credit_card, custId);
 
             if (result != null)
